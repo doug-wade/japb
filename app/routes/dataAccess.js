@@ -1,14 +1,25 @@
-var pg = require('pg');
+var pg = require('pg'),
+    Q = require('q');
 
 var dbUrl = "tcp://japbAdmin:34ae82ede2@localhost/japb";
 
-exports.getDate = function(onDone) {
-    pg.connect(dbUrl, function(err, client) {
-        client.query("SELECT NOW() as when", function(err, result) {
-            console.log("Row count: %d",result.rows.length);  // 1
-            console.log("Current year: %d", result.rows[0].when.getFullYear());
+exports.getDate = function(res, onDone) {
+  var deferred = Q.defer();
 
-            onDone();
-        });
+  pg.connect(dbUrl, function(err, client, done) {
+    var handleError = function(err) {
+      if(!err) return false;
+      done(client);
+      deferred.reject(err);
+      return true;
+    };
+    client.query("SELECT NOW() as when", function(err, result) {
+
+      done();
+
+      deferred.resolve(result.rows[0].when);
     });
+  });
+
+  return deferred.promise;
 }

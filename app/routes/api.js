@@ -69,7 +69,9 @@ exports.deletePost = function(req, res) {
 };
 
 exports.getDate = function(req, res) {
-  var dateResult = dataAccess.getDate(undefined);
-  
-  res.json({ date: dateResult });
+  dataAccess.getDate()
+    .then(function(dateResult) { res.json({ date: dateResult }); 
+    }, function(error){
+      res.json({ date: undefined });
+    })
 }
