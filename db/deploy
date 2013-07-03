@@ -1,0 +1,17 @@
+﻿create table post
+(
+	post_id serial primary key
+	,post_text text
+);
+
+create table tag
+(
+	tag_id serial primary key
+	,tag_display_name text
+);
+
+create table map_post_to_tag
+(
+	tag_id integer references tag (tag_id)
+	,post_id integer references post (post_id)
+);

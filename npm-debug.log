@@ -1,0 +1,1918 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'express',
+1 verbose cli   '--save' ]
+2 info using npm@1.2.25
+3 info using node@v0.11.3
+4 verbose read json /home/doug/node_projects/japb/package.json
+5 verbose read json /home/doug/node_projects/japb/package.json
+6 verbose cache add [ 'express', null ]
+7 verbose cache add name=undefined spec="express" args=["express",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'express',
+8 verbose parsed url   path: 'express',
+8 verbose parsed url   href: 'express' }
+9 silly lockFile f3c62de4-express express
+10 verbose lock express /home/doug/.npm/f3c62de4-express.lock
+11 silly lockFile f3c62de4-express express
+12 silly lockFile f3c62de4-express express
+13 verbose addNamed [ 'express', '' ]
+14 verbose addNamed [ null, '' ]
+15 silly lockFile 64a534c1-express express@
+16 verbose lock express@ /home/doug/.npm/64a534c1-express.lock
+17 silly addNameRange { name: 'express', range: '', hasData: false }
+18 verbose url raw express
+19 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+20 verbose url resolved https://registry.npmjs.org/express
+21 info trying registry request attempt 1 at 01:11:12
+22 verbose etag "8QRPNJ4ZIWIJZRRYE0LRPQXP7"
+23 http GET https://registry.npmjs.org/express
+24 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+25 info trying registry request attempt 2 at 01:11:22
+26 verbose etag "8QRPNJ4ZIWIJZRRYE0LRPQXP7"
+27 http GET https://registry.npmjs.org/express
+28 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+29 info trying registry request attempt 3 at 01:12:22
+30 verbose etag "8QRPNJ4ZIWIJZRRYE0LRPQXP7"
+31 http GET https://registry.npmjs.org/express
+32 silly registry.get cb [ 304, undefined ]
+33 verbose etag express from cache
+34 silly addNameRange number 2 { name: 'express', range: '', hasData: true }
+35 silly addNameRange versions [ 'express',
+35 silly addNameRange   [ '0.14.0',
+35 silly addNameRange     '0.14.1',
+35 silly addNameRange     '1.0.0beta',
+35 silly addNameRange     '1.0.0beta2',
+35 silly addNameRange     '1.0.0rc',
+35 silly addNameRange     '1.0.0rc2',
+35 silly addNameRange     '1.0.0rc3',
+35 silly addNameRange     '1.0.0rc4',
+35 silly addNameRange     '1.0.0',
+35 silly addNameRange     '1.0.1',
+35 silly addNameRange     '1.0.2',
+35 silly addNameRange     '1.0.3',
+35 silly addNameRange     '1.0.4',
+35 silly addNameRange     '1.0.5',
+35 silly addNameRange     '1.0.6',
+35 silly addNameRange     '1.0.7',
+35 silly addNameRange     '2.0.0beta',
+35 silly addNameRange     '1.0.8',
+35 silly addNameRange     '2.0.0beta2',
+35 silly addNameRange     '2.0.0beta3',
+35 silly addNameRange     '2.0.0rc',
+35 silly addNameRange     '2.0.0rc2',
+35 silly addNameRange     '2.0.0rc3',
+35 silly addNameRange     '2.0.0',
+35 silly addNameRange     '2.1.0',
+35 silly addNameRange     '2.1.1',
+35 silly addNameRange     '2.2.0',
+35 silly addNameRange     '2.2.1',
+35 silly addNameRange     '2.2.2',
+35 silly addNameRange     '2.3.0',
+35 silly addNameRange     '2.3.1',
+35 silly addNameRange     '2.3.2',
+35 silly addNameRange     '2.3.3',
+35 silly addNameRange     '2.3.4',
+35 silly addNameRange     '2.3.5',
+35 silly addNameRange     '2.3.6',
+35 silly addNameRange     '2.3.7',
+35 silly addNameRange     '2.3.8',
+35 silly addNameRange     '2.3.9',
+35 silly addNameRange     '2.3.10',
+35 silly addNameRange     '2.3.11',
+35 silly addNameRange     '2.3.12',
+35 silly addNameRange     '2.4.0',
+35 silly addNameRange     '2.4.1',
+35 silly addNameRange     '2.4.2',
+35 silly addNameRange     '2.4.3',
+35 silly addNameRange     '2.4.4',
+35 silly addNameRange     '2.4.5',
+35 silly addNameRange     '2.4.6',
+35 silly addNameRange     '2.4.7',
+35 silly addNameRange     '2.5.0',
+35 silly addNameRange     '2.5.1',
+35 silly addNameRange     '2.5.2',
+35 silly addNameRange     '2.5.3',
+35 silly addNameRange     '2.5.4',
+35 silly addNameRange     '2.5.5',
+35 silly addNameRange     '2.5.6',
+35 silly addNameRange     '2.5.7',
+35 silly addNameRange     '2.5.8',
+35 silly addNameRange     '2.5.9',
+35 silly addNameRange     '3.0.0alpha1',
+35 silly addNameRange     '3.0.0alpha2',
+35 silly addNameRange     '3.0.0alpha3',
+35 silly addNameRange     '3.0.0alpha4',
+35 silly addNameRange     '3.0.0alpha5',
+35 silly addNameRange     '3.0.0beta1',
+35 silly addNameRange     '3.0.0beta2',
+35 silly addNameRange     '3.0.0beta3',
+35 silly addNameRange     '2.5.10',
+35 silly addNameRange     '3.0.0beta4',
+35 silly addNameRange     '2.5.11',
+35 silly addNameRange     '3.0.0beta6',
+35 silly addNameRange     '3.0.0beta7',
+35 silly addNameRange     '3.0.0rc1',
+35 silly addNameRange     '3.0.0rc2',
+35 silly addNameRange     '3.0.0rc3',
+35 silly addNameRange     '3.0.0rc4',
+35 silly addNameRange     '3.0.0rc5',
+35 silly addNameRange     '3.0.0',
+35 silly addNameRange     '3.0.1',
+35 silly addNameRange     '3.0.2',
+35 silly addNameRange     '3.0.3',
+35 silly addNameRange     '3.0.4',
+35 silly addNameRange     '3.0.5',
+35 silly addNameRange     '3.0.6',
+35 silly addNameRange     '3.1.0',
+35 silly addNameRange     '3.1.1',
+35 silly addNameRange     '3.1.2',
+35 silly addNameRange     '3.2.0',
+35 silly addNameRange     '3.2.1',
+35 silly addNameRange     '3.2.2',
+35 silly addNameRange     '3.2.3',
+35 silly addNameRange     '3.2.4',
+35 silly addNameRange     '3.2.5',
+35 silly addNameRange     '3.2.6',
+35 silly addNameRange     '3.3.0',
+35 silly addNameRange     '3.3.1' ] ]
+36 verbose addNamed [ 'express', '3.3.1' ]
+37 verbose addNamed [ '3.3.1', '3.3.1' ]
+38 silly lockFile b6b0fa02-express-3-3-1 express@3.3.1
+39 verbose lock express@3.3.1 /home/doug/.npm/b6b0fa02-express-3-3-1.lock
+40 verbose read json /home/doug/.npm/express/3.3.1/package/package.json
+41 silly lockFile b6b0fa02-express-3-3-1 express@3.3.1
+42 silly lockFile b6b0fa02-express-3-3-1 express@3.3.1
+43 silly lockFile 64a534c1-express express@
+44 silly lockFile 64a534c1-express express@
+45 silly resolved [ { name: 'express',
+45 silly resolved     description: 'Sinatra inspired web development framework',
+45 silly resolved     version: '3.3.1',
+45 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+45 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+45 silly resolved     dependencies:
+45 silly resolved      { connect: '2.8.1',
+45 silly resolved        commander: '0.6.1',
+45 silly resolved        'range-parser': '0.0.4',
+45 silly resolved        mkdirp: '0.3.4',
+45 silly resolved        cookie: '0.1.0',
+45 silly resolved        'buffer-crc32': '0.2.1',
+45 silly resolved        fresh: '0.1.0',
+45 silly resolved        methods: '0.0.1',
+45 silly resolved        send: '0.1.1',
+45 silly resolved        'cookie-signature': '1.0.1',
+45 silly resolved        debug: '*' },
+45 silly resolved     devDependencies:
+45 silly resolved      { ejs: '*',
+45 silly resolved        mocha: '*',
+45 silly resolved        jade: '0.30.0',
+45 silly resolved        hjs: '*',
+45 silly resolved        stylus: '*',
+45 silly resolved        should: '*',
+45 silly resolved        'connect-redis': '*',
+45 silly resolved        marked: '*',
+45 silly resolved        supertest: '0.6.0' },
+45 silly resolved     keywords:
+45 silly resolved      [ 'express',
+45 silly resolved        'framework',
+45 silly resolved        'sinatra',
+45 silly resolved        'web',
+45 silly resolved        'rest',
+45 silly resolved        'restful',
+45 silly resolved        'router',
+45 silly resolved        'app',
+45 silly resolved        'api' ],
+45 silly resolved     repository: { type: 'git', url: 'git://github.com/visionmedia/express' },
+45 silly resolved     main: 'index',
+45 silly resolved     bin: { express: './bin/express' },
+45 silly resolved     scripts: { prepublish: 'npm prune', test: 'make test' },
+45 silly resolved     engines: { node: '*' },
+45 silly resolved     readme: '![express logo](http://f.cl.ly/items/0V2S1n0K1i3y1c122g04/Screen%20Shot%202012-04-11%20at%209.59.42%20AM.png)\n\n  Fast, unopinionated, minimalist web framework for [node](http://nodejs.org). [![Build Status](https://secure.travis-ci.org/visionmedia/express.png)](http://travis-ci.org/visionmedia/express) [![Dependency Status](https://gemnasium.com/visionmedia/express.png)](https://gemnasium.com/visionmedia/express)\n\n```js\nvar express = require(\'express\');\nvar app = express();\n\napp.get(\'/\', function(req, res){\n  res.send(\'Hello World\');\n});\n\napp.listen(3000);\n```\n\n## Installation\n\n    $ npm install -g express\n\n## Quick Start\n\n The quickest way to get started with express is to utilize the executable `express(1)` to generate an application as shown below:\n\n Create the app:\n\n    $ npm install -g express\n    $ express /tmp/foo && cd /tmp/foo\n\n Install dependencies:\n\n    $ npm install\n\n Start the server:\n\n    $ node app\n\n## Features\n\n  * Built on [Connect](http://github.com/senchalabs/connect)\n  * Robust routing\n  * HTTP helpers (redirection, caching, etc)\n  * View system supporting 14+ template engines\n  * Content negotiation\n  * Focus on high performance\n  * Environment based configuration\n  * Executable for generating applications quickly\n  * High test coverage\n\n## Philosophy\n\n  The Express philosophy is to provide small, robust tooling for HTTP servers. Making\n  it a great solution for single page applications, web sites, hybrids, or public\n  HTTP APIs.\n\n  Built on Connect you can use _only_ what you need, and nothing more, applications\n  can be as big or as small as you like, even a single file. Express does\n  not force you to use any specific ORM or template engine. With support for over\n  14 template engines via [Consolidate.js](http://github.com/visionmedia/consolidate.js)\n  you can quickly craft your perfect framework.\n\n## More Information\n\n  * Join #express on freenode\n  * [Google Group](http://groups.google.com/group/express-js) for discussion\n  * Follow [tjholowaychuk](http://twitter.com/tjholowaychuk) on twitter for updates\n  * Visit the [Wiki](http://github.com/visionmedia/express/wiki)\n  * [Русскоязычная документация](http://jsman.ru/express/)\n  * Run express examples [online](https://runnable.com/express)\n\n## Viewing Examples\n\nClone the Express repo, then install the dev dependencies to install all the example / test suite deps:\n\n    $ git clone git://github.com/visionmedia/express.git --depth 1\n    $ cd express\n    $ npm install\n\nthen run whichever tests you want:\n\n    $ node examples/content-negotiation\n\n## Running Tests\n\nTo run the test suite first invoke the following command within the repo, installing the development dependencies:\n\n    $ npm install\n\nthen run the tests:\n\n    $ make test\n\n## Contributors\n\n```\nproject: express\ncommits: 3559\nactive : 468 days\nfiles  : 237\nauthors:\n 1891\tTj Holowaychuk          53.1%\n 1285\tvisionmedia             36.1%\n  182\tTJ Holowaychuk          5.1%\n   54\tAaron Heckmann          1.5%\n   34\tcsausdev                1.0%\n   26\tciaranj                 0.7%\n   21\tRobert Sköld            0.6%\n    6\tGuillermo Rauch         0.2%\n    3\tDav Glass               0.1%\n    3\tNick Poulden            0.1%\n    2\tRandy Merrill           0.1%\n    2\tBenny Wong              0.1%\n    2\tHunter Loftis           0.1%\n    2\tJake Gordon             0.1%\n    2\tBrian McKinney          0.1%\n    2\tRoman Shtylman          0.1%\n    2\tBen Weaver              0.1%\n    2\tDave Hoover             0.1%\n    2\tEivind Fjeldstad        0.1%\n    2\tDaniel Shaw             0.1%\n    1\tMatt Colyer             0.0%\n    1\tPau Ramon               0.0%\n    1\tPero Pejovic            0.0%\n    1\tPeter Rekdal Sunde      0.0%\n    1\tRaynos                  0.0%\n    1\tTeng Siong Ong          0.0%\n    1\tViktor Kelemen          0.0%\n    1\tctide                   0.0%\n    1\t8bitDesigner            0.0%\n    1\tisaacs                  0.0%\n    1\tmgutz                   0.0%\n    1\tpikeas                  0.0%\n    1\tshuwatto                0.0%\n    1\ttstrimple               0.0%\n    1\tewoudj                  0.0%\n    1\tAdam Sanderson          0.0%\n    1\tAndrii Kostenko         0.0%\n    1\tAndy Hiew               0.0%\n    1\tArpad Borsos            0.0%\n    1\tAshwin Purohit          0.0%\n    1\tBenjen                  0.0%\n    1\tDarren Torpey           0.0%\n    1\tGreg Ritter             0.0%\n    1\tGregory Ritter          0.0%\n    1\tJames Herdman           0.0%\n    1\tJim Snodgrass           0.0%\n    1\tJoe McCann              0.0%\n    1\tJonathan Dumaine        0.0%\n    1\tJonathan Palardy        0.0%\n    1\tJonathan Zacsh          0.0%\n    1\tJustin Lilly            0.0%\n    1\tKen Sato                0.0%\n    1\tMaciej Małecki          0.0%\n    1\tMasahiro Hayashi        0.0%\n```\n\n## License\n\n(The MIT License)\n\nCopyright (c) 2009-2012 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+45 silly resolved     readmeFilename: 'Readme.md',
+45 silly resolved     bugs: { url: 'https://github.com/visionmedia/express/issues' },
+45 silly resolved     _id: 'express@3.3.1',
+45 silly resolved     _from: 'express@' } ]
+46 info install express@3.3.1 into /home/doug/node_projects/japb
+47 info installOne express@3.3.1
+48 verbose from cache /home/doug/.npm/express/3.3.1/package/package.json
+49 info /home/doug/node_projects/japb/node_modules/express unbuild
+50 verbose read json /home/doug/node_projects/japb/node_modules/express/package.json
+51 verbose tar unpack /home/doug/.npm/express/3.3.1/package.tgz
+52 silly lockFile 09b0dff9-ojects-japb-node-modules-express /home/doug/node_projects/japb/node_modules/express
+53 verbose lock /home/doug/node_projects/japb/node_modules/express /home/doug/.npm/09b0dff9-ojects-japb-node-modules-express.lock
+54 silly lockFile e65b5b79-ug-npm-express-3-3-1-package-tgz /home/doug/.npm/express/3.3.1/package.tgz
+55 verbose lock /home/doug/.npm/express/3.3.1/package.tgz /home/doug/.npm/e65b5b79-ug-npm-express-3-3-1-package-tgz.lock
+56 silly gunzTarPerm modes [ '755', '644' ]
+57 silly gunzTarPerm extractEntry Readme.md
+58 silly gunzTarPerm extractEntry .npmignore
+59 silly gunzTarPerm extractEntry bin/
+60 silly gunzTarPerm extractEntry bin/express
+61 silly gunzTarPerm extractEntry .travis.yml
+62 silly gunzTarPerm extractEntry package.json
+63 silly gunzTarPerm extractEntry LICENSE
+64 silly gunzTarPerm extractEntry lib/
+65 silly gunzTarPerm extractEntry lib/request.js
+66 silly gunzTarPerm extractEntry lib/router/
+67 silly gunzTarPerm extractEntry lib/router/route.js
+68 silly gunzTarPerm extractEntry lib/router/index.js
+69 silly gunzTarPerm extractEntry lib/view.js
+70 silly gunzTarPerm extractEntry lib/response.js
+71 silly gunzTarPerm extractEntry lib/application.js
+72 silly gunzTarPerm extractEntry lib/utils.js
+73 silly gunzTarPerm extractEntry lib/express.js
+74 silly gunzTarPerm extractEntry lib/middleware.js
+75 silly gunzTarPerm extractEntry Makefile
+76 silly gunzTarPerm extractEntry History.md
+77 silly gunzTarPerm extractEntry test.js
+78 silly gunzTarPerm extractEntry index.js
+79 verbose read json /home/doug/node_projects/japb/node_modules/express/package.json
+80 silly lockFile 09b0dff9-ojects-japb-node-modules-express /home/doug/node_projects/japb/node_modules/express
+81 silly lockFile 09b0dff9-ojects-japb-node-modules-express /home/doug/node_projects/japb/node_modules/express
+82 silly lockFile e65b5b79-ug-npm-express-3-3-1-package-tgz /home/doug/.npm/express/3.3.1/package.tgz
+83 silly lockFile e65b5b79-ug-npm-express-3-3-1-package-tgz /home/doug/.npm/express/3.3.1/package.tgz
+84 info preinstall express@3.3.1
+85 verbose from cache /home/doug/node_projects/japb/node_modules/express/package.json
+86 verbose readDependencies using package.json deps
+87 verbose from cache /home/doug/node_projects/japb/node_modules/express/package.json
+88 verbose readDependencies using package.json deps
+89 verbose cache add [ 'connect@2.8.1', null ]
+90 verbose cache add name=undefined spec="connect@2.8.1" args=["connect@2.8.1",null]
+91 verbose parsed url { protocol: null,
+91 verbose parsed url   slashes: null,
+91 verbose parsed url   auth: null,
+91 verbose parsed url   host: null,
+91 verbose parsed url   port: null,
+91 verbose parsed url   hostname: null,
+91 verbose parsed url   hash: null,
+91 verbose parsed url   search: null,
+91 verbose parsed url   query: null,
+91 verbose parsed url   pathname: 'connect@2.8.1',
+91 verbose parsed url   path: 'connect@2.8.1',
+91 verbose parsed url   href: 'connect@2.8.1' }
+92 verbose cache add name="connect" spec="2.8.1" args=["connect","2.8.1"]
+93 verbose parsed url { protocol: null,
+93 verbose parsed url   slashes: null,
+93 verbose parsed url   auth: null,
+93 verbose parsed url   host: null,
+93 verbose parsed url   port: null,
+93 verbose parsed url   hostname: null,
+93 verbose parsed url   hash: null,
+93 verbose parsed url   search: null,
+93 verbose parsed url   query: null,
+93 verbose parsed url   pathname: '2.8.1',
+93 verbose parsed url   path: '2.8.1',
+93 verbose parsed url   href: '2.8.1' }
+94 verbose addNamed [ 'connect', '2.8.1' ]
+95 verbose addNamed [ '2.8.1', '2.8.1' ]
+96 silly lockFile 6b0c86e6-connect-2-8-1 connect@2.8.1
+97 verbose lock connect@2.8.1 /home/doug/.npm/6b0c86e6-connect-2-8-1.lock
+98 verbose cache add [ 'commander@0.6.1', null ]
+99 verbose cache add name=undefined spec="commander@0.6.1" args=["commander@0.6.1",null]
+100 verbose parsed url { protocol: null,
+100 verbose parsed url   slashes: null,
+100 verbose parsed url   auth: null,
+100 verbose parsed url   host: null,
+100 verbose parsed url   port: null,
+100 verbose parsed url   hostname: null,
+100 verbose parsed url   hash: null,
+100 verbose parsed url   search: null,
+100 verbose parsed url   query: null,
+100 verbose parsed url   pathname: 'commander@0.6.1',
+100 verbose parsed url   path: 'commander@0.6.1',
+100 verbose parsed url   href: 'commander@0.6.1' }
+101 verbose cache add name="commander" spec="0.6.1" args=["commander","0.6.1"]
+102 verbose parsed url { protocol: null,
+102 verbose parsed url   slashes: null,
+102 verbose parsed url   auth: null,
+102 verbose parsed url   host: null,
+102 verbose parsed url   port: null,
+102 verbose parsed url   hostname: null,
+102 verbose parsed url   hash: null,
+102 verbose parsed url   search: null,
+102 verbose parsed url   query: null,
+102 verbose parsed url   pathname: '0.6.1',
+102 verbose parsed url   path: '0.6.1',
+102 verbose parsed url   href: '0.6.1' }
+103 verbose addNamed [ 'commander', '0.6.1' ]
+104 verbose addNamed [ '0.6.1', '0.6.1' ]
+105 silly lockFile fa16a2ce-commander-0-6-1 commander@0.6.1
+106 verbose lock commander@0.6.1 /home/doug/.npm/fa16a2ce-commander-0-6-1.lock
+107 verbose cache add [ 'range-parser@0.0.4', null ]
+108 verbose cache add name=undefined spec="range-parser@0.0.4" args=["range-parser@0.0.4",null]
+109 verbose parsed url { protocol: null,
+109 verbose parsed url   slashes: null,
+109 verbose parsed url   auth: null,
+109 verbose parsed url   host: null,
+109 verbose parsed url   port: null,
+109 verbose parsed url   hostname: null,
+109 verbose parsed url   hash: null,
+109 verbose parsed url   search: null,
+109 verbose parsed url   query: null,
+109 verbose parsed url   pathname: 'range-parser@0.0.4',
+109 verbose parsed url   path: 'range-parser@0.0.4',
+109 verbose parsed url   href: 'range-parser@0.0.4' }
+110 verbose cache add name="range-parser" spec="0.0.4" args=["range-parser","0.0.4"]
+111 verbose parsed url { protocol: null,
+111 verbose parsed url   slashes: null,
+111 verbose parsed url   auth: null,
+111 verbose parsed url   host: null,
+111 verbose parsed url   port: null,
+111 verbose parsed url   hostname: null,
+111 verbose parsed url   hash: null,
+111 verbose parsed url   search: null,
+111 verbose parsed url   query: null,
+111 verbose parsed url   pathname: '0.0.4',
+111 verbose parsed url   path: '0.0.4',
+111 verbose parsed url   href: '0.0.4' }
+112 verbose addNamed [ 'range-parser', '0.0.4' ]
+113 verbose addNamed [ '0.0.4', '0.0.4' ]
+114 silly lockFile 0760c556-range-parser-0-0-4 range-parser@0.0.4
+115 verbose lock range-parser@0.0.4 /home/doug/.npm/0760c556-range-parser-0-0-4.lock
+116 verbose cache add [ 'mkdirp@0.3.4', null ]
+117 verbose cache add name=undefined spec="mkdirp@0.3.4" args=["mkdirp@0.3.4",null]
+118 verbose parsed url { protocol: null,
+118 verbose parsed url   slashes: null,
+118 verbose parsed url   auth: null,
+118 verbose parsed url   host: null,
+118 verbose parsed url   port: null,
+118 verbose parsed url   hostname: null,
+118 verbose parsed url   hash: null,
+118 verbose parsed url   search: null,
+118 verbose parsed url   query: null,
+118 verbose parsed url   pathname: 'mkdirp@0.3.4',
+118 verbose parsed url   path: 'mkdirp@0.3.4',
+118 verbose parsed url   href: 'mkdirp@0.3.4' }
+119 verbose cache add name="mkdirp" spec="0.3.4" args=["mkdirp","0.3.4"]
+120 verbose parsed url { protocol: null,
+120 verbose parsed url   slashes: null,
+120 verbose parsed url   auth: null,
+120 verbose parsed url   host: null,
+120 verbose parsed url   port: null,
+120 verbose parsed url   hostname: null,
+120 verbose parsed url   hash: null,
+120 verbose parsed url   search: null,
+120 verbose parsed url   query: null,
+120 verbose parsed url   pathname: '0.3.4',
+120 verbose parsed url   path: '0.3.4',
+120 verbose parsed url   href: '0.3.4' }
+121 verbose addNamed [ 'mkdirp', '0.3.4' ]
+122 verbose addNamed [ '0.3.4', '0.3.4' ]
+123 silly lockFile 86f43333-mkdirp-0-3-4 mkdirp@0.3.4
+124 verbose lock mkdirp@0.3.4 /home/doug/.npm/86f43333-mkdirp-0-3-4.lock
+125 verbose cache add [ 'cookie@0.1.0', null ]
+126 verbose cache add name=undefined spec="cookie@0.1.0" args=["cookie@0.1.0",null]
+127 verbose parsed url { protocol: null,
+127 verbose parsed url   slashes: null,
+127 verbose parsed url   auth: null,
+127 verbose parsed url   host: null,
+127 verbose parsed url   port: null,
+127 verbose parsed url   hostname: null,
+127 verbose parsed url   hash: null,
+127 verbose parsed url   search: null,
+127 verbose parsed url   query: null,
+127 verbose parsed url   pathname: 'cookie@0.1.0',
+127 verbose parsed url   path: 'cookie@0.1.0',
+127 verbose parsed url   href: 'cookie@0.1.0' }
+128 verbose cache add name="cookie" spec="0.1.0" args=["cookie","0.1.0"]
+129 verbose parsed url { protocol: null,
+129 verbose parsed url   slashes: null,
+129 verbose parsed url   auth: null,
+129 verbose parsed url   host: null,
+129 verbose parsed url   port: null,
+129 verbose parsed url   hostname: null,
+129 verbose parsed url   hash: null,
+129 verbose parsed url   search: null,
+129 verbose parsed url   query: null,
+129 verbose parsed url   pathname: '0.1.0',
+129 verbose parsed url   path: '0.1.0',
+129 verbose parsed url   href: '0.1.0' }
+130 verbose addNamed [ 'cookie', '0.1.0' ]
+131 verbose addNamed [ '0.1.0', '0.1.0' ]
+132 silly lockFile b55e145e-cookie-0-1-0 cookie@0.1.0
+133 verbose lock cookie@0.1.0 /home/doug/.npm/b55e145e-cookie-0-1-0.lock
+134 verbose cache add [ 'buffer-crc32@0.2.1', null ]
+135 verbose cache add name=undefined spec="buffer-crc32@0.2.1" args=["buffer-crc32@0.2.1",null]
+136 verbose parsed url { protocol: null,
+136 verbose parsed url   slashes: null,
+136 verbose parsed url   auth: null,
+136 verbose parsed url   host: null,
+136 verbose parsed url   port: null,
+136 verbose parsed url   hostname: null,
+136 verbose parsed url   hash: null,
+136 verbose parsed url   search: null,
+136 verbose parsed url   query: null,
+136 verbose parsed url   pathname: 'buffer-crc32@0.2.1',
+136 verbose parsed url   path: 'buffer-crc32@0.2.1',
+136 verbose parsed url   href: 'buffer-crc32@0.2.1' }
+137 verbose cache add name="buffer-crc32" spec="0.2.1" args=["buffer-crc32","0.2.1"]
+138 verbose parsed url { protocol: null,
+138 verbose parsed url   slashes: null,
+138 verbose parsed url   auth: null,
+138 verbose parsed url   host: null,
+138 verbose parsed url   port: null,
+138 verbose parsed url   hostname: null,
+138 verbose parsed url   hash: null,
+138 verbose parsed url   search: null,
+138 verbose parsed url   query: null,
+138 verbose parsed url   pathname: '0.2.1',
+138 verbose parsed url   path: '0.2.1',
+138 verbose parsed url   href: '0.2.1' }
+139 verbose addNamed [ 'buffer-crc32', '0.2.1' ]
+140 verbose addNamed [ '0.2.1', '0.2.1' ]
+141 silly lockFile 057d0d26-buffer-crc32-0-2-1 buffer-crc32@0.2.1
+142 verbose lock buffer-crc32@0.2.1 /home/doug/.npm/057d0d26-buffer-crc32-0-2-1.lock
+143 verbose cache add [ 'fresh@0.1.0', null ]
+144 verbose cache add name=undefined spec="fresh@0.1.0" args=["fresh@0.1.0",null]
+145 verbose parsed url { protocol: null,
+145 verbose parsed url   slashes: null,
+145 verbose parsed url   auth: null,
+145 verbose parsed url   host: null,
+145 verbose parsed url   port: null,
+145 verbose parsed url   hostname: null,
+145 verbose parsed url   hash: null,
+145 verbose parsed url   search: null,
+145 verbose parsed url   query: null,
+145 verbose parsed url   pathname: 'fresh@0.1.0',
+145 verbose parsed url   path: 'fresh@0.1.0',
+145 verbose parsed url   href: 'fresh@0.1.0' }
+146 verbose cache add name="fresh" spec="0.1.0" args=["fresh","0.1.0"]
+147 verbose parsed url { protocol: null,
+147 verbose parsed url   slashes: null,
+147 verbose parsed url   auth: null,
+147 verbose parsed url   host: null,
+147 verbose parsed url   port: null,
+147 verbose parsed url   hostname: null,
+147 verbose parsed url   hash: null,
+147 verbose parsed url   search: null,
+147 verbose parsed url   query: null,
+147 verbose parsed url   pathname: '0.1.0',
+147 verbose parsed url   path: '0.1.0',
+147 verbose parsed url   href: '0.1.0' }
+148 verbose addNamed [ 'fresh', '0.1.0' ]
+149 verbose addNamed [ '0.1.0', '0.1.0' ]
+150 silly lockFile 3dea7da8-fresh-0-1-0 fresh@0.1.0
+151 verbose lock fresh@0.1.0 /home/doug/.npm/3dea7da8-fresh-0-1-0.lock
+152 verbose cache add [ 'methods@0.0.1', null ]
+153 verbose cache add name=undefined spec="methods@0.0.1" args=["methods@0.0.1",null]
+154 verbose parsed url { protocol: null,
+154 verbose parsed url   slashes: null,
+154 verbose parsed url   auth: null,
+154 verbose parsed url   host: null,
+154 verbose parsed url   port: null,
+154 verbose parsed url   hostname: null,
+154 verbose parsed url   hash: null,
+154 verbose parsed url   search: null,
+154 verbose parsed url   query: null,
+154 verbose parsed url   pathname: 'methods@0.0.1',
+154 verbose parsed url   path: 'methods@0.0.1',
+154 verbose parsed url   href: 'methods@0.0.1' }
+155 verbose cache add name="methods" spec="0.0.1" args=["methods","0.0.1"]
+156 verbose parsed url { protocol: null,
+156 verbose parsed url   slashes: null,
+156 verbose parsed url   auth: null,
+156 verbose parsed url   host: null,
+156 verbose parsed url   port: null,
+156 verbose parsed url   hostname: null,
+156 verbose parsed url   hash: null,
+156 verbose parsed url   search: null,
+156 verbose parsed url   query: null,
+156 verbose parsed url   pathname: '0.0.1',
+156 verbose parsed url   path: '0.0.1',
+156 verbose parsed url   href: '0.0.1' }
+157 verbose addNamed [ 'methods', '0.0.1' ]
+158 verbose addNamed [ '0.0.1', '0.0.1' ]
+159 silly lockFile 209c2920-methods-0-0-1 methods@0.0.1
+160 verbose lock methods@0.0.1 /home/doug/.npm/209c2920-methods-0-0-1.lock
+161 verbose cache add [ 'send@0.1.1', null ]
+162 verbose cache add name=undefined spec="send@0.1.1" args=["send@0.1.1",null]
+163 verbose parsed url { protocol: null,
+163 verbose parsed url   slashes: null,
+163 verbose parsed url   auth: null,
+163 verbose parsed url   host: null,
+163 verbose parsed url   port: null,
+163 verbose parsed url   hostname: null,
+163 verbose parsed url   hash: null,
+163 verbose parsed url   search: null,
+163 verbose parsed url   query: null,
+163 verbose parsed url   pathname: 'send@0.1.1',
+163 verbose parsed url   path: 'send@0.1.1',
+163 verbose parsed url   href: 'send@0.1.1' }
+164 verbose cache add name="send" spec="0.1.1" args=["send","0.1.1"]
+165 verbose parsed url { protocol: null,
+165 verbose parsed url   slashes: null,
+165 verbose parsed url   auth: null,
+165 verbose parsed url   host: null,
+165 verbose parsed url   port: null,
+165 verbose parsed url   hostname: null,
+165 verbose parsed url   hash: null,
+165 verbose parsed url   search: null,
+165 verbose parsed url   query: null,
+165 verbose parsed url   pathname: '0.1.1',
+165 verbose parsed url   path: '0.1.1',
+165 verbose parsed url   href: '0.1.1' }
+166 verbose addNamed [ 'send', '0.1.1' ]
+167 verbose addNamed [ '0.1.1', '0.1.1' ]
+168 silly lockFile aa25b10a-send-0-1-1 send@0.1.1
+169 verbose lock send@0.1.1 /home/doug/.npm/aa25b10a-send-0-1-1.lock
+170 verbose cache add [ 'cookie-signature@1.0.1', null ]
+171 verbose cache add name=undefined spec="cookie-signature@1.0.1" args=["cookie-signature@1.0.1",null]
+172 verbose parsed url { protocol: null,
+172 verbose parsed url   slashes: null,
+172 verbose parsed url   auth: null,
+172 verbose parsed url   host: null,
+172 verbose parsed url   port: null,
+172 verbose parsed url   hostname: null,
+172 verbose parsed url   hash: null,
+172 verbose parsed url   search: null,
+172 verbose parsed url   query: null,
+172 verbose parsed url   pathname: 'cookie-signature@1.0.1',
+172 verbose parsed url   path: 'cookie-signature@1.0.1',
+172 verbose parsed url   href: 'cookie-signature@1.0.1' }
+173 verbose cache add name="cookie-signature" spec="1.0.1" args=["cookie-signature","1.0.1"]
+174 verbose parsed url { protocol: null,
+174 verbose parsed url   slashes: null,
+174 verbose parsed url   auth: null,
+174 verbose parsed url   host: null,
+174 verbose parsed url   port: null,
+174 verbose parsed url   hostname: null,
+174 verbose parsed url   hash: null,
+174 verbose parsed url   search: null,
+174 verbose parsed url   query: null,
+174 verbose parsed url   pathname: '1.0.1',
+174 verbose parsed url   path: '1.0.1',
+174 verbose parsed url   href: '1.0.1' }
+175 verbose addNamed [ 'cookie-signature', '1.0.1' ]
+176 verbose addNamed [ '1.0.1', '1.0.1' ]
+177 silly lockFile d4a1eba1-cookie-signature-1-0-1 cookie-signature@1.0.1
+178 verbose lock cookie-signature@1.0.1 /home/doug/.npm/d4a1eba1-cookie-signature-1-0-1.lock
+179 verbose cache add [ 'debug@*', null ]
+180 verbose cache add name=undefined spec="debug@*" args=["debug@*",null]
+181 verbose parsed url { protocol: null,
+181 verbose parsed url   slashes: null,
+181 verbose parsed url   auth: null,
+181 verbose parsed url   host: null,
+181 verbose parsed url   port: null,
+181 verbose parsed url   hostname: null,
+181 verbose parsed url   hash: null,
+181 verbose parsed url   search: null,
+181 verbose parsed url   query: null,
+181 verbose parsed url   pathname: 'debug@*',
+181 verbose parsed url   path: 'debug@*',
+181 verbose parsed url   href: 'debug@*' }
+182 verbose cache add name="debug" spec="*" args=["debug","*"]
+183 verbose parsed url { protocol: null,
+183 verbose parsed url   slashes: null,
+183 verbose parsed url   auth: null,
+183 verbose parsed url   host: null,
+183 verbose parsed url   port: null,
+183 verbose parsed url   hostname: null,
+183 verbose parsed url   hash: null,
+183 verbose parsed url   search: null,
+183 verbose parsed url   query: null,
+183 verbose parsed url   pathname: '*',
+183 verbose parsed url   path: '*',
+183 verbose parsed url   href: '*' }
+184 verbose addNamed [ 'debug', '*' ]
+185 verbose addNamed [ null, '' ]
+186 silly lockFile 3ac45eff-debug debug@*
+187 verbose lock debug@* /home/doug/.npm/3ac45eff-debug.lock
+188 silly addNameRange { name: 'debug', range: '', hasData: false }
+189 verbose url raw connect/2.8.1
+190 verbose url resolving [ 'https://registry.npmjs.org/', './connect/2.8.1' ]
+191 verbose url resolved https://registry.npmjs.org/connect/2.8.1
+192 info trying registry request attempt 1 at 01:12:22
+193 verbose etag "79C0JXDAUMESET8B8R64AC132"
+194 http GET https://registry.npmjs.org/connect/2.8.1
+195 verbose url raw mkdirp/0.3.4
+196 verbose url resolving [ 'https://registry.npmjs.org/', './mkdirp/0.3.4' ]
+197 verbose url resolved https://registry.npmjs.org/mkdirp/0.3.4
+198 info trying registry request attempt 1 at 01:12:22
+199 verbose etag "9ZCRRPI96BH1I59BKUXVFU1ZC"
+200 http GET https://registry.npmjs.org/mkdirp/0.3.4
+201 verbose url raw range-parser/0.0.4
+202 verbose url resolving [ 'https://registry.npmjs.org/', './range-parser/0.0.4' ]
+203 verbose url resolved https://registry.npmjs.org/range-parser/0.0.4
+204 info trying registry request attempt 1 at 01:12:22
+205 verbose etag "77UURP2BSYGVROY135LZYVOB5"
+206 http GET https://registry.npmjs.org/range-parser/0.0.4
+207 verbose url raw commander/0.6.1
+208 verbose url resolving [ 'https://registry.npmjs.org/', './commander/0.6.1' ]
+209 verbose url resolved https://registry.npmjs.org/commander/0.6.1
+210 info trying registry request attempt 1 at 01:12:22
+211 verbose etag "CUZ5FGXX13UQUL0XLHGT59ZY8"
+212 http GET https://registry.npmjs.org/commander/0.6.1
+213 verbose url raw cookie/0.1.0
+214 verbose url resolving [ 'https://registry.npmjs.org/', './cookie/0.1.0' ]
+215 verbose url resolved https://registry.npmjs.org/cookie/0.1.0
+216 info trying registry request attempt 1 at 01:12:22
+217 verbose etag "EZCQ1MG12EN4O3OSE1ZUF176C"
+218 http GET https://registry.npmjs.org/cookie/0.1.0
+219 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+220 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+221 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+222 verbose url raw methods/0.0.1
+223 verbose url resolving [ 'https://registry.npmjs.org/', './methods/0.0.1' ]
+224 verbose url resolved https://registry.npmjs.org/methods/0.0.1
+225 info trying registry request attempt 1 at 01:12:22
+226 verbose etag "BJKMKY7TDR3BQNG3OV8H58IDX"
+227 http GET https://registry.npmjs.org/methods/0.0.1
+228 verbose url raw buffer-crc32/0.2.1
+229 verbose url resolving [ 'https://registry.npmjs.org/', './buffer-crc32/0.2.1' ]
+230 verbose url resolved https://registry.npmjs.org/buffer-crc32/0.2.1
+231 info trying registry request attempt 1 at 01:12:22
+232 verbose etag "EXHJEISDINXGKJ393P15KXJ2L"
+233 http GET https://registry.npmjs.org/buffer-crc32/0.2.1
+234 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+235 verbose url raw fresh/0.1.0
+236 verbose url resolving [ 'https://registry.npmjs.org/', './fresh/0.1.0' ]
+237 verbose url resolved https://registry.npmjs.org/fresh/0.1.0
+238 info trying registry request attempt 1 at 01:12:22
+239 verbose etag "3ZLVXDGBE5VU18J68D7ZQSOY5"
+240 http GET https://registry.npmjs.org/fresh/0.1.0
+241 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+242 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+243 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+244 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+245 verbose url raw send/0.1.1
+246 verbose url resolving [ 'https://registry.npmjs.org/', './send/0.1.1' ]
+247 verbose url resolved https://registry.npmjs.org/send/0.1.1
+248 info trying registry request attempt 1 at 01:12:22
+249 verbose etag "4Z43T1PLD68OCN78J1A6EME31"
+250 http GET https://registry.npmjs.org/send/0.1.1
+251 verbose url raw debug
+252 verbose url resolving [ 'https://registry.npmjs.org/', './debug' ]
+253 verbose url resolved https://registry.npmjs.org/debug
+254 info trying registry request attempt 1 at 01:12:22
+255 verbose etag "AHT3737SHBSO5U43I373PXHVS"
+256 http GET https://registry.npmjs.org/debug
+257 verbose url raw cookie-signature/1.0.1
+258 verbose url resolving [ 'https://registry.npmjs.org/', './cookie-signature/1.0.1' ]
+259 verbose url resolved https://registry.npmjs.org/cookie-signature/1.0.1
+260 info trying registry request attempt 1 at 01:12:22
+261 verbose etag "7Y0N1365DKMTTXTLUP92IW83E"
+262 http GET https://registry.npmjs.org/cookie-signature/1.0.1
+263 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+264 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+265 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+266 info trying registry request attempt 2 at 01:12:32
+267 verbose etag "79C0JXDAUMESET8B8R64AC132"
+268 http GET https://registry.npmjs.org/connect/2.8.1
+269 info trying registry request attempt 2 at 01:12:32
+270 verbose etag "9ZCRRPI96BH1I59BKUXVFU1ZC"
+271 http GET https://registry.npmjs.org/mkdirp/0.3.4
+272 info trying registry request attempt 2 at 01:12:32
+273 verbose etag "77UURP2BSYGVROY135LZYVOB5"
+274 http GET https://registry.npmjs.org/range-parser/0.0.4
+275 info trying registry request attempt 2 at 01:12:32
+276 verbose etag "CUZ5FGXX13UQUL0XLHGT59ZY8"
+277 http GET https://registry.npmjs.org/commander/0.6.1
+278 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+279 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+280 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+281 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+282 info trying registry request attempt 2 at 01:12:32
+283 verbose etag "EZCQ1MG12EN4O3OSE1ZUF176C"
+284 http GET https://registry.npmjs.org/cookie/0.1.0
+285 info trying registry request attempt 2 at 01:12:32
+286 verbose etag "BJKMKY7TDR3BQNG3OV8H58IDX"
+287 http GET https://registry.npmjs.org/methods/0.0.1
+288 info trying registry request attempt 2 at 01:12:32
+289 verbose etag "EXHJEISDINXGKJ393P15KXJ2L"
+290 http GET https://registry.npmjs.org/buffer-crc32/0.2.1
+291 info trying registry request attempt 2 at 01:12:32
+292 verbose etag "3ZLVXDGBE5VU18J68D7ZQSOY5"
+293 http GET https://registry.npmjs.org/fresh/0.1.0
+294 info trying registry request attempt 2 at 01:12:32
+295 verbose etag "4Z43T1PLD68OCN78J1A6EME31"
+296 http GET https://registry.npmjs.org/send/0.1.1
+297 info trying registry request attempt 2 at 01:12:32
+298 verbose etag "AHT3737SHBSO5U43I373PXHVS"
+299 http GET https://registry.npmjs.org/debug
+300 info trying registry request attempt 2 at 01:12:32
+301 verbose etag "7Y0N1365DKMTTXTLUP92IW83E"
+302 http GET https://registry.npmjs.org/cookie-signature/1.0.1
+303 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+304 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+305 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+306 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+307 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+308 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+309 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+310 info trying registry request attempt 3 at 01:13:32
+311 verbose etag "79C0JXDAUMESET8B8R64AC132"
+312 http GET https://registry.npmjs.org/connect/2.8.1
+313 info trying registry request attempt 3 at 01:13:32
+314 verbose etag "9ZCRRPI96BH1I59BKUXVFU1ZC"
+315 http GET https://registry.npmjs.org/mkdirp/0.3.4
+316 info trying registry request attempt 3 at 01:13:32
+317 verbose etag "77UURP2BSYGVROY135LZYVOB5"
+318 http GET https://registry.npmjs.org/range-parser/0.0.4
+319 info trying registry request attempt 3 at 01:13:32
+320 verbose etag "CUZ5FGXX13UQUL0XLHGT59ZY8"
+321 http GET https://registry.npmjs.org/commander/0.6.1
+322 info trying registry request attempt 3 at 01:13:32
+323 verbose etag "EZCQ1MG12EN4O3OSE1ZUF176C"
+324 http GET https://registry.npmjs.org/cookie/0.1.0
+325 info trying registry request attempt 3 at 01:13:32
+326 verbose etag "BJKMKY7TDR3BQNG3OV8H58IDX"
+327 http GET https://registry.npmjs.org/methods/0.0.1
+328 info trying registry request attempt 3 at 01:13:32
+329 verbose etag "EXHJEISDINXGKJ393P15KXJ2L"
+330 http GET https://registry.npmjs.org/buffer-crc32/0.2.1
+331 info trying registry request attempt 3 at 01:13:32
+332 verbose etag "3ZLVXDGBE5VU18J68D7ZQSOY5"
+333 http GET https://registry.npmjs.org/fresh/0.1.0
+334 info trying registry request attempt 3 at 01:13:32
+335 verbose etag "4Z43T1PLD68OCN78J1A6EME31"
+336 http GET https://registry.npmjs.org/send/0.1.1
+337 info trying registry request attempt 3 at 01:13:32
+338 verbose etag "AHT3737SHBSO5U43I373PXHVS"
+339 http GET https://registry.npmjs.org/debug
+340 info trying registry request attempt 3 at 01:13:32
+341 verbose etag "7Y0N1365DKMTTXTLUP92IW83E"
+342 http GET https://registry.npmjs.org/cookie-signature/1.0.1
+343 silly registry.get cb [ 304, undefined ]
+344 verbose etag connect/2.8.1 from cache
+345 silly registry.get cb [ 304, undefined ]
+346 verbose etag mkdirp/0.3.4 from cache
+347 silly registry.get cb [ 304, undefined ]
+348 verbose etag range-parser/0.0.4 from cache
+349 silly registry.get cb [ 304, undefined ]
+350 verbose etag commander/0.6.1 from cache
+351 silly registry.get cb [ 304, undefined ]
+352 verbose etag cookie/0.1.0 from cache
+353 silly registry.get cb [ 304, undefined ]
+354 verbose etag methods/0.0.1 from cache
+355 silly registry.get cb [ 304, undefined ]
+356 verbose etag buffer-crc32/0.2.1 from cache
+357 silly registry.get cb [ 304, undefined ]
+358 verbose etag fresh/0.1.0 from cache
+359 silly registry.get cb [ 304, undefined ]
+360 verbose etag send/0.1.1 from cache
+361 silly registry.get cb [ 304, undefined ]
+362 verbose etag debug from cache
+363 silly registry.get cb [ 304, undefined ]
+364 verbose etag cookie-signature/1.0.1 from cache
+365 verbose read json /home/doug/.npm/connect/2.8.1/package/package.json
+366 verbose read json /home/doug/.npm/mkdirp/0.3.4/package/package.json
+367 verbose read json /home/doug/.npm/range-parser/0.0.4/package/package.json
+368 verbose read json /home/doug/.npm/commander/0.6.1/package/package.json
+369 verbose read json /home/doug/.npm/cookie/0.1.0/package/package.json
+370 verbose read json /home/doug/.npm/buffer-crc32/0.2.1/package/package.json
+371 verbose read json /home/doug/.npm/methods/0.0.1/package/package.json
+372 verbose read json /home/doug/.npm/fresh/0.1.0/package/package.json
+373 verbose read json /home/doug/.npm/send/0.1.1/package/package.json
+374 silly addNameRange number 2 { name: 'debug', range: '', hasData: true }
+375 silly addNameRange versions [ 'debug',
+375 silly addNameRange   [ '0.0.1',
+375 silly addNameRange     '0.1.0',
+375 silly addNameRange     '0.2.0',
+375 silly addNameRange     '0.3.0',
+375 silly addNameRange     '0.4.0',
+375 silly addNameRange     '0.4.1',
+375 silly addNameRange     '0.5.0',
+375 silly addNameRange     '0.6.0',
+375 silly addNameRange     '0.7.0',
+375 silly addNameRange     '0.7.1',
+375 silly addNameRange     '0.7.2' ] ]
+376 verbose addNamed [ 'debug', '0.7.2' ]
+377 verbose addNamed [ '0.7.2', '0.7.2' ]
+378 silly lockFile 432e5064-debug-0-7-2 debug@0.7.2
+379 verbose lock debug@0.7.2 /home/doug/.npm/432e5064-debug-0-7-2.lock
+380 verbose read json /home/doug/.npm/cookie-signature/1.0.1/package/package.json
+381 verbose read json /home/doug/.npm/debug/0.7.2/package/package.json
+382 warn package.json connect@2.8.1 No readme data.
+383 silly lockFile 6b0c86e6-connect-2-8-1 connect@2.8.1
+384 silly lockFile 6b0c86e6-connect-2-8-1 connect@2.8.1
+385 warn package.json methods@0.0.1 No repository field.
+386 warn package.json methods@0.0.1 No readme data.
+387 silly lockFile 209c2920-methods-0-0-1 methods@0.0.1
+388 silly lockFile 209c2920-methods-0-0-1 methods@0.0.1
+389 silly lockFile fa16a2ce-commander-0-6-1 commander@0.6.1
+390 silly lockFile fa16a2ce-commander-0-6-1 commander@0.6.1
+391 silly lockFile 86f43333-mkdirp-0-3-4 mkdirp@0.3.4
+392 silly lockFile 86f43333-mkdirp-0-3-4 mkdirp@0.3.4
+393 warn package.json range-parser@0.0.4 No repository field.
+394 silly lockFile 0760c556-range-parser-0-0-4 range-parser@0.0.4
+395 silly lockFile 0760c556-range-parser-0-0-4 range-parser@0.0.4
+396 silly lockFile 057d0d26-buffer-crc32-0-2-1 buffer-crc32@0.2.1
+397 silly lockFile 057d0d26-buffer-crc32-0-2-1 buffer-crc32@0.2.1
+398 silly lockFile aa25b10a-send-0-1-1 send@0.1.1
+399 silly lockFile aa25b10a-send-0-1-1 send@0.1.1
+400 warn package.json fresh@0.1.0 No repository field.
+401 silly lockFile 3dea7da8-fresh-0-1-0 fresh@0.1.0
+402 silly lockFile 3dea7da8-fresh-0-1-0 fresh@0.1.0
+403 warn package.json cookie-signature@1.0.1 No repository field.
+404 silly lockFile d4a1eba1-cookie-signature-1-0-1 cookie-signature@1.0.1
+405 silly lockFile d4a1eba1-cookie-signature-1-0-1 cookie-signature@1.0.1
+406 silly lockFile b55e145e-cookie-0-1-0 cookie@0.1.0
+407 silly lockFile b55e145e-cookie-0-1-0 cookie@0.1.0
+408 silly lockFile 432e5064-debug-0-7-2 debug@0.7.2
+409 silly lockFile 432e5064-debug-0-7-2 debug@0.7.2
+410 silly lockFile 3ac45eff-debug debug@*
+411 silly lockFile 3ac45eff-debug debug@*
+412 silly resolved [ { name: 'connect',
+412 silly resolved     version: '2.8.1',
+412 silly resolved     description: 'High performance middleware framework',
+412 silly resolved     keywords: [ 'framework', 'web', 'middleware', 'connect', 'rack' ],
+412 silly resolved     repository: { type: 'git', url: 'git://github.com/senchalabs/connect.git' },
+412 silly resolved     author:
+412 silly resolved      { name: 'TJ Holowaychuk',
+412 silly resolved        email: 'tj@vision-media.ca',
+412 silly resolved        url: 'http://tjholowaychuk.com' },
+412 silly resolved     dependencies:
+412 silly resolved      { qs: '0.6.5',
+412 silly resolved        formidable: '1.0.14',
+412 silly resolved        'cookie-signature': '1.0.1',
+412 silly resolved        'buffer-crc32': '0.2.1',
+412 silly resolved        cookie: '0.0.5',
+412 silly resolved        send: '0.1.1',
+412 silly resolved        bytes: '0.2.0',
+412 silly resolved        fresh: '0.1.0',
+412 silly resolved        pause: '0.0.1',
+412 silly resolved        uid2: '0.0.2',
+412 silly resolved        debug: '*' },
+412 silly resolved     devDependencies: { should: '*', mocha: '*', jade: '*', dox: '*' },
+412 silly resolved     main: 'index',
+412 silly resolved     engines: { node: '>= 0.8.0' },
+412 silly resolved     scripts: { test: 'make' },
+412 silly resolved     bugs: { url: 'https://github.com/senchalabs/connect/issues' },
+412 silly resolved     readme: 'ERROR: No README data found!',
+412 silly resolved     _id: 'connect@2.8.1',
+412 silly resolved     _from: 'connect@2.8.1' },
+412 silly resolved   { name: 'methods',
+412 silly resolved     version: '0.0.1',
+412 silly resolved     description: 'HTTP methods that node supports',
+412 silly resolved     main: 'index.js',
+412 silly resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+412 silly resolved     keywords: [ 'http', 'methods' ],
+412 silly resolved     author: { name: 'TJ Holowaychuk' },
+412 silly resolved     license: 'MIT',
+412 silly resolved     readme: 'ERROR: No README data found!',
+412 silly resolved     _id: 'methods@0.0.1',
+412 silly resolved     _from: 'methods@0.0.1' },
+412 silly resolved   { name: 'commander',
+412 silly resolved     version: '0.6.1',
+412 silly resolved     description: 'the complete solution for node.js command-line programs',
+412 silly resolved     keywords: [ 'command', 'option', 'parser', 'prompt', 'stdin' ],
+412 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+412 silly resolved     repository:
+412 silly resolved      { type: 'git',
+412 silly resolved        url: 'https://github.com/visionmedia/commander.js.git' },
+412 silly resolved     dependencies: {},
+412 silly resolved     devDependencies: { should: '>= 0.0.1' },
+412 silly resolved     scripts: { test: 'make test' },
+412 silly resolved     main: 'index',
+412 silly resolved     engines: { node: '>= 0.4.x' },
+412 silly resolved     readme: '# Commander.js\n\n  The complete solution for [node.js](http://nodejs.org) command-line interfaces, inspired by Ruby\'s [commander](https://github.com/visionmedia/commander).\n\n [![Build Status](https://secure.travis-ci.org/visionmedia/commander.js.png)](http://travis-ci.org/visionmedia/commander.js)\n\n## Installation\n\n    $ npm install commander\n\n## Option parsing\n\n Options with commander are defined with the `.option()` method, also serving as documentation for the options. The example below parses args and options from `process.argv`, leaving remaining args as the `program.args` array which were not consumed by options.\n\n```js\n#!/usr/bin/env node\n\n/**\n * Module dependencies.\n */\n\nvar program = require(\'commander\');\n\nprogram\n  .version(\'0.0.1\')\n  .option(\'-p, --peppers\', \'Add peppers\')\n  .option(\'-P, --pineapple\', \'Add pineapple\')\n  .option(\'-b, --bbq\', \'Add bbq sauce\')\n  .option(\'-c, --cheese [type]\', \'Add the specified type of cheese [marble]\', \'marble\')\n  .parse(process.argv);\n\nconsole.log(\'you ordered a pizza with:\');\nif (program.peppers) console.log(\'  - peppers\');\nif (program.pineapple) console.log(\'  - pineappe\');\nif (program.bbq) console.log(\'  - bbq\');\nconsole.log(\'  - %s cheese\', program.cheese);\n```\n\n Short flags may be passed as a single arg, for example `-abc` is equivalent to `-a -b -c`. Multi-word options such as "--template-engine" are camel-cased, becoming `program.templateEngine` etc.\n\n## Automated --help\n\n The help information is auto-generated based on the information commander already knows about your program, so the following `--help` info is for free:\n\n```  \n $ ./examples/pizza --help\n\n   Usage: pizza [options]\n\n   Options:\n\n     -V, --version        output the version number\n     -p, --peppers        Add peppers\n     -P, --pineapple      Add pineappe\n     -b, --bbq            Add bbq sauce\n     -c, --cheese <type>  Add the specified type of cheese [marble]\n     -h, --help           output usage information\n\n```\n\n## Coercion\n\n```js\nfunction range(val) {\n  return val.split(\'..\').map(Number);\n}\n\nfunction list(val) {\n  return val.split(\',\');\n}\n\nprogram\n  .version(\'0.0.1\')\n  .usage(\'[options] <file ...>\')\n  .option(\'-i, --integer <n>\', \'An integer argument\', parseInt)\n  .option(\'-f, --float <n>\', \'A float argument\', parseFloat)\n  .option(\'-r, --range <a>..<b>\', \'A range\', range)\n  .option(\'-l, --list <items>\', \'A list\', list)\n  .option(\'-o, --optional [value]\', \'An optional value\')\n  .parse(process.argv);\n\nconsole.log(\' int: %j\', program.integer);\nconsole.log(\' float: %j\', program.float);\nconsole.log(\' optional: %j\', program.optional);\nprogram.range = program.range || [];\nconsole.log(\' range: %j..%j\', program.range[0], program.range[1]);\nconsole.log(\' list: %j\', program.list);\nconsole.log(\' args: %j\', program.args);\n```\n\n## Custom help\n\n You can display arbitrary `-h, --help` information\n by listening for "--help". Commander will automatically\n exit once you are done so that the remainder of your program\n does not execute causing undesired behaviours, for example\n in the following executable "stuff" will not output when\n `--help` is used.\n\n```js\n#!/usr/bin/env node\n\n/**\n * Module dependencies.\n */\n\nvar program = require(\'../\');\n\nfunction list(val) {\n  return val.split(\',\').map(Number);\n}\n\nprogram\n  .version(\'0.0.1\')\n  .option(\'-f, --foo\', \'enable some foo\')\n  .option(\'-b, --bar\', \'enable some bar\')\n  .option(\'-B, --baz\', \'enable some baz\');\n\n// must be before .parse() since\n// node\'s emit() is immediate\n\nprogram.on(\'--help\', function(){\n  console.log(\'  Examples:\');\n  console.log(\'\');\n  console.log(\'    $ custom-help --help\');\n  console.log(\'    $ custom-help -h\');\n  console.log(\'\');\n});\n\nprogram.parse(process.argv);\n\nconsole.log(\'stuff\');\n```\n\nyielding the following help output:\n\n```\n\nUsage: custom-help [options]\n\nOptions:\n\n  -h, --help     output usage information\n  -V, --version  output the version number\n  -f, --foo      enable some foo\n  -b, --bar      enable some bar\n  -B, --baz      enable some baz\n\nExamples:\n\n  $ custom-help --help\n  $ custom-help -h\n\n```\n\n## .prompt(msg, fn)\n\n Single-line prompt:\n\n```js\nprogram.prompt(\'name: \', function(name){\n  console.log(\'hi %s\', name);\n});\n```\n\n Multi-line prompt:\n\n```js\nprogram.prompt(\'description:\', function(name){\n  console.log(\'hi %s\', name);\n});\n```\n\n Coercion:\n\n```js\nprogram.prompt(\'Age: \', Number, function(age){\n  console.log(\'age: %j\', age);\n});\n```\n\n```js\nprogram.prompt(\'Birthdate: \', Date, function(date){\n  console.log(\'date: %s\', date);\n});\n```\n\n## .password(msg[, mask], fn)\n\nPrompt for password without echoing:\n\n```js\nprogram.password(\'Password: \', function(pass){\n  console.log(\'got "%s"\', pass);\n  process.stdin.destroy();\n});\n```\n\nPrompt for password with mask char "*":\n\n```js\nprogram.password(\'Password: \', \'*\', function(pass){\n  console.log(\'got "%s"\', pass);\n  process.stdin.destroy();\n});\n```\n\n## .confirm(msg, fn)\n\n Confirm with the given `msg`:\n\n```js\nprogram.confirm(\'continue? \', function(ok){\n  console.log(\' got %j\', ok);\n});\n```\n\n## .choose(list, fn)\n\n Let the user choose from a `list`:\n\n```js\nvar list = [\'tobi\', \'loki\', \'jane\', \'manny\', \'luna\'];\n\nconsole.log(\'Choose the coolest pet:\');\nprogram.choose(list, function(i){\n  console.log(\'you chose %d "%s"\', i, list[i]);\n});\n```\n\n## Links\n\n - [API documentation](http://visionmedia.github.com/commander.js/)\n - [ascii tables](https://github.com/LearnBoost/cli-table)\n - [progress bars](https://github.com/visionmedia/node-progress)\n - [more progress bars](https://github.com/substack/node-multimeter)\n - [examples](https://github.com/visionmedia/commander.js/tree/master/examples)\n\n## License \n\n(The MIT License)\n\nCopyright (c) 2011 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.',
+412 silly resolved     readmeFilename: 'Readme.md',
+412 silly resolved     bugs: { url: 'https://github.com/visionmedia/commander.js/issues' },
+412 silly resolved     _id: 'commander@0.6.1',
+412 silly resolved     _from: 'commander@0.6.1' },
+412 silly resolved   { name: 'mkdirp',
+412 silly resolved     description: 'Recursively mkdir, like `mkdir -p`',
+412 silly resolved     version: '0.3.4',
+412 silly resolved     author:
+412 silly resolved      { name: 'James Halliday',
+412 silly resolved        email: 'mail@substack.net',
+412 silly resolved        url: 'http://substack.net' },
+412 silly resolved     main: './index',
+412 silly resolved     keywords: [ 'mkdir', 'directory' ],
+412 silly resolved     repository:
+412 silly resolved      { type: 'git',
+412 silly resolved        url: 'http://github.com/substack/node-mkdirp.git' },
+412 silly resolved     scripts: { test: 'tap test/*.js' },
+412 silly resolved     devDependencies: { tap: '~0.2.4' },
+412 silly resolved     license: 'MIT/X11',
+412 silly resolved     engines: { node: '*' },
+412 silly resolved     readme: 'mkdirp\n======\n\nLike `mkdir -p`, but in node.js!\n\n[![build status](https://secure.travis-ci.org/substack/node-mkdirp.png)](http://travis-ci.org/substack/node-mkdirp)\n\nexample\n=======\n\npow.js\n------\n    var mkdirp = require(\'mkdirp\');\n    \n    mkdirp(\'/tmp/foo/bar/baz\', function (err) {\n        if (err) console.error(err)\n        else console.log(\'pow!\')\n    });\n\nOutput\n    pow!\n\nAnd now /tmp/foo/bar/baz exists, huzzah!\n\nmethods\n=======\n\nvar mkdirp = require(\'mkdirp\');\n\nmkdirp(dir, mode, cb)\n---------------------\n\nCreate a new directory and any necessary subdirectories at `dir` with octal\npermission string `mode`.\n\nIf `mode` isn\'t specified, it defaults to `0777 & (~process.umask())`.\n\n`cb(err, made)` fires with the error or the first directory `made`\nthat had to be created, if any.\n\nmkdirp.sync(dir, mode)\n----------------------\n\nSynchronously create a new directory and any necessary subdirectories at `dir`\nwith octal permission string `mode`.\n\nIf `mode` isn\'t specified, it defaults to `0777 & (~process.umask())`.\n\nReturns the first directory that had to be created, if any.\n\ninstall\n=======\n\nWith [npm](http://npmjs.org) do:\n\n    npm install mkdirp\n\nlicense\n=======\n\nMIT/X11\n',
+412 silly resolved     readmeFilename: 'README.markdown',
+412 silly resolved     bugs: { url: 'https://github.com/substack/node-mkdirp/issues' },
+412 silly resolved     _id: 'mkdirp@0.3.4',
+412 silly resolved     _from: 'mkdirp@0.3.4' },
+412 silly resolved   { name: 'range-parser',
+412 silly resolved     author:
+412 silly resolved      { name: 'TJ Holowaychuk',
+412 silly resolved        email: 'tj@vision-media.ca',
+412 silly resolved        url: 'http://tjholowaychuk.com' },
+412 silly resolved     description: 'Range header field string parser',
+412 silly resolved     version: '0.0.4',
+412 silly resolved     main: 'index.js',
+412 silly resolved     dependencies: {},
+412 silly resolved     devDependencies: { mocha: '*', should: '*' },
+412 silly resolved     readme: '\n# node-range-parser\n\n  Range header field parser.\n\n## Example:\n\n```js\nassert(-1 == parse(200, \'bytes=500-20\'));\nassert(-2 == parse(200, \'bytes=malformed\'));\nparse(200, \'bytes=0-499\').should.eql(arr(\'bytes\', [{ start: 0, end: 199 }]));\nparse(1000, \'bytes=0-499\').should.eql(arr(\'bytes\', [{ start: 0, end: 499 }]));\nparse(1000, \'bytes=40-80\').should.eql(arr(\'bytes\', [{ start: 40, end: 80 }]));\nparse(1000, \'bytes=-500\').should.eql(arr(\'bytes\', [{ start: 500, end: 999 }]));\nparse(1000, \'bytes=-400\').should.eql(arr(\'bytes\', [{ start: 600, end: 999 }]));\nparse(1000, \'bytes=500-\').should.eql(arr(\'bytes\', [{ start: 500, end: 999 }]));\nparse(1000, \'bytes=400-\').should.eql(arr(\'bytes\', [{ start: 400, end: 999 }]));\nparse(1000, \'bytes=0-0\').should.eql(arr(\'bytes\', [{ start: 0, end: 0 }]));\nparse(1000, \'bytes=-1\').should.eql(arr(\'bytes\', [{ start: 999, end: 999 }]));\nparse(1000, \'items=0-5\').should.eql(arr(\'items\', [{ start: 0, end: 5 }]));\nparse(1000, \'bytes=40-80,-1\').should.eql(arr(\'bytes\', [{ start: 40, end: 80 }, { start: 999, end: 999 }]));\n```\n\n## Installation\n\n```\n$ npm install range-parser\n```',
+412 silly resolved     readmeFilename: 'Readme.md',
+412 silly resolved     _id: 'range-parser@0.0.4',
+412 silly resolved     _from: 'range-parser@0.0.4' },
+412 silly resolved   { author:
+412 silly resolved      { name: 'Brian J. Brennan',
+412 silly resolved        email: 'brianloveswords@gmail.com',
+412 silly resolved        url: 'http://bjb.io' },
+412 silly resolved     name: 'buffer-crc32',
+412 silly resolved     description: 'A pure javascript CRC32 algorithm that plays nice with binary data',
+412 silly resolved     version: '0.2.1',
+412 silly resolved     contributors: [ [Object] ],
+412 silly resolved     homepage: 'https://github.com/brianloveswords/buffer-crc32',
+412 silly resolved     repository:
+412 silly resolved      { type: 'git',
+412 silly resolved        url: 'git://github.com/brianloveswords/buffer-crc32.git' },
+412 silly resolved     main: 'index.js',
+412 silly resolved     scripts: { test: './node_modules/.bin/tap tests/*.test.js' },
+412 silly resolved     dependencies: {},
+412 silly resolved     devDependencies: { tap: '~0.2.5' },
+412 silly resolved     optionalDependencies: {},
+412 silly resolved     engines: { node: '*' },
+412 silly resolved     readme: '# buffer-crc32\n\n[![Build Status](https://secure.travis-ci.org/brianloveswords/buffer-crc32.png?branch=master)](http://travis-ci.org/brianloveswords/buffer-crc32)\n\ncrc32 that works with binary data and fancy character sets, outputs\nbuffer, signed or unsigned data and has tests.\n\nDerived from the sample CRC implementation in the PNG specification: http://www.w3.org/TR/PNG/#D-CRCAppendix\n\n# install\n```\nnpm install buffer-crc32\n```\n\n# example\n```js\nvar crc32 = require(\'buffer-crc32\');\n// works with buffers\nvar buf = Buffer([0x00, 0x73, 0x75, 0x70, 0x20, 0x62, 0x72, 0x6f, 0x00])\ncrc32(buf) // -> <Buffer 94 5a ab 4a>\n\n// has convenience methods for getting signed or unsigned ints\ncrc32.signed(buf) // -> -1805997238\ncrc32.unsigned(buf) // -> 2488970058\n\n// will cast to buffer if given a string, so you can\n// directly use foreign characters safely\ncrc32(\'自動販売機\') // -> <Buffer cb 03 1a c5>\n\n// and works in append mode too\nvar partialCrc = crc32(\'hey\');\nvar partialCrc = crc32(\' \', partialCrc);\nvar partialCrc = crc32(\'sup\', partialCrc);\nvar partialCrc = crc32(\' \', partialCrc);\nvar finalCrc = crc32(\'bros\', partialCrc); // -> <Buffer 47 fa 55 70>\n```\n\n# tests\nThis was tested against the output of zlib\'s crc32 method. You can run\nthe tests with`npm test` (requires tap)\n\n# see also\nhttps://github.com/alexgorbatchev/node-crc, `crc.buffer.crc32` also\nsupports buffer inputs and return unsigned ints (thanks @tjholowaychuk).\n\n# license\nMIT/X11\n',
+412 silly resolved     readmeFilename: 'README.md',
+412 silly resolved     bugs: { url: 'https://github.com/brianloveswords/buffer-crc32/issues' },
+412 silly resolved     _id: 'buffer-crc32@0.2.1',
+412 silly resolved     _from: 'buffer-crc32@0.2.1' },
+412 silly resolved   { name: 'send',
+412 silly resolved     version: '0.1.1',
+412 silly resolved     description: 'Better streaming static file server with Range and conditional-GET support',
+412 silly resolved     keywords: [ 'static', 'file', 'server' ],
+412 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+412 silly resolved     dependencies:
+412 silly resolved      { debug: '*',
+412 silly resolved        mime: '~1.2.9',
+412 silly resolved        fresh: '0.1.0',
+412 silly resolved        'range-parser': '0.0.4' },
+412 silly resolved     devDependencies: { mocha: '*', should: '*', supertest: '0.0.1', connect: '2.x' },
+412 silly resolved     scripts: { test: 'make test' },
+412 silly resolved     repository: { type: 'git', url: 'git://github.com/visionmedia/send.git' },
+412 silly resolved     main: 'index',
+412 silly resolved     readme: '# send\n\n  Send is Connect\'s `static()` extracted for generalized use, a streaming static file\n  server supporting partial responses (Ranges), conditional-GET negotiation, high test coverage, and granular events which may be leveraged to take appropriate actions in your application or framework.\n\n## Installation\n\n    $ npm install send\n\n## Examples\n\n  Small:\n\n```js\nvar http = require(\'http\');\nvar send = require(\'send\');\n\nvar app = http.createServer(function(req, res){\n  send(req, req.url).pipe(res);\n}).listen(3000);\n```\n\n  Serving from a root directory with custom error-handling:\n\n```js\nvar http = require(\'http\');\nvar send = require(\'send\');\nvar url = require(\'url\');\n\nvar app = http.createServer(function(req, res){\n  // your custom error-handling logic:\n  function error(err) {\n    res.statusCode = err.status || 500;\n    res.end(err.message);\n  }\n\n  // your custom directory handling logic:\n  function redirect() {\n    res.statusCode = 301;\n    res.setHeader(\'Location\', req.url + \'/\');\n    res.end(\'Redirecting to \' + req.url + \'/\');\n  }\n\n  // transfer arbitrary files from within\n  // /www/example.com/public/*\n  send(req, url.parse(req.url).pathname)\n  .root(\'/www/example.com/public\')\n  .on(\'error\', error)\n  .on(\'directory\', redirect)\n  .pipe(res);\n}).listen(3000);\n```\n\n## API\n\n### Events\n\n  - `error` an error occurred `(err)`\n  - `directory` a directory was requested\n  - `file` a file was requested `(path, stat)`\n  - `stream` file streaming has started `(stream)`\n  - `end` streaming has completed\n\n### .root(dir)\n\n  Serve files relative to `path`. Aliased as `.from(dir)`.\n\n### .index(path)\n\n  By default send supports "index.html" files, to disable this\n  invoke `.index(false)` or to supply a new index pass a string.\n\n### .maxage(ms)\n\n  Provide a max-age in milliseconds for http caching, defaults to 0.\n\n### .hidden(bool)\n\n  Enable or disable transfer of hidden files, defaults to false.\n\n## Error-handling\n\n  By default when no `error` listeners are present an automatic response will be made, otherwise you have full control over the response, aka you may show a 5xx page etc.\n\n## Caching\n\n  It does _not_ perform internal caching, you should use a reverse proxy cache such\n  as Varnish for this, or those fancy things called CDNs. If your application is small enough that it would benefit from single-node memory caching, it\'s small enough that it does not need caching at all ;).\n\n## Debugging\n\n To enable `debug()` instrumentation output export __DEBUG__:\n\n```\n$ DEBUG=send node app\n```\n\n## Running tests\n\n```\n$ npm install\n$ make test\n```\n\n## License \n\n(The MIT License)\n\nCopyright (c) 2012 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+412 silly resolved     readmeFilename: 'Readme.md',
+412 silly resolved     bugs: { url: 'https://github.com/visionmedia/send/issues' },
+412 silly resolved     _id: 'send@0.1.1',
+412 silly resolved     _from: 'send@0.1.1' },
+412 silly resolved   { name: 'fresh',
+412 silly resolved     author:
+412 silly resolved      { name: 'TJ Holowaychuk',
+412 silly resolved        email: 'tj@vision-media.ca',
+412 silly resolved        url: 'http://tjholowaychuk.com' },
+412 silly resolved     description: 'HTTP response freshness testing',
+412 silly resolved     version: '0.1.0',
+412 silly resolved     main: 'index.js',
+412 silly resolved     dependencies: {},
+412 silly resolved     devDependencies: { mocha: '*', should: '*' },
+412 silly resolved     readme: '\n# node-fresh\n\n  HTTP response freshness testing\n\n## fresh(req, res)\n\n Check freshness of `req` and `res` headers.\n\n When the cache is "fresh" __true__ is returned,\n otherwise __false__ is returned to indicate that\n the cache is now stale.\n\n## Example:\n\n```js\nvar req = { \'if-none-match\': \'tobi\' };\nvar res = { \'etag\': \'luna\' };\nfresh(req, res);\n// => false\n\nvar req = { \'if-none-match\': \'tobi\' };\nvar res = { \'etag\': \'tobi\' };\nfresh(req, res);\n// => true\n```\n\n## Installation\n\n```\n$ npm install fresh\n```',
+412 silly resolved     readmeFilename: 'Readme.md',
+412 silly resolved     _id: 'fresh@0.1.0',
+412 silly resolved     _from: 'fresh@0.1.0' },
+412 silly resolved   { name: 'cookie-signature',
+412 silly resolved     version: '1.0.1',
+412 silly resolved     description: 'Sign and unsign cookies',
+412 silly resolved     keywords: [ 'cookie', 'sign', 'unsign' ],
+412 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@learnboost.com' },
+412 silly resolved     dependencies: {},
+412 silly resolved     devDependencies: { mocha: '*', should: '*' },
+412 silly resolved     main: 'index',
+412 silly resolved     readme: '\n# cookie-signature\n\n  Sign and unsign cookies.\n\n## Example\n\n```js\nvar cookie = require(\'cookie-signature\');\n\nvar val = cookie.sign(\'hello\', \'tobiiscool\');\nval.should.equal(\'hello.DGDUkGlIkCzPz+C0B064FNgHdEjox7ch8tOBGslZ5QI\');\n\nvar val = cookie.sign(\'hello\', \'tobiiscool\');\ncookie.unsign(val, \'tobiiscool\').should.equal(\'hello\');\ncookie.unsign(val, \'luna\').should.be.false;\n```\n\n## License \n\n(The MIT License)\n\nCopyright (c) 2012 LearnBoost &lt;tj@learnboost.com&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.',
+412 silly resolved     readmeFilename: 'Readme.md',
+412 silly resolved     _id: 'cookie-signature@1.0.1',
+412 silly resolved     _from: 'cookie-signature@1.0.1' },
+412 silly resolved   { author: { name: 'Roman Shtylman', email: 'shtylman@gmail.com' },
+412 silly resolved     name: 'cookie',
+412 silly resolved     description: 'cookie parsing and serialization',
+412 silly resolved     version: '0.1.0',
+412 silly resolved     repository:
+412 silly resolved      { type: 'git',
+412 silly resolved        url: 'git://github.com/shtylman/node-cookie.git' },
+412 silly resolved     keywords: [ 'cookie', 'cookies' ],
+412 silly resolved     main: 'index.js',
+412 silly resolved     scripts: { test: 'mocha' },
+412 silly resolved     dependencies: {},
+412 silly resolved     devDependencies: { mocha: '1.x.x' },
+412 silly resolved     optionalDependencies: {},
+412 silly resolved     engines: { node: '*' },
+412 silly resolved     readme: '# cookie [![Build Status](https://secure.travis-ci.org/shtylman/node-cookie.png?branch=master)](http://travis-ci.org/shtylman/node-cookie) #\n\ncookie is a basic cookie parser and serializer. It doesn\'t make assumptions about how you are going to deal with your cookies. It basically just provides a way to read and write the HTTP cookie headers.\n\nSee [RFC6265](http://tools.ietf.org/html/rfc6265) for details about the http header for cookies.\n\n## how?\n\n```\nnpm install cookie\n```\n\n```javascript\nvar cookie = require(\'cookie\');\n\nvar hdr = cookie.serialize(\'foo\', \'bar\');\n// hdr = \'foo=bar\';\n\nvar cookies = cookie.parse(\'foo=bar; cat=meow; dog=ruff\');\n// cookies = { foo: \'bar\', cat: \'meow\', dog: \'ruff\' };\n```\n\n## more\n\nThe serialize function takes a third parameter, an object, to set cookie options. See the RFC for valid values.\n\n### path\n> cookie path\n\n### expires\n> absolute expiration date for the cookie (Date object)\n\n### maxAge\n> relative max age of the cookie from when the client receives it (seconds)\n\n### domain\n> domain for the cookie\n\n### secure\n> true or false\n\n### httpOnly\n> true or false\n\n',
+412 silly resolved     readmeFilename: 'README.md',
+412 silly resolved     bugs: { url: 'https://github.com/shtylman/node-cookie/issues' },
+412 silly resolved     _id: 'cookie@0.1.0',
+412 silly resolved     _from: 'cookie@0.1.0' },
+412 silly resolved   { name: 'debug',
+412 silly resolved     version: '0.7.2',
+412 silly resolved     repository: { type: 'git', url: 'git://github.com/visionmedia/debug.git' },
+412 silly resolved     description: 'small debugging utility',
+412 silly resolved     keywords: [ 'debug', 'log', 'debugger' ],
+412 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+412 silly resolved     dependencies: {},
+412 silly resolved     devDependencies: { mocha: '*' },
+412 silly resolved     main: 'lib/debug.js',
+412 silly resolved     browserify: 'debug.js',
+412 silly resolved     engines: { node: '*' },
+412 silly resolved     component: { scripts: [Object] },
+412 silly resolved     readme: '\n# debug\n\n  tiny node.js debugging utility modelled after node core\'s debugging technique.\n\n## Installation\n\n```\n$ npm install debug\n```\n\n## Usage\n\n With `debug` you simply invoke the exported function to generate your debug function, passing it a name which will determine if a noop function is returned, or a decorated `console.error`, so all of the `console` format string goodies you\'re used to work fine. A unique color is selected per-function for visibility.\n \nExample _app.js_:\n\n```js\nvar debug = require(\'debug\')(\'http\')\n  , http = require(\'http\')\n  , name = \'My App\';\n\n// fake app\n\ndebug(\'booting %s\', name);\n\nhttp.createServer(function(req, res){\n  debug(req.method + \' \' + req.url);\n  res.end(\'hello\\n\');\n}).listen(3000, function(){\n  debug(\'listening\');\n});\n\n// fake worker of some kind\n\nrequire(\'./worker\');\n```\n\nExample _worker.js_:\n\n```js\nvar debug = require(\'debug\')(\'worker\');\n\nsetInterval(function(){\n  debug(\'doing some work\');\n}, 1000);\n```\n\n The __DEBUG__ environment variable is then used to enable these based on space or comma-delimited names. Here are some examples:\n\n  ![debug http and worker](http://f.cl.ly/items/18471z1H402O24072r1J/Screenshot.png)\n\n  ![debug worker](http://f.cl.ly/items/1X413v1a3M0d3C2c1E0i/Screenshot.png)\n\n## Millisecond diff\n\n  When actively developing an application it can be useful to see when the time spent between one `debug()` call and the next. Suppose for example you invoke `debug()` before requesting a resource, and after as well, the "+NNNms" will show you how much time was spent between calls.\n\n  ![](http://f.cl.ly/items/2i3h1d3t121M2Z1A3Q0N/Screenshot.png)\n\n  When stdout is not a TTY, `Date#toUTCString()` is used, making it more useful for logging the debug information as shown below:\n  \n  ![](http://f.cl.ly/items/112H3i0e0o0P0a2Q2r11/Screenshot.png)\n\n## Conventions\n\n If you\'re using this in one or more of your libraries, you _should_ use the name of your library so that developers may toggle debugging as desired without guessing names. If you have more than one debuggers you _should_ prefix them with your library name and use ":" to separate features. For example "bodyParser" from Connect would then be "connect:bodyParser". \n\n## Wildcards\n\n  The "*" character may be used as a wildcard. Suppose for example your library has debuggers named "connect:bodyParser", "connect:compress", "connect:session", instead of listing all three with `DEBUG=connect:bodyParser,connect.compress,connect:session`, you may simply do `DEBUG=connect:*`, or to run everything using this module simply use `DEBUG=*`.\n\n  You can also exclude specific debuggers by prefixing them with a "-" character.  For example, `DEBUG=* -connect:*` would include all debuggers except those starting with "connect:".\n\n## Browser support\n\n Debug works in the browser as well, currently persisted by `localStorage`. For example if you have `worker:a` and `worker:b` as shown below, and wish to debug both type `debug.enable(\'worker:*\')` in the console and refresh the page, this will remain until you disable with `debug.disable()`. \n\n```js\na = debug(\'worker:a\');\nb = debug(\'worker:b\');\n\nsetInterval(function(){\n  a(\'doing some work\');\n}, 1000);\n\nsetInterval(function(){\n  a(\'doing some work\');\n}, 1200);\n```\n\n## License \n\n(The MIT License)\n\nCopyright (c) 2011 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.',
+412 silly resolved     readmeFilename: 'Readme.md',
+412 silly resolved     bugs: { url: 'https://github.com/visionmedia/debug/issues' },
+412 silly resolved     _id: 'debug@0.7.2',
+412 silly resolved     _from: 'debug@*' } ]
+413 info install connect@2.8.1 into /home/doug/node_projects/japb/node_modules/express
+414 info install methods@0.0.1 into /home/doug/node_projects/japb/node_modules/express
+415 info install commander@0.6.1 into /home/doug/node_projects/japb/node_modules/express
+416 info install mkdirp@0.3.4 into /home/doug/node_projects/japb/node_modules/express
+417 info install range-parser@0.0.4 into /home/doug/node_projects/japb/node_modules/express
+418 info install buffer-crc32@0.2.1 into /home/doug/node_projects/japb/node_modules/express
+419 info install send@0.1.1 into /home/doug/node_projects/japb/node_modules/express
+420 info install fresh@0.1.0 into /home/doug/node_projects/japb/node_modules/express
+421 info install cookie-signature@1.0.1 into /home/doug/node_projects/japb/node_modules/express
+422 info install cookie@0.1.0 into /home/doug/node_projects/japb/node_modules/express
+423 info install debug@0.7.2 into /home/doug/node_projects/japb/node_modules/express
+424 info installOne connect@2.8.1
+425 info installOne methods@0.0.1
+426 info installOne commander@0.6.1
+427 info installOne mkdirp@0.3.4
+428 info installOne range-parser@0.0.4
+429 info installOne buffer-crc32@0.2.1
+430 info installOne send@0.1.1
+431 info installOne fresh@0.1.0
+432 info installOne cookie-signature@1.0.1
+433 info installOne cookie@0.1.0
+434 info installOne debug@0.7.2
+435 verbose from cache /home/doug/.npm/connect/2.8.1/package/package.json
+436 info /home/doug/node_projects/japb/node_modules/express/node_modules/connect unbuild
+437 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/connect/package.json
+438 verbose from cache /home/doug/.npm/methods/0.0.1/package/package.json
+439 info /home/doug/node_projects/japb/node_modules/express/node_modules/methods unbuild
+440 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/methods/package.json
+441 verbose from cache /home/doug/.npm/commander/0.6.1/package/package.json
+442 info /home/doug/node_projects/japb/node_modules/express/node_modules/commander unbuild
+443 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/commander/package.json
+444 verbose from cache /home/doug/.npm/mkdirp/0.3.4/package/package.json
+445 info /home/doug/node_projects/japb/node_modules/express/node_modules/mkdirp unbuild
+446 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/mkdirp/package.json
+447 verbose from cache /home/doug/.npm/range-parser/0.0.4/package/package.json
+448 info /home/doug/node_projects/japb/node_modules/express/node_modules/range-parser unbuild
+449 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/range-parser/package.json
+450 verbose from cache /home/doug/.npm/buffer-crc32/0.2.1/package/package.json
+451 info /home/doug/node_projects/japb/node_modules/express/node_modules/buffer-crc32 unbuild
+452 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/buffer-crc32/package.json
+453 verbose from cache /home/doug/.npm/send/0.1.1/package/package.json
+454 info /home/doug/node_projects/japb/node_modules/express/node_modules/send unbuild
+455 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/send/package.json
+456 verbose from cache /home/doug/.npm/fresh/0.1.0/package/package.json
+457 info /home/doug/node_projects/japb/node_modules/express/node_modules/fresh unbuild
+458 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/fresh/package.json
+459 verbose from cache /home/doug/.npm/cookie-signature/1.0.1/package/package.json
+460 info /home/doug/node_projects/japb/node_modules/express/node_modules/cookie-signature unbuild
+461 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/cookie-signature/package.json
+462 verbose from cache /home/doug/.npm/cookie/0.1.0/package/package.json
+463 info /home/doug/node_projects/japb/node_modules/express/node_modules/cookie unbuild
+464 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/cookie/package.json
+465 verbose from cache /home/doug/.npm/debug/0.7.2/package/package.json
+466 info /home/doug/node_projects/japb/node_modules/express/node_modules/debug unbuild
+467 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/debug/package.json
+468 verbose tar unpack /home/doug/.npm/connect/2.8.1/package.tgz
+469 silly lockFile 1cdc6a12-les-express-node-modules-connect /home/doug/node_projects/japb/node_modules/express/node_modules/connect
+470 verbose lock /home/doug/node_projects/japb/node_modules/express/node_modules/connect /home/doug/.npm/1cdc6a12-les-express-node-modules-connect.lock
+471 silly lockFile 935d5883-ug-npm-connect-2-8-1-package-tgz /home/doug/.npm/connect/2.8.1/package.tgz
+472 verbose lock /home/doug/.npm/connect/2.8.1/package.tgz /home/doug/.npm/935d5883-ug-npm-connect-2-8-1-package-tgz.lock
+473 verbose tar unpack /home/doug/.npm/methods/0.0.1/package.tgz
+474 silly lockFile c6f7f8a2-les-express-node-modules-methods /home/doug/node_projects/japb/node_modules/express/node_modules/methods
+475 verbose lock /home/doug/node_projects/japb/node_modules/express/node_modules/methods /home/doug/.npm/c6f7f8a2-les-express-node-modules-methods.lock
+476 silly lockFile e7942021-ug-npm-methods-0-0-1-package-tgz /home/doug/.npm/methods/0.0.1/package.tgz
+477 verbose lock /home/doug/.npm/methods/0.0.1/package.tgz /home/doug/.npm/e7942021-ug-npm-methods-0-0-1-package-tgz.lock
+478 verbose tar unpack /home/doug/.npm/commander/0.6.1/package.tgz
+479 silly lockFile 09f9219f-s-express-node-modules-commander /home/doug/node_projects/japb/node_modules/express/node_modules/commander
+480 verbose lock /home/doug/node_projects/japb/node_modules/express/node_modules/commander /home/doug/.npm/09f9219f-s-express-node-modules-commander.lock
+481 silly lockFile b8ce3c86--npm-commander-0-6-1-package-tgz /home/doug/.npm/commander/0.6.1/package.tgz
+482 verbose lock /home/doug/.npm/commander/0.6.1/package.tgz /home/doug/.npm/b8ce3c86--npm-commander-0-6-1-package-tgz.lock
+483 verbose tar unpack /home/doug/.npm/mkdirp/0.3.4/package.tgz
+484 silly lockFile 414ee803-ules-express-node-modules-mkdirp /home/doug/node_projects/japb/node_modules/express/node_modules/mkdirp
+485 verbose lock /home/doug/node_projects/japb/node_modules/express/node_modules/mkdirp /home/doug/.npm/414ee803-ules-express-node-modules-mkdirp.lock
+486 silly lockFile aa579d19-oug-npm-mkdirp-0-3-4-package-tgz /home/doug/.npm/mkdirp/0.3.4/package.tgz
+487 verbose lock /home/doug/.npm/mkdirp/0.3.4/package.tgz /home/doug/.npm/aa579d19-oug-npm-mkdirp-0-3-4-package-tgz.lock
+488 verbose tar unpack /home/doug/.npm/range-parser/0.0.4/package.tgz
+489 silly lockFile c8178b41-xpress-node-modules-range-parser /home/doug/node_projects/japb/node_modules/express/node_modules/range-parser
+490 verbose lock /home/doug/node_projects/japb/node_modules/express/node_modules/range-parser /home/doug/.npm/c8178b41-xpress-node-modules-range-parser.lock
+491 silly lockFile 89127896-m-range-parser-0-0-4-package-tgz /home/doug/.npm/range-parser/0.0.4/package.tgz
+492 verbose lock /home/doug/.npm/range-parser/0.0.4/package.tgz /home/doug/.npm/89127896-m-range-parser-0-0-4-package-tgz.lock
+493 verbose tar unpack /home/doug/.npm/buffer-crc32/0.2.1/package.tgz
+494 silly lockFile 9c8ef442-xpress-node-modules-buffer-crc32 /home/doug/node_projects/japb/node_modules/express/node_modules/buffer-crc32
+495 verbose lock /home/doug/node_projects/japb/node_modules/express/node_modules/buffer-crc32 /home/doug/.npm/9c8ef442-xpress-node-modules-buffer-crc32.lock
+496 silly lockFile eaa06e57-m-buffer-crc32-0-2-1-package-tgz /home/doug/.npm/buffer-crc32/0.2.1/package.tgz
+497 verbose lock /home/doug/.npm/buffer-crc32/0.2.1/package.tgz /home/doug/.npm/eaa06e57-m-buffer-crc32-0-2-1-package-tgz.lock
+498 verbose tar unpack /home/doug/.npm/send/0.1.1/package.tgz
+499 silly lockFile ae323bd3-odules-express-node-modules-send /home/doug/node_projects/japb/node_modules/express/node_modules/send
+500 verbose lock /home/doug/node_projects/japb/node_modules/express/node_modules/send /home/doug/.npm/ae323bd3-odules-express-node-modules-send.lock
+501 silly lockFile 7f884031--doug-npm-send-0-1-1-package-tgz /home/doug/.npm/send/0.1.1/package.tgz
+502 verbose lock /home/doug/.npm/send/0.1.1/package.tgz /home/doug/.npm/7f884031--doug-npm-send-0-1-1-package-tgz.lock
+503 verbose tar unpack /home/doug/.npm/fresh/0.1.0/package.tgz
+504 silly lockFile 71a89a79-dules-express-node-modules-fresh /home/doug/node_projects/japb/node_modules/express/node_modules/fresh
+505 verbose lock /home/doug/node_projects/japb/node_modules/express/node_modules/fresh /home/doug/.npm/71a89a79-dules-express-node-modules-fresh.lock
+506 silly lockFile 49042f80-doug-npm-fresh-0-1-0-package-tgz /home/doug/.npm/fresh/0.1.0/package.tgz
+507 verbose lock /home/doug/.npm/fresh/0.1.0/package.tgz /home/doug/.npm/49042f80-doug-npm-fresh-0-1-0-package-tgz.lock
+508 verbose tar unpack /home/doug/.npm/cookie-signature/1.0.1/package.tgz
+509 silly lockFile 7f531640-ss-node-modules-cookie-signature /home/doug/node_projects/japb/node_modules/express/node_modules/cookie-signature
+510 verbose lock /home/doug/node_projects/japb/node_modules/express/node_modules/cookie-signature /home/doug/.npm/7f531640-ss-node-modules-cookie-signature.lock
+511 silly lockFile 1983699f-okie-signature-1-0-1-package-tgz /home/doug/.npm/cookie-signature/1.0.1/package.tgz
+512 verbose lock /home/doug/.npm/cookie-signature/1.0.1/package.tgz /home/doug/.npm/1983699f-okie-signature-1-0-1-package-tgz.lock
+513 verbose tar unpack /home/doug/.npm/cookie/0.1.0/package.tgz
+514 silly lockFile 0d8a502f-ules-express-node-modules-cookie /home/doug/node_projects/japb/node_modules/express/node_modules/cookie
+515 verbose lock /home/doug/node_projects/japb/node_modules/express/node_modules/cookie /home/doug/.npm/0d8a502f-ules-express-node-modules-cookie.lock
+516 silly lockFile c6bec54c-oug-npm-cookie-0-1-0-package-tgz /home/doug/.npm/cookie/0.1.0/package.tgz
+517 verbose lock /home/doug/.npm/cookie/0.1.0/package.tgz /home/doug/.npm/c6bec54c-oug-npm-cookie-0-1-0-package-tgz.lock
+518 verbose tar unpack /home/doug/.npm/debug/0.7.2/package.tgz
+519 silly lockFile 6db22928-dules-express-node-modules-debug /home/doug/node_projects/japb/node_modules/express/node_modules/debug
+520 verbose lock /home/doug/node_projects/japb/node_modules/express/node_modules/debug /home/doug/.npm/6db22928-dules-express-node-modules-debug.lock
+521 silly lockFile 823e0ca0-doug-npm-debug-0-7-2-package-tgz /home/doug/.npm/debug/0.7.2/package.tgz
+522 verbose lock /home/doug/.npm/debug/0.7.2/package.tgz /home/doug/.npm/823e0ca0-doug-npm-debug-0-7-2-package-tgz.lock
+523 silly gunzTarPerm modes [ '755', '644' ]
+524 silly gunzTarPerm modes [ '755', '644' ]
+525 silly gunzTarPerm modes [ '755', '644' ]
+526 silly gunzTarPerm modes [ '755', '644' ]
+527 silly gunzTarPerm modes [ '755', '644' ]
+528 silly gunzTarPerm modes [ '755', '644' ]
+529 silly gunzTarPerm modes [ '755', '644' ]
+530 silly gunzTarPerm modes [ '755', '644' ]
+531 silly gunzTarPerm modes [ '755', '644' ]
+532 silly gunzTarPerm modes [ '755', '644' ]
+533 silly gunzTarPerm modes [ '755', '644' ]
+534 silly gunzTarPerm extractEntry .npmignore
+535 silly gunzTarPerm extractEntry README.markdown
+536 silly gunzTarPerm extractEntry Readme.md
+537 silly gunzTarPerm extractEntry package.json
+538 silly gunzTarPerm extractEntry README.md
+539 silly gunzTarPerm extractEntry Readme.md
+540 silly gunzTarPerm extractEntry Readme.md
+541 silly gunzTarPerm extractEntry Readme.md
+542 silly gunzTarPerm extractEntry .travis.yml
+543 silly gunzTarPerm extractEntry package.json
+544 silly gunzTarPerm extractEntry .npmignore
+545 silly gunzTarPerm extractEntry .travis.yml
+546 silly gunzTarPerm extractEntry .npmignore
+547 silly gunzTarPerm extractEntry .travis.yml
+548 silly gunzTarPerm extractEntry index.js
+549 silly gunzTarPerm extractEntry .npmignore
+550 silly gunzTarPerm extractEntry .travis.yml
+551 silly gunzTarPerm extractEntry .npmignore
+552 silly gunzTarPerm extractEntry package.json
+553 silly gunzTarPerm extractEntry .npmignore
+554 silly gunzTarPerm extractEntry package.json
+555 silly gunzTarPerm extractEntry .npmignore
+556 silly gunzTarPerm extractEntry package.json
+557 silly gunzTarPerm extractEntry Readme.md
+558 silly gunzTarPerm extractEntry Readme.md
+559 silly gunzTarPerm extractEntry LICENSE
+560 silly gunzTarPerm extractEntry lib/
+561 silly gunzTarPerm extractEntry .npmignore
+562 silly gunzTarPerm extractEntry package.json
+563 silly gunzTarPerm extractEntry Makefile
+564 silly gunzTarPerm extractEntry index.js
+565 silly gunzTarPerm extractEntry example/
+566 silly gunzTarPerm extractEntry example/app.js
+567 silly gunzTarPerm extractEntry test/
+568 silly gunzTarPerm extractEntry test/root.js
+569 silly gunzTarPerm extractEntry package.json
+570 silly gunzTarPerm extractEntry tests/
+571 silly gunzTarPerm extractEntry Makefile
+572 silly gunzTarPerm extractEntry History.md
+573 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/methods/package.json
+574 silly gunzTarPerm extractEntry README.md
+575 silly gunzTarPerm extractEntry lib/connect.js
+576 silly gunzTarPerm extractEntry lib/middleware/
+577 silly gunzTarPerm extractEntry lib/
+578 silly gunzTarPerm extractEntry lib/send.js
+579 silly gunzTarPerm extractEntry Makefile
+580 silly gunzTarPerm extractEntry History.md
+581 silly gunzTarPerm extractEntry .npmignore
+582 silly gunzTarPerm extractEntry .travis.yml
+583 silly gunzTarPerm extractEntry test/race.js
+584 silly gunzTarPerm extractEntry test/chmod.js
+585 silly lockFile c6f7f8a2-les-express-node-modules-methods /home/doug/node_projects/japb/node_modules/express/node_modules/methods
+586 silly lockFile c6f7f8a2-les-express-node-modules-methods /home/doug/node_projects/japb/node_modules/express/node_modules/methods
+587 silly gunzTarPerm extractEntry tests/crc.test.js
+588 silly gunzTarPerm extractEntry index.js
+589 silly gunzTarPerm extractEntry index.js
+590 silly lockFile e7942021-ug-npm-methods-0-0-1-package-tgz /home/doug/.npm/methods/0.0.1/package.tgz
+591 silly lockFile e7942021-ug-npm-methods-0-0-1-package-tgz /home/doug/.npm/methods/0.0.1/package.tgz
+592 silly gunzTarPerm extractEntry package.json
+593 silly gunzTarPerm extractEntry lib/
+594 silly gunzTarPerm extractEntry lib/utils.js
+595 silly gunzTarPerm extractEntry lib/middleware/basicAuth.js
+596 silly gunzTarPerm extractEntry lib/middleware/session/
+597 info preinstall methods@0.0.1
+598 silly gunzTarPerm extractEntry example/wildcards.js
+599 silly gunzTarPerm extractEntry example/worker.js
+600 silly gunzTarPerm extractEntry example/browser.html
+601 silly gunzTarPerm extractEntry index.js
+602 silly gunzTarPerm extractEntry test/return_sync.js
+603 silly gunzTarPerm extractEntry test/sync.js
+604 silly gunzTarPerm extractEntry test/perm.js
+605 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/methods/package.json
+606 silly gunzTarPerm extractEntry test/
+607 silly gunzTarPerm extractEntry test/parse.js
+608 verbose readDependencies using package.json deps
+609 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/methods/package.json
+610 silly gunzTarPerm extractEntry lib/commander.js
+611 silly gunzTarPerm extractEntry Makefile
+612 silly gunzTarPerm extractEntry History.md
+613 silly gunzTarPerm extractEntry index.js
+614 verbose readDependencies using package.json deps
+615 silly resolved []
+616 verbose about to build /home/doug/node_projects/japb/node_modules/express/node_modules/methods
+617 info build /home/doug/node_projects/japb/node_modules/express/node_modules/methods
+618 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/methods/package.json
+619 verbose linkStuff [ false,
+619 verbose linkStuff   false,
+619 verbose linkStuff   false,
+619 verbose linkStuff   '/home/doug/node_projects/japb/node_modules/express/node_modules' ]
+620 info linkStuff methods@0.0.1
+621 verbose read json /home/doug/node_projects/japb/package.json
+622 verbose linkBins methods@0.0.1
+623 verbose linkMans methods@0.0.1
+624 verbose rebuildBundles methods@0.0.1
+625 silly gunzTarPerm extractEntry component.json
+626 silly gunzTarPerm extractEntry .npmignore
+627 silly gunzTarPerm extractEntry test/umask.js
+628 silly gunzTarPerm extractEntry test/perm_sync.js
+629 info install methods@0.0.1
+630 silly gunzTarPerm extractEntry Makefile
+631 silly gunzTarPerm extractEntry History.md
+632 silly gunzTarPerm extractEntry index.js
+633 silly gunzTarPerm extractEntry lib/middleware/session/memory.js
+634 silly gunzTarPerm extractEntry lib/middleware/session/store.js
+635 info postinstall methods@0.0.1
+636 silly gunzTarPerm extractEntry test/serialize.js
+637 silly gunzTarPerm extractEntry test/mocha.opts
+638 silly gunzTarPerm extractEntry debug.js
+639 silly gunzTarPerm extractEntry package.json
+640 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/fresh/package.json
+641 silly gunzTarPerm extractEntry lib/middleware/session/cookie.js
+642 silly gunzTarPerm extractEntry lib/middleware/session/session.js
+643 silly gunzTarPerm extractEntry test/clobber.js
+644 silly gunzTarPerm extractEntry package.json
+645 silly gunzTarPerm extractEntry LICENSE
+646 silly gunzTarPerm extractEntry index.js
+647 silly gunzTarPerm extractEntry lib/
+648 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/range-parser/package.json
+649 silly lockFile 71a89a79-dules-express-node-modules-fresh /home/doug/node_projects/japb/node_modules/express/node_modules/fresh
+650 silly lockFile 71a89a79-dules-express-node-modules-fresh /home/doug/node_projects/japb/node_modules/express/node_modules/fresh
+651 silly gunzTarPerm extractEntry test/return.js
+652 silly gunzTarPerm extractEntry test/rel.js
+653 silly lockFile 49042f80-doug-npm-fresh-0-1-0-package-tgz /home/doug/.npm/fresh/0.1.0/package.tgz
+654 silly lockFile 49042f80-doug-npm-fresh-0-1-0-package-tgz /home/doug/.npm/fresh/0.1.0/package.tgz
+655 silly gunzTarPerm extractEntry lib/debug.js
+656 silly gunzTarPerm extractEntry History.md
+657 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/cookie-signature/package.json
+658 info preinstall fresh@0.1.0
+659 silly lockFile c8178b41-xpress-node-modules-range-parser /home/doug/node_projects/japb/node_modules/express/node_modules/range-parser
+660 silly lockFile c8178b41-xpress-node-modules-range-parser /home/doug/node_projects/japb/node_modules/express/node_modules/range-parser
+661 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/fresh/package.json
+662 silly gunzTarPerm extractEntry test/umask_sync.js
+663 silly gunzTarPerm extractEntry test/mkdirp.js
+664 silly lockFile 89127896-m-range-parser-0-0-4-package-tgz /home/doug/.npm/range-parser/0.0.4/package.tgz
+665 silly lockFile 89127896-m-range-parser-0-0-4-package-tgz /home/doug/.npm/range-parser/0.0.4/package.tgz
+666 verbose readDependencies using package.json deps
+667 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/fresh/package.json
+668 verbose readDependencies using package.json deps
+669 silly resolved []
+670 verbose about to build /home/doug/node_projects/japb/node_modules/express/node_modules/fresh
+671 info build /home/doug/node_projects/japb/node_modules/express/node_modules/fresh
+672 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/fresh/package.json
+673 verbose linkStuff [ false,
+673 verbose linkStuff   false,
+673 verbose linkStuff   false,
+673 verbose linkStuff   '/home/doug/node_projects/japb/node_modules/express/node_modules' ]
+674 info linkStuff fresh@0.1.0
+675 verbose read json /home/doug/node_projects/japb/package.json
+676 silly gunzTarPerm extractEntry lib/middleware/timeout.js
+677 silly gunzTarPerm extractEntry lib/middleware/favicon.js
+678 silly gunzTarPerm extractEntry lib/middleware/logger.js
+679 verbose linkBins fresh@0.1.0
+680 verbose linkMans fresh@0.1.0
+681 verbose rebuildBundles fresh@0.1.0
+682 silly gunzTarPerm extractEntry index.js
+683 info install fresh@0.1.0
+684 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/buffer-crc32/package.json
+685 info preinstall range-parser@0.0.4
+686 silly lockFile 7f531640-ss-node-modules-cookie-signature /home/doug/node_projects/japb/node_modules/express/node_modules/cookie-signature
+687 silly lockFile 7f531640-ss-node-modules-cookie-signature /home/doug/node_projects/japb/node_modules/express/node_modules/cookie-signature
+688 info postinstall fresh@0.1.0
+689 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/range-parser/package.json
+690 silly lockFile 1983699f-okie-signature-1-0-1-package-tgz /home/doug/.npm/cookie-signature/1.0.1/package.tgz
+691 silly lockFile 1983699f-okie-signature-1-0-1-package-tgz /home/doug/.npm/cookie-signature/1.0.1/package.tgz
+692 verbose readDependencies using package.json deps
+693 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/range-parser/package.json
+694 silly gunzTarPerm extractEntry examples/
+695 silly gunzTarPerm extractEntry examples/pow.js
+696 silly gunzTarPerm extractEntry lib/middleware/directory.js
+697 silly gunzTarPerm extractEntry lib/middleware/urlencoded.js
+698 verbose readDependencies using package.json deps
+699 silly resolved []
+700 verbose about to build /home/doug/node_projects/japb/node_modules/express/node_modules/range-parser
+701 info build /home/doug/node_projects/japb/node_modules/express/node_modules/range-parser
+702 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/range-parser/package.json
+703 verbose linkStuff [ false,
+703 verbose linkStuff   false,
+703 verbose linkStuff   false,
+703 verbose linkStuff   '/home/doug/node_projects/japb/node_modules/express/node_modules' ]
+704 info linkStuff range-parser@0.0.4
+705 verbose read json /home/doug/node_projects/japb/package.json
+706 verbose linkBins range-parser@0.0.4
+707 verbose linkMans range-parser@0.0.4
+708 verbose rebuildBundles range-parser@0.0.4
+709 info install range-parser@0.0.4
+710 info preinstall cookie-signature@1.0.1
+711 info postinstall range-parser@0.0.4
+712 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/cookie-signature/package.json
+713 silly lockFile 9c8ef442-xpress-node-modules-buffer-crc32 /home/doug/node_projects/japb/node_modules/express/node_modules/buffer-crc32
+714 silly lockFile 9c8ef442-xpress-node-modules-buffer-crc32 /home/doug/node_projects/japb/node_modules/express/node_modules/buffer-crc32
+715 verbose readDependencies using package.json deps
+716 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/cookie-signature/package.json
+717 verbose readDependencies using package.json deps
+718 silly resolved []
+719 verbose about to build /home/doug/node_projects/japb/node_modules/express/node_modules/cookie-signature
+720 info build /home/doug/node_projects/japb/node_modules/express/node_modules/cookie-signature
+721 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/cookie-signature/package.json
+722 verbose linkStuff [ false,
+722 verbose linkStuff   false,
+722 verbose linkStuff   false,
+722 verbose linkStuff   '/home/doug/node_projects/japb/node_modules/express/node_modules' ]
+723 info linkStuff cookie-signature@1.0.1
+724 verbose read json /home/doug/node_projects/japb/package.json
+725 silly lockFile eaa06e57-m-buffer-crc32-0-2-1-package-tgz /home/doug/.npm/buffer-crc32/0.2.1/package.tgz
+726 silly lockFile eaa06e57-m-buffer-crc32-0-2-1-package-tgz /home/doug/.npm/buffer-crc32/0.2.1/package.tgz
+727 silly gunzTarPerm extractEntry package.json
+728 silly gunzTarPerm extractEntry LICENSE
+729 verbose linkBins cookie-signature@1.0.1
+730 verbose linkMans cookie-signature@1.0.1
+731 verbose rebuildBundles cookie-signature@1.0.1
+732 info install cookie-signature@1.0.1
+733 info postinstall cookie-signature@1.0.1
+734 info preinstall buffer-crc32@0.2.1
+735 silly gunzTarPerm extractEntry lib/middleware/cookieParser.js
+736 silly gunzTarPerm extractEntry lib/middleware/static.js
+737 silly gunzTarPerm extractEntry lib/middleware/vhost.js
+738 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/buffer-crc32/package.json
+739 verbose readDependencies using package.json deps
+740 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/buffer-crc32/package.json
+741 verbose readDependencies using package.json deps
+742 silly resolved []
+743 verbose about to build /home/doug/node_projects/japb/node_modules/express/node_modules/buffer-crc32
+744 info build /home/doug/node_projects/japb/node_modules/express/node_modules/buffer-crc32
+745 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/buffer-crc32/package.json
+746 verbose linkStuff [ false,
+746 verbose linkStuff   false,
+746 verbose linkStuff   false,
+746 verbose linkStuff   '/home/doug/node_projects/japb/node_modules/express/node_modules' ]
+747 info linkStuff buffer-crc32@0.2.1
+748 verbose read json /home/doug/node_projects/japb/package.json
+749 silly gunzTarPerm extractEntry index.js
+750 verbose linkBins buffer-crc32@0.2.1
+751 verbose linkMans buffer-crc32@0.2.1
+752 verbose rebuildBundles buffer-crc32@0.2.1
+753 silly gunzTarPerm extractEntry lib/middleware/staticCache.js
+754 silly gunzTarPerm extractEntry lib/middleware/compress.js
+755 info install buffer-crc32@0.2.1
+756 info postinstall buffer-crc32@0.2.1
+757 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/send/package.json
+758 silly gunzTarPerm extractEntry lib/middleware/csrf.js
+759 silly gunzTarPerm extractEntry lib/middleware/multipart.js
+760 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/cookie/package.json
+761 silly lockFile ae323bd3-odules-express-node-modules-send /home/doug/node_projects/japb/node_modules/express/node_modules/send
+762 silly lockFile ae323bd3-odules-express-node-modules-send /home/doug/node_projects/japb/node_modules/express/node_modules/send
+763 silly lockFile 7f884031--doug-npm-send-0-1-1-package-tgz /home/doug/.npm/send/0.1.1/package.tgz
+764 silly lockFile 7f884031--doug-npm-send-0-1-1-package-tgz /home/doug/.npm/send/0.1.1/package.tgz
+765 silly gunzTarPerm extractEntry lib/middleware/session.js
+766 silly gunzTarPerm extractEntry lib/middleware/cookieSession.js
+767 info preinstall send@0.1.1
+768 silly lockFile 0d8a502f-ules-express-node-modules-cookie /home/doug/node_projects/japb/node_modules/express/node_modules/cookie
+769 silly lockFile 0d8a502f-ules-express-node-modules-cookie /home/doug/node_projects/japb/node_modules/express/node_modules/cookie
+770 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/send/package.json
+771 silly lockFile c6bec54c-oug-npm-cookie-0-1-0-package-tgz /home/doug/.npm/cookie/0.1.0/package.tgz
+772 silly lockFile c6bec54c-oug-npm-cookie-0-1-0-package-tgz /home/doug/.npm/cookie/0.1.0/package.tgz
+773 verbose readDependencies using package.json deps
+774 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/send/package.json
+775 verbose readDependencies using package.json deps
+776 verbose cache add [ 'mime@~1.2.9', null ]
+777 verbose cache add name=undefined spec="mime@~1.2.9" args=["mime@~1.2.9",null]
+778 verbose parsed url { protocol: null,
+778 verbose parsed url   slashes: null,
+778 verbose parsed url   auth: null,
+778 verbose parsed url   host: null,
+778 verbose parsed url   port: null,
+778 verbose parsed url   hostname: null,
+778 verbose parsed url   hash: null,
+778 verbose parsed url   search: null,
+778 verbose parsed url   query: null,
+778 verbose parsed url   pathname: 'mime@~1.2.9',
+778 verbose parsed url   path: 'mime@~1.2.9',
+778 verbose parsed url   href: 'mime@~1.2.9' }
+779 verbose cache add name="mime" spec="~1.2.9" args=["mime","~1.2.9"]
+780 verbose parsed url { protocol: null,
+780 verbose parsed url   slashes: null,
+780 verbose parsed url   auth: null,
+780 verbose parsed url   host: null,
+780 verbose parsed url   port: null,
+780 verbose parsed url   hostname: null,
+780 verbose parsed url   hash: null,
+780 verbose parsed url   search: null,
+780 verbose parsed url   query: null,
+780 verbose parsed url   pathname: '~1.2.9',
+780 verbose parsed url   path: '~1.2.9',
+780 verbose parsed url   href: '~1.2.9' }
+781 verbose addNamed [ 'mime', '~1.2.9' ]
+782 verbose addNamed [ null, '>=1.2.9- <1.3.0-' ]
+783 silly lockFile ccf24a67-mime-1-2-9 mime@~1.2.9
+784 verbose lock mime@~1.2.9 /home/doug/.npm/ccf24a67-mime-1-2-9.lock
+785 silly addNameRange { name: 'mime', range: '>=1.2.9- <1.3.0-', hasData: false }
+786 verbose url raw mime
+787 verbose url resolving [ 'https://registry.npmjs.org/', './mime' ]
+788 verbose url resolved https://registry.npmjs.org/mime
+789 info trying registry request attempt 1 at 01:13:33
+790 http GET https://registry.npmjs.org/mime
+791 info preinstall cookie@0.1.0
+792 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+793 silly gunzTarPerm extractEntry lib/middleware/methodOverride.js
+794 silly gunzTarPerm extractEntry lib/middleware/limit.js
+795 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/cookie/package.json
+796 verbose readDependencies using package.json deps
+797 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/cookie/package.json
+798 verbose readDependencies using package.json deps
+799 silly resolved []
+800 verbose about to build /home/doug/node_projects/japb/node_modules/express/node_modules/cookie
+801 info build /home/doug/node_projects/japb/node_modules/express/node_modules/cookie
+802 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/cookie/package.json
+803 verbose linkStuff [ false,
+803 verbose linkStuff   false,
+803 verbose linkStuff   false,
+803 verbose linkStuff   '/home/doug/node_projects/japb/node_modules/express/node_modules' ]
+804 info linkStuff cookie@0.1.0
+805 verbose read json /home/doug/node_projects/japb/package.json
+806 verbose linkBins cookie@0.1.0
+807 verbose linkMans cookie@0.1.0
+808 verbose rebuildBundles cookie@0.1.0
+809 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/commander/package.json
+810 info install cookie@0.1.0
+811 info postinstall cookie@0.1.0
+812 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/debug/package.json
+813 silly gunzTarPerm extractEntry lib/middleware/json.js
+814 silly gunzTarPerm extractEntry lib/middleware/errorHandler.js
+815 silly lockFile 09f9219f-s-express-node-modules-commander /home/doug/node_projects/japb/node_modules/express/node_modules/commander
+816 silly lockFile 09f9219f-s-express-node-modules-commander /home/doug/node_projects/japb/node_modules/express/node_modules/commander
+817 silly lockFile b8ce3c86--npm-commander-0-6-1-package-tgz /home/doug/.npm/commander/0.6.1/package.tgz
+818 silly lockFile b8ce3c86--npm-commander-0-6-1-package-tgz /home/doug/.npm/commander/0.6.1/package.tgz
+819 silly lockFile 6db22928-dules-express-node-modules-debug /home/doug/node_projects/japb/node_modules/express/node_modules/debug
+820 silly lockFile 6db22928-dules-express-node-modules-debug /home/doug/node_projects/japb/node_modules/express/node_modules/debug
+821 info preinstall commander@0.6.1
+822 silly lockFile 823e0ca0-doug-npm-debug-0-7-2-package-tgz /home/doug/.npm/debug/0.7.2/package.tgz
+823 silly lockFile 823e0ca0-doug-npm-debug-0-7-2-package-tgz /home/doug/.npm/debug/0.7.2/package.tgz
+824 silly gunzTarPerm extractEntry lib/middleware/query.js
+825 silly gunzTarPerm extractEntry lib/middleware/bodyParser.js
+826 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/commander/package.json
+827 verbose readDependencies using package.json deps
+828 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/commander/package.json
+829 verbose readDependencies using package.json deps
+830 silly resolved []
+831 verbose about to build /home/doug/node_projects/japb/node_modules/express/node_modules/commander
+832 info build /home/doug/node_projects/japb/node_modules/express/node_modules/commander
+833 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/commander/package.json
+834 verbose linkStuff [ false,
+834 verbose linkStuff   false,
+834 verbose linkStuff   false,
+834 verbose linkStuff   '/home/doug/node_projects/japb/node_modules/express/node_modules' ]
+835 info linkStuff commander@0.6.1
+836 verbose read json /home/doug/node_projects/japb/package.json
+837 info preinstall debug@0.7.2
+838 verbose linkBins commander@0.6.1
+839 verbose linkMans commander@0.6.1
+840 verbose rebuildBundles commander@0.6.1
+841 info install commander@0.6.1
+842 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/debug/package.json
+843 verbose readDependencies using package.json deps
+844 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/debug/package.json
+845 info postinstall commander@0.6.1
+846 verbose readDependencies using package.json deps
+847 silly resolved []
+848 verbose about to build /home/doug/node_projects/japb/node_modules/express/node_modules/debug
+849 info build /home/doug/node_projects/japb/node_modules/express/node_modules/debug
+850 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/debug/package.json
+851 verbose linkStuff [ false,
+851 verbose linkStuff   false,
+851 verbose linkStuff   false,
+851 verbose linkStuff   '/home/doug/node_projects/japb/node_modules/express/node_modules' ]
+852 info linkStuff debug@0.7.2
+853 verbose read json /home/doug/node_projects/japb/package.json
+854 silly gunzTarPerm extractEntry lib/middleware/responseTime.js
+855 silly gunzTarPerm extractEntry lib/cache.js
+856 verbose linkBins debug@0.7.2
+857 verbose linkMans debug@0.7.2
+858 verbose rebuildBundles debug@0.7.2
+859 info install debug@0.7.2
+860 info postinstall debug@0.7.2
+861 silly gunzTarPerm extractEntry lib/utils.js
+862 silly gunzTarPerm extractEntry lib/public/
+863 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/mkdirp/package.json
+864 silly gunzTarPerm extractEntry lib/public/style.css
+865 silly gunzTarPerm extractEntry lib/public/error.html
+866 silly lockFile 414ee803-ules-express-node-modules-mkdirp /home/doug/node_projects/japb/node_modules/express/node_modules/mkdirp
+867 silly lockFile 414ee803-ules-express-node-modules-mkdirp /home/doug/node_projects/japb/node_modules/express/node_modules/mkdirp
+868 silly lockFile aa579d19-oug-npm-mkdirp-0-3-4-package-tgz /home/doug/.npm/mkdirp/0.3.4/package.tgz
+869 silly lockFile aa579d19-oug-npm-mkdirp-0-3-4-package-tgz /home/doug/.npm/mkdirp/0.3.4/package.tgz
+870 silly gunzTarPerm extractEntry lib/public/directory.html
+871 silly gunzTarPerm extractEntry lib/public/icons/
+872 info preinstall mkdirp@0.3.4
+873 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/mkdirp/package.json
+874 verbose readDependencies using package.json deps
+875 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/mkdirp/package.json
+876 verbose readDependencies using package.json deps
+877 silly resolved []
+878 verbose about to build /home/doug/node_projects/japb/node_modules/express/node_modules/mkdirp
+879 info build /home/doug/node_projects/japb/node_modules/express/node_modules/mkdirp
+880 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/mkdirp/package.json
+881 verbose linkStuff [ false,
+881 verbose linkStuff   false,
+881 verbose linkStuff   false,
+881 verbose linkStuff   '/home/doug/node_projects/japb/node_modules/express/node_modules' ]
+882 info linkStuff mkdirp@0.3.4
+883 verbose read json /home/doug/node_projects/japb/package.json
+884 silly gunzTarPerm extractEntry lib/public/icons/page_white_picture.png
+885 silly gunzTarPerm extractEntry lib/public/icons/page_add.png
+886 verbose linkBins mkdirp@0.3.4
+887 verbose linkMans mkdirp@0.3.4
+888 verbose rebuildBundles mkdirp@0.3.4
+889 info install mkdirp@0.3.4
+890 info postinstall mkdirp@0.3.4
+891 silly gunzTarPerm extractEntry lib/public/icons/page_link.png
+892 silly gunzTarPerm extractEntry lib/public/icons/page_key.png
+893 silly gunzTarPerm extractEntry lib/public/icons/page_white_zip.png
+894 silly gunzTarPerm extractEntry lib/public/icons/page_white_code.png
+895 silly gunzTarPerm extractEntry lib/public/icons/page_white_tux.png
+896 silly gunzTarPerm extractEntry lib/public/icons/page_white_code_red.png
+897 silly gunzTarPerm extractEntry lib/public/icons/page_white_swoosh.png
+898 silly gunzTarPerm extractEntry lib/public/icons/page_white_camera.png
+899 silly gunzTarPerm extractEntry lib/public/icons/page_white_paste.png
+900 silly gunzTarPerm extractEntry lib/public/icons/page_white_stack.png
+901 silly gunzTarPerm extractEntry lib/public/icons/page_white_copy.png
+902 silly gunzTarPerm extractEntry lib/public/icons/page_attach.png
+903 silly gunzTarPerm extractEntry lib/public/icons/page_white_world.png
+904 silly gunzTarPerm extractEntry lib/public/icons/page_white_database.png
+905 silly gunzTarPerm extractEntry lib/public/icons/page_word.png
+906 silly gunzTarPerm extractEntry lib/public/icons/page_green.png
+907 silly gunzTarPerm extractEntry lib/public/icons/page_white_actionscript.png
+908 silly gunzTarPerm extractEntry lib/public/icons/page_white_visualstudio.png
+909 silly gunzTarPerm extractEntry lib/public/icons/page_code.png
+910 silly gunzTarPerm extractEntry lib/public/icons/page_white_text.png
+911 silly gunzTarPerm extractEntry lib/public/icons/page_white_cplusplus.png
+912 silly gunzTarPerm extractEntry lib/public/icons/page_white_find.png
+913 silly gunzTarPerm extractEntry lib/public/icons/page_save.png
+914 silly gunzTarPerm extractEntry lib/public/icons/page_white_h.png
+915 silly gunzTarPerm extractEntry lib/public/icons/page_find.png
+916 silly gunzTarPerm extractEntry lib/public/icons/page_white_magnify.png
+917 silly gunzTarPerm extractEntry lib/public/icons/page_white_freehand.png
+918 silly gunzTarPerm extractEntry lib/public/icons/page_white_delete.png
+919 silly gunzTarPerm extractEntry lib/public/icons/page_copy.png
+920 silly gunzTarPerm extractEntry lib/public/icons/page_white_horizontal.png
+921 silly gunzTarPerm extractEntry lib/public/icons/page_white_c.png
+922 silly gunzTarPerm extractEntry lib/public/icons/page_white_key.png
+923 silly gunzTarPerm extractEntry lib/public/icons/page_red.png
+924 silly gunzTarPerm extractEntry lib/public/icons/page_white_cup.png
+925 silly gunzTarPerm extractEntry lib/public/icons/page_paintbrush.png
+926 silly gunzTarPerm extractEntry lib/public/icons/page_white_word.png
+927 silly gunzTarPerm extractEntry lib/public/icons/page_white_office.png
+928 silly gunzTarPerm extractEntry lib/public/icons/page_white_csharp.png
+929 silly gunzTarPerm extractEntry lib/public/icons/page_white_paintbrush.png
+930 silly gunzTarPerm extractEntry lib/public/icons/page_white_php.png
+931 silly gunzTarPerm extractEntry lib/public/icons/page_lightning.png
+932 silly gunzTarPerm extractEntry lib/public/icons/page_white_dvd.png
+933 silly gunzTarPerm extractEntry lib/public/icons/page_white_medal.png
+934 silly gunzTarPerm extractEntry lib/public/icons/page_white_gear.png
+935 silly gunzTarPerm extractEntry lib/public/icons/page_white_edit.png
+936 silly gunzTarPerm extractEntry lib/public/icons/page_error.png
+937 silly gunzTarPerm extractEntry lib/public/icons/page_gear.png
+938 silly gunzTarPerm extractEntry lib/public/icons/page_white_width.png
+939 silly gunzTarPerm extractEntry lib/public/icons/page_excel.png
+940 silly gunzTarPerm extractEntry lib/public/icons/page_white_star.png
+941 silly gunzTarPerm extractEntry lib/public/icons/page_white_ruby.png
+942 silly gunzTarPerm extractEntry lib/public/icons/page_refresh.png
+943 silly gunzTarPerm extractEntry lib/public/icons/page_white_error.png
+944 silly gunzTarPerm extractEntry lib/public/icons/page_white_put.png
+945 silly gunzTarPerm extractEntry lib/public/icons/page_white_cd.png
+946 silly gunzTarPerm extractEntry lib/public/icons/page_go.png
+947 silly gunzTarPerm extractEntry lib/public/icons/page_delete.png
+948 silly gunzTarPerm extractEntry lib/public/icons/page_white_vector.png
+949 silly gunzTarPerm extractEntry lib/public/icons/page.png
+950 silly gunzTarPerm extractEntry lib/public/icons/page_white_link.png
+951 silly gunzTarPerm extractEntry lib/public/icons/page_white_paint.png
+952 silly gunzTarPerm extractEntry lib/public/icons/page_white_powerpoint.png
+953 silly gunzTarPerm extractEntry lib/public/icons/page_white_coldfusion.png
+954 silly gunzTarPerm extractEntry lib/public/icons/page_white_go.png
+955 silly gunzTarPerm extractEntry lib/public/icons/page_white_add.png
+956 silly gunzTarPerm extractEntry lib/public/icons/page_world.png
+957 silly gunzTarPerm extractEntry lib/public/icons/page_white_get.png
+958 silly gunzTarPerm extractEntry lib/public/icons/page_white_wrench.png
+959 silly gunzTarPerm extractEntry lib/public/icons/page_white_acrobat.png
+960 silly gunzTarPerm extractEntry lib/public/icons/page_white.png
+961 silly gunzTarPerm extractEntry lib/public/icons/page_edit.png
+962 silly gunzTarPerm extractEntry lib/public/icons/page_white_lightning.png
+963 silly gunzTarPerm extractEntry lib/public/icons/page_paste.png
+964 silly gunzTarPerm extractEntry lib/public/icons/page_white_flash.png
+965 silly gunzTarPerm extractEntry lib/public/icons/page_white_compressed.png
+966 silly gunzTarPerm extractEntry lib/public/icons/page_white_text_width.png
+967 silly gunzTarPerm extractEntry lib/public/icons/page_white_excel.png
+968 silly gunzTarPerm extractEntry lib/public/favicon.ico
+969 silly gunzTarPerm extractEntry lib/proto.js
+970 silly gunzTarPerm extractEntry lib/patch.js
+971 silly gunzTarPerm extractEntry lib/index.js
+972 silly gunzTarPerm extractEntry test.js
+973 silly gunzTarPerm extractEntry index.js
+974 verbose read json /home/doug/node_projects/japb/node_modules/express/node_modules/connect/package.json
+975 silly lockFile 1cdc6a12-les-express-node-modules-connect /home/doug/node_projects/japb/node_modules/express/node_modules/connect
+976 silly lockFile 1cdc6a12-les-express-node-modules-connect /home/doug/node_projects/japb/node_modules/express/node_modules/connect
+977 silly lockFile 935d5883-ug-npm-connect-2-8-1-package-tgz /home/doug/.npm/connect/2.8.1/package.tgz
+978 silly lockFile 935d5883-ug-npm-connect-2-8-1-package-tgz /home/doug/.npm/connect/2.8.1/package.tgz
+979 info preinstall connect@2.8.1
+980 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/connect/package.json
+981 verbose readDependencies using package.json deps
+982 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/connect/package.json
+983 verbose readDependencies using package.json deps
+984 verbose cache add [ 'qs@0.6.5', null ]
+985 verbose cache add name=undefined spec="qs@0.6.5" args=["qs@0.6.5",null]
+986 verbose parsed url { protocol: null,
+986 verbose parsed url   slashes: null,
+986 verbose parsed url   auth: null,
+986 verbose parsed url   host: null,
+986 verbose parsed url   port: null,
+986 verbose parsed url   hostname: null,
+986 verbose parsed url   hash: null,
+986 verbose parsed url   search: null,
+986 verbose parsed url   query: null,
+986 verbose parsed url   pathname: 'qs@0.6.5',
+986 verbose parsed url   path: 'qs@0.6.5',
+986 verbose parsed url   href: 'qs@0.6.5' }
+987 verbose cache add name="qs" spec="0.6.5" args=["qs","0.6.5"]
+988 verbose parsed url { protocol: null,
+988 verbose parsed url   slashes: null,
+988 verbose parsed url   auth: null,
+988 verbose parsed url   host: null,
+988 verbose parsed url   port: null,
+988 verbose parsed url   hostname: null,
+988 verbose parsed url   hash: null,
+988 verbose parsed url   search: null,
+988 verbose parsed url   query: null,
+988 verbose parsed url   pathname: '0.6.5',
+988 verbose parsed url   path: '0.6.5',
+988 verbose parsed url   href: '0.6.5' }
+989 verbose addNamed [ 'qs', '0.6.5' ]
+990 verbose addNamed [ '0.6.5', '0.6.5' ]
+991 silly lockFile f5e5a40f-qs-0-6-5 qs@0.6.5
+992 verbose lock qs@0.6.5 /home/doug/.npm/f5e5a40f-qs-0-6-5.lock
+993 verbose cache add [ 'formidable@1.0.14', null ]
+994 verbose cache add name=undefined spec="formidable@1.0.14" args=["formidable@1.0.14",null]
+995 verbose parsed url { protocol: null,
+995 verbose parsed url   slashes: null,
+995 verbose parsed url   auth: null,
+995 verbose parsed url   host: null,
+995 verbose parsed url   port: null,
+995 verbose parsed url   hostname: null,
+995 verbose parsed url   hash: null,
+995 verbose parsed url   search: null,
+995 verbose parsed url   query: null,
+995 verbose parsed url   pathname: 'formidable@1.0.14',
+995 verbose parsed url   path: 'formidable@1.0.14',
+995 verbose parsed url   href: 'formidable@1.0.14' }
+996 verbose cache add name="formidable" spec="1.0.14" args=["formidable","1.0.14"]
+997 verbose parsed url { protocol: null,
+997 verbose parsed url   slashes: null,
+997 verbose parsed url   auth: null,
+997 verbose parsed url   host: null,
+997 verbose parsed url   port: null,
+997 verbose parsed url   hostname: null,
+997 verbose parsed url   hash: null,
+997 verbose parsed url   search: null,
+997 verbose parsed url   query: null,
+997 verbose parsed url   pathname: '1.0.14',
+997 verbose parsed url   path: '1.0.14',
+997 verbose parsed url   href: '1.0.14' }
+998 verbose addNamed [ 'formidable', '1.0.14' ]
+999 verbose addNamed [ '1.0.14', '1.0.14' ]
+1000 silly lockFile 3f08b74a-formidable-1-0-14 formidable@1.0.14
+1001 verbose lock formidable@1.0.14 /home/doug/.npm/3f08b74a-formidable-1-0-14.lock
+1002 verbose cache add [ 'cookie@0.0.5', null ]
+1003 verbose cache add name=undefined spec="cookie@0.0.5" args=["cookie@0.0.5",null]
+1004 verbose parsed url { protocol: null,
+1004 verbose parsed url   slashes: null,
+1004 verbose parsed url   auth: null,
+1004 verbose parsed url   host: null,
+1004 verbose parsed url   port: null,
+1004 verbose parsed url   hostname: null,
+1004 verbose parsed url   hash: null,
+1004 verbose parsed url   search: null,
+1004 verbose parsed url   query: null,
+1004 verbose parsed url   pathname: 'cookie@0.0.5',
+1004 verbose parsed url   path: 'cookie@0.0.5',
+1004 verbose parsed url   href: 'cookie@0.0.5' }
+1005 verbose cache add name="cookie" spec="0.0.5" args=["cookie","0.0.5"]
+1006 verbose parsed url { protocol: null,
+1006 verbose parsed url   slashes: null,
+1006 verbose parsed url   auth: null,
+1006 verbose parsed url   host: null,
+1006 verbose parsed url   port: null,
+1006 verbose parsed url   hostname: null,
+1006 verbose parsed url   hash: null,
+1006 verbose parsed url   search: null,
+1006 verbose parsed url   query: null,
+1006 verbose parsed url   pathname: '0.0.5',
+1006 verbose parsed url   path: '0.0.5',
+1006 verbose parsed url   href: '0.0.5' }
+1007 verbose addNamed [ 'cookie', '0.0.5' ]
+1008 verbose addNamed [ '0.0.5', '0.0.5' ]
+1009 silly lockFile fe08ced7-cookie-0-0-5 cookie@0.0.5
+1010 verbose lock cookie@0.0.5 /home/doug/.npm/fe08ced7-cookie-0-0-5.lock
+1011 verbose cache add [ 'bytes@0.2.0', null ]
+1012 verbose cache add name=undefined spec="bytes@0.2.0" args=["bytes@0.2.0",null]
+1013 verbose parsed url { protocol: null,
+1013 verbose parsed url   slashes: null,
+1013 verbose parsed url   auth: null,
+1013 verbose parsed url   host: null,
+1013 verbose parsed url   port: null,
+1013 verbose parsed url   hostname: null,
+1013 verbose parsed url   hash: null,
+1013 verbose parsed url   search: null,
+1013 verbose parsed url   query: null,
+1013 verbose parsed url   pathname: 'bytes@0.2.0',
+1013 verbose parsed url   path: 'bytes@0.2.0',
+1013 verbose parsed url   href: 'bytes@0.2.0' }
+1014 verbose cache add name="bytes" spec="0.2.0" args=["bytes","0.2.0"]
+1015 verbose parsed url { protocol: null,
+1015 verbose parsed url   slashes: null,
+1015 verbose parsed url   auth: null,
+1015 verbose parsed url   host: null,
+1015 verbose parsed url   port: null,
+1015 verbose parsed url   hostname: null,
+1015 verbose parsed url   hash: null,
+1015 verbose parsed url   search: null,
+1015 verbose parsed url   query: null,
+1015 verbose parsed url   pathname: '0.2.0',
+1015 verbose parsed url   path: '0.2.0',
+1015 verbose parsed url   href: '0.2.0' }
+1016 verbose addNamed [ 'bytes', '0.2.0' ]
+1017 verbose addNamed [ '0.2.0', '0.2.0' ]
+1018 silly lockFile e351aee0-bytes-0-2-0 bytes@0.2.0
+1019 verbose lock bytes@0.2.0 /home/doug/.npm/e351aee0-bytes-0-2-0.lock
+1020 verbose url raw qs/0.6.5
+1021 verbose url resolving [ 'https://registry.npmjs.org/', './qs/0.6.5' ]
+1022 verbose url resolved https://registry.npmjs.org/qs/0.6.5
+1023 info trying registry request attempt 1 at 01:13:33
+1024 http GET https://registry.npmjs.org/qs/0.6.5
+1025 verbose cache add [ 'pause@0.0.1', null ]
+1026 verbose cache add name=undefined spec="pause@0.0.1" args=["pause@0.0.1",null]
+1027 verbose parsed url { protocol: null,
+1027 verbose parsed url   slashes: null,
+1027 verbose parsed url   auth: null,
+1027 verbose parsed url   host: null,
+1027 verbose parsed url   port: null,
+1027 verbose parsed url   hostname: null,
+1027 verbose parsed url   hash: null,
+1027 verbose parsed url   search: null,
+1027 verbose parsed url   query: null,
+1027 verbose parsed url   pathname: 'pause@0.0.1',
+1027 verbose parsed url   path: 'pause@0.0.1',
+1027 verbose parsed url   href: 'pause@0.0.1' }
+1028 verbose cache add name="pause" spec="0.0.1" args=["pause","0.0.1"]
+1029 verbose parsed url { protocol: null,
+1029 verbose parsed url   slashes: null,
+1029 verbose parsed url   auth: null,
+1029 verbose parsed url   host: null,
+1029 verbose parsed url   port: null,
+1029 verbose parsed url   hostname: null,
+1029 verbose parsed url   hash: null,
+1029 verbose parsed url   search: null,
+1029 verbose parsed url   query: null,
+1029 verbose parsed url   pathname: '0.0.1',
+1029 verbose parsed url   path: '0.0.1',
+1029 verbose parsed url   href: '0.0.1' }
+1030 verbose addNamed [ 'pause', '0.0.1' ]
+1031 verbose addNamed [ '0.0.1', '0.0.1' ]
+1032 silly lockFile c62fc432-pause-0-0-1 pause@0.0.1
+1033 verbose lock pause@0.0.1 /home/doug/.npm/c62fc432-pause-0-0-1.lock
+1034 verbose cache add [ 'uid2@0.0.2', null ]
+1035 verbose cache add name=undefined spec="uid2@0.0.2" args=["uid2@0.0.2",null]
+1036 verbose parsed url { protocol: null,
+1036 verbose parsed url   slashes: null,
+1036 verbose parsed url   auth: null,
+1036 verbose parsed url   host: null,
+1036 verbose parsed url   port: null,
+1036 verbose parsed url   hostname: null,
+1036 verbose parsed url   hash: null,
+1036 verbose parsed url   search: null,
+1036 verbose parsed url   query: null,
+1036 verbose parsed url   pathname: 'uid2@0.0.2',
+1036 verbose parsed url   path: 'uid2@0.0.2',
+1036 verbose parsed url   href: 'uid2@0.0.2' }
+1037 verbose cache add name="uid2" spec="0.0.2" args=["uid2","0.0.2"]
+1038 verbose parsed url { protocol: null,
+1038 verbose parsed url   slashes: null,
+1038 verbose parsed url   auth: null,
+1038 verbose parsed url   host: null,
+1038 verbose parsed url   port: null,
+1038 verbose parsed url   hostname: null,
+1038 verbose parsed url   hash: null,
+1038 verbose parsed url   search: null,
+1038 verbose parsed url   query: null,
+1038 verbose parsed url   pathname: '0.0.2',
+1038 verbose parsed url   path: '0.0.2',
+1038 verbose parsed url   href: '0.0.2' }
+1039 verbose addNamed [ 'uid2', '0.0.2' ]
+1040 verbose addNamed [ '0.0.2', '0.0.2' ]
+1041 silly lockFile aaa92211-uid2-0-0-2 uid2@0.0.2
+1042 verbose lock uid2@0.0.2 /home/doug/.npm/aaa92211-uid2-0-0-2.lock
+1043 verbose url raw formidable/1.0.14
+1044 verbose url resolving [ 'https://registry.npmjs.org/', './formidable/1.0.14' ]
+1045 verbose url resolved https://registry.npmjs.org/formidable/1.0.14
+1046 info trying registry request attempt 1 at 01:13:33
+1047 http GET https://registry.npmjs.org/formidable/1.0.14
+1048 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+1049 verbose url raw cookie/0.0.5
+1050 verbose url resolving [ 'https://registry.npmjs.org/', './cookie/0.0.5' ]
+1051 verbose url resolved https://registry.npmjs.org/cookie/0.0.5
+1052 info trying registry request attempt 1 at 01:13:33
+1053 http GET https://registry.npmjs.org/cookie/0.0.5
+1054 verbose url raw bytes/0.2.0
+1055 verbose url resolving [ 'https://registry.npmjs.org/', './bytes/0.2.0' ]
+1056 verbose url resolved https://registry.npmjs.org/bytes/0.2.0
+1057 info trying registry request attempt 1 at 01:13:33
+1058 http GET https://registry.npmjs.org/bytes/0.2.0
+1059 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+1060 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+1061 verbose url raw pause/0.0.1
+1062 verbose url resolving [ 'https://registry.npmjs.org/', './pause/0.0.1' ]
+1063 verbose url resolved https://registry.npmjs.org/pause/0.0.1
+1064 info trying registry request attempt 1 at 01:13:33
+1065 http GET https://registry.npmjs.org/pause/0.0.1
+1066 verbose url raw uid2/0.0.2
+1067 verbose url resolving [ 'https://registry.npmjs.org/', './uid2/0.0.2' ]
+1068 verbose url resolved https://registry.npmjs.org/uid2/0.0.2
+1069 info trying registry request attempt 1 at 01:13:33
+1070 http GET https://registry.npmjs.org/uid2/0.0.2
+1071 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+1072 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+1073 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+1074 info trying registry request attempt 2 at 01:13:43
+1075 http GET https://registry.npmjs.org/mime
+1076 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+1077 info trying registry request attempt 2 at 01:13:43
+1078 http GET https://registry.npmjs.org/qs/0.6.5
+1079 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+1080 info trying registry request attempt 2 at 01:13:43
+1081 http GET https://registry.npmjs.org/formidable/1.0.14
+1082 info trying registry request attempt 2 at 01:13:43
+1083 http GET https://registry.npmjs.org/cookie/0.0.5
+1084 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+1085 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+1086 info trying registry request attempt 2 at 01:13:43
+1087 http GET https://registry.npmjs.org/bytes/0.2.0
+1088 info trying registry request attempt 2 at 01:13:43
+1089 http GET https://registry.npmjs.org/pause/0.0.1
+1090 info trying registry request attempt 2 at 01:13:43
+1091 http GET https://registry.npmjs.org/uid2/0.0.2
+1092 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+1093 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+1094 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+1095 info trying registry request attempt 3 at 01:14:43
+1096 http GET https://registry.npmjs.org/mime
+1097 silly lockFile ccf24a67-mime-1-2-9 mime@~1.2.9
+1098 silly lockFile ccf24a67-mime-1-2-9 mime@~1.2.9
+1099 verbose about to build /home/doug/node_projects/japb/node_modules/express/node_modules/send
+1100 info /home/doug/node_projects/japb/node_modules/express/node_modules/send unbuild
+1101 verbose from cache /home/doug/node_projects/japb/node_modules/express/node_modules/send/package.json
+1102 info preuninstall send@0.1.1
+1103 info uninstall send@0.1.1
+1104 verbose false,/home/doug/node_projects/japb/node_modules,/home/doug/node_projects/japb/node_modules/express/node_modules unbuild send@0.1.1
+1105 info postuninstall send@0.1.1
+1106 verbose about to build /home/doug/node_projects/japb/node_modules/express
+1107 info /home/doug/node_projects/japb/node_modules/express unbuild
+1108 verbose from cache /home/doug/node_projects/japb/node_modules/express/package.json
+1109 info preuninstall express@3.3.1
+1110 info uninstall express@3.3.1
+1111 verbose true,/home/doug/node_projects/japb/node_modules,/home/doug/node_projects/japb/node_modules unbuild express@3.3.1
+1112 verbose /home/doug/node_projects/japb/node_modules/.bin,[object Object] binRoot
+1113 info postuninstall express@3.3.1
+1114 error Error: getaddrinfo EADDRINFO
+1114 error     at errnoException (dns.js:37:11)
+1114 error     at Object.onanswer [as oncomplete] (dns.js:124:16)
+1115 error If you need help, you may report this log at:
+1115 error     <http://github.com/isaacs/npm/issues>
+1115 error or email it to:
+1115 error     <npm-@googlegroups.com>
+1116 error System Linux 3.8.0-19-generic
+1117 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "express" "--save"
+1118 error cwd /home/doug/node_projects/japb
+1119 error node -v v0.11.3
+1120 error npm -v 1.2.25
+1121 error syscall getaddrinfo
+1122 error code EADDRINFO
+1123 error errno EADDRINFO
+1124 verbose exit [ 1, true ]

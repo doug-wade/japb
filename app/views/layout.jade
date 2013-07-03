@@ -1,0 +1,46 @@
+!!!
+html(ng-app="japb")
+  head
+    meta(charset='utf8')
+    base(href='/')
+    title= title
+    link(rel='stylesheet', href='/lib/bootstrap/css/bootstrap.css')
+    link(rel='stylesheet', href='/lib/bootstrap/css/bootstrap-responsive.css')
+    link(rel='stylesheet', href='/css/app.css')
+  body
+    div.navbar.navbar-inverse.navbar-fixed-top
+      div.navbar-inner
+        div.container
+          button.btn.btn-navbar(type='button',
+                                data-toggle='collapse',
+                                data-target='.nav-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href='/') JAPB
+          div.nav-collapse.collapse
+            ul.nav
+              li.active
+                a(href='#') Home
+              li.dropdown
+                a.dropdown-toggle(href='#',
+                                  data-toggle='dropdown') Admin
+                ul.dropdown-menu
+                  li
+                    a(href='#') New Post
+            div.pull-right
+              if username==undefined
+                p Anonymous <a href='/signin'>(sign in)</a>
+              else
+                p #{username}
+    div.container
+      block content
+    include footer
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js')
+    script(src='/lib/bootstrap/js/bootstrap.js')
+    script(src='javascripts/app.js')
+    script(src='javascripts/services.js')
+    script(src='javascripts/controllers.js')
+    script(src='javascripts/filters.js')
+    script(src='javascripts/directives.js')
