@@ -13,12 +13,12 @@ angular.module('japb', ['japb.filters', 'japb.services', 'japb.directives']).
         controller: AddPostCtrl
       }).
       when('/readPost/:id', {
-        templateUrl: 'partials/editPost',
-        controller: EditPostCtrl
+        templateUrl: 'partials/readPost',
+        controller: ReadPostCtrl
       }).
       when('/editPost/:id', {
         templateUrl: 'partials/editPost',
-        controller: DeletePostCtrl
+        controller: EditPostCtrl
       }).
       when('/deletePost/:id', {
         templateUrl: 'partials/deletePost',

@@ -2,76 +2,73 @@
  * GET home page.
  */
 var dataAccess = require('./dataAccess');
-var data = {
-  "posts": [
-    {
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      "title": "Sed egestas",
-      "text": "Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus."
-    }
-  ]
-};
 
-exports.posts = function(req, res) {
+exports.posts = function(req, res){
   var posts = [];
-  data.posts.forEach(function(post, i) {
-    posts.push({
-      id: i,
-      title: post.title,
-      text: post.text.substr(0,50) + '...'
+  dataAccess.getPosts()
+  .then(function(data){
+    data.rows.forEach(function(post, i){
+      posts.push({
+        id: post.id,
+        title: post.title,
+        teaser: post.text.substr(0,50) + '...',
+        text: post.text
+      });
     });
-  });
-  res.json({
-    posts: posts
-  });
-};
-
-exports.post = function(req, res) {
-  var id = req.params.id;
-
-  if (id >= 0 && id < data.posts.length) {
     res.json({
-      post: data.posts[id]
+      posts: posts
     });
-  } else {
-    res.json(false);
-  }
+  }, function(err){
+    res.json(JSON.stringify(err));
+  });
 };
 
-exports.addPost = function(req, res) {
-  data.posts.push(req.body);
-  res.json(req.body);
-};
-
-exports.editPost = function(req, res) {
+exports.post = function(req, res){
   var id = req.params.id;
 
-  if (id >= 0 && id < data.posts.length) {
-    data.posts.splice(id, 1);
-    res.json(true);
-  } else {
-    res.json(false);
-  }
+  dataAccess.getPost(id)
+  .then(function(data){
+    var postRow = data.rows[0];
+    res.json({
+      post: postRow
+    });
+  });
 };
 
-exports.deletePost = function(req, res) {
+exports.addPost = function(req, res){
+  dataAccess.createPost(req.body.title, req.body.text).
+  then(function(data){
+    res.json({ id: data.id });
+  }, function(error){
+    res.json({ error: error });
+  });
+};
+
+exports.editPost = function(req, res){
   var id = req.params.id;
 
-  if (id >= 0 && id < data.posts.length) {
-    data.posts.splice(id, 1);
-    res.json(true);
-  } else {
-    res.json(false);
-  }
+  dataAccess.updatePost(req.body.id, req.body.title, req.body.text).
+  then(function(data){
+    res.json({ id: JSON.stringify(data) });
+  });
 };
 
-exports.getDate = function(req, res) {
+exports.deletePost = function(req, res){
+  var id = req.params.id;
+
+  dataAccess.deletePost(id).
+  then(function(data){
+    res.json({ id: data.id });
+  }, function(error){
+    res.json({ error: error });
+  });
+};
+
+exports.getDate = function(req, res){
   dataAccess.getDate()
-    .then(function(dateResult) { res.json({ date: dateResult }); 
-    }, function(error){
-      res.json({ date: undefined });
-    })
-}
+  .then(function(dateResult){ 
+    res.json({ date: dateResult }); 
+  }, function(error){
+    res.json({ error: error });
+  });
+};

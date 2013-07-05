@@ -24,35 +24,38 @@ function ReadPostCtrl($scope, $http, $routeParams) {
     });
 }
 
-function EditPostCtrl($scope, $http, $location, $routeParams) {
+function EditPostCtrl($scope, $http, $location, $routeParams){
   $scope.form = {};
   $http.get('/api/post/' + $routeParams.id).
-    success(function(data) {
+    success(function(data){
       $scope.post = data.post;
     });
 
-  $scope.editPost = function() {
-    $http.put('/api/post/' + $routeParams.id, $scope.form).
-      success(function(data) {
+  $scope.editPost = function(){
+    $http.put('/api/post/' + $routeParams.id, $scope.post).
+      success(function(data){
         $location.url('/readPost/' + $routeParams.id);
+      }).
+      error(function(err){
+        console.log(err);
       });
   };
 }
 
-function DeletePostCtrl($scope, $http, $location, $routeParams) {
+function DeletePostCtrl($scope, $http, $location, $routeParams){
   $http.get('/api/post/' + $routeParams.id).
-    success(function(data) {
+    success(function(data){
       $scope.post = data.post;
     });
 
-  $scope.deletePost = function() {
+  $scope.deletePost = function(){
     $http.delete('/api/post/' + $routeParams.id).
-      success(function(data) {
+      success(function(data){
         $location.url('/');
       });
   };
 
-  $scope.home = function() {
+  $scope.home = function(){
     $location.url('/');
   };
 }
