@@ -37,9 +37,6 @@ app.configure('production', function(){
 // Routes
 app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
-app.get('/Contact', routes.contact);
-app.get('/About', routes.about);
-app.get('/Signin', routes.signin);
 
 //JSON API
 app.get('/api/posts', api.posts);

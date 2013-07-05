@@ -24,6 +24,18 @@ angular.module('japb', ['japb.filters', 'japb.services', 'japb.directives']).
         templateUrl: 'partials/deletePost',
         controller: DeletePostCtrl
       }).
+      when('/about', {
+        templateUrl: 'partials/about',
+        controller: IndexCtrl
+      }).
+      when('/signin', {
+        templateUrl: 'partials/signin',
+        controller: IndexCtrl
+      }).
+      when('/contact', {
+        templateUrl: 'partials/contact',
+        controller: IndexCtrl
+      }).
       otherwise({
         redirectTo: '/'
       });
