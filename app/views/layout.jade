@@ -4,9 +4,9 @@ html(ng-app="japb")
     meta(charset='utf8')
     base(href='/')
     title= title
-    link(rel='stylesheet', href='/lib/bootstrap/css/bootstrap.css')
-    link(rel='stylesheet', href='/lib/bootstrap/css/bootstrap-responsive.css')
-    link(rel='stylesheet', href='/css/app.css')
+    link(rel='stylesheet', href='/public/lib/bootstrap/css/bootstrap.css')
+    link(rel='stylesheet', href='/public/lib/bootstrap/css/bootstrap-responsive.css')
+    link(rel='stylesheet', href='/public/css/app.css')
   body
     div.navbar.navbar-inverse.navbar-fixed-top
       div.navbar-inner
@@ -21,7 +21,7 @@ html(ng-app="japb")
           div.nav-collapse.collapse
             ul.nav
               li.active
-                a(href='#') Home
+                a(href='/') Home
               li.dropdown
                 a.dropdown-toggle(href='#',
                                   data-toggle='dropdown') Admin
@@ -38,9 +38,10 @@ html(ng-app="japb")
     include footer
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js')
     script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js')
-    script(src='/lib/bootstrap/js/bootstrap.js')
-    script(src='javascripts/app.js')
-    script(src='javascripts/services.js')
-    script(src='javascripts/controllers.js')
-    script(src='javascripts/filters.js')
-    script(src='javascripts/directives.js')
+    script(src='/public/lib/bootstrap/js/bootstrap.js')
+    script(src='/public/js/app.js')
+    script(src='/public/js/angular-resource.js')
+    script(src='/public/js/services.js')
+    script(src='/public/js/controllers.js')
+    script(src='/public/js/filters.js')
+    script(src='/public/js/directives.js')

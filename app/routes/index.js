@@ -3,20 +3,9 @@ exports.index = function(req, res) {
 };
 
 exports.partials = function(req, res) {
-  console.log('partials/' + name);
   var name = req.params.name;
+  console.log('partials/' + name);
   res.render('partials/' + name);
+  //It would be nice if I could successfully include more stuff:
+  //res.render('partials/' + name, { title: name, username: req.session.username });
 };
-
-exports.contact = function(req, res) {
-  res.render('contact', { title: 'Contact', username: req.session.username });
-};
-
-exports.about = function(req, res) {
-  res.render('about', { title: 'About', username: req.session.username });
-};
-
-exports.signin = function(req, res) {
-  res.render('signin', { title: 'Signin', username: req.session.username });
-};
-

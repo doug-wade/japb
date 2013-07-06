@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -15,13 +14,13 @@ app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
-  app.set(express.favicon("img/japb-icon.png"));
+  app.set(express.favicon(__dirname + '/public/favicon.ico'));
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser());
   app.use(express.session({ secret: 'your secret here' }));
-  app.use(require('stylus').middleware({ src: __dirname + '/public' }));
+  app.use(require('stylus').middleware({ src: __dirname + '/css' }));
   app.use(app.router);
   app.use(express.static(__dirname));
 });
@@ -36,7 +35,9 @@ app.configure('production', function(){
 
 // Routes
 app.get('/', routes.index);
+app.use(routes.index);
 app.get('/partials/:name', routes.partials);
+app.use(routes.partials);
 
 //JSON API
 app.get('/api/posts', api.posts);
