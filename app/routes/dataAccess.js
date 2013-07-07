@@ -119,7 +119,7 @@ exports.editPost = function(id, postTitle, postText){
 
       done();
 
-      deferred.resolve(result.rows[0].id);
+      deferred.resolve(id);
     });
   });
 
