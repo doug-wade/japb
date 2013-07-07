@@ -47,7 +47,7 @@ exports.addPost = function(req, res){
 exports.editPost = function(req, res){
   var id = req.params.id;
 
-  dataAccess.updatePost(req.body.id, req.body.title, req.body.text).
+  dataAccess.editPost(req.body.id, req.body.title, req.body.text).
   then(function(data){
     res.json({ id: JSON.stringify(data) });
   });
@@ -57,8 +57,8 @@ exports.deletePost = function(req, res){
   var id = req.params.id;
 
   dataAccess.deletePost(id).
-  then(function(data){
-    res.json({ id: data.id });
+  then(function(){
+    res.json({ id: id });
   }, function(error){
     res.json({ error: error });
   });

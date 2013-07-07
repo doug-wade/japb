@@ -72,7 +72,7 @@ exports.createPost = function(postTitle, postText) {
 
   pg.connect(dbUrl, function(err, client, done) {
     client.query(insertQuery, function(err, result) {
-      //handleError(err, deferred, done);
+      handleError(err, deferred, done);
 
       console.log(result.rows[0].id);
 
@@ -104,7 +104,7 @@ exports.deletePost = function(id){
   return deferred.promise;
 }
 
-exports.updatePost = function(id, postTitle, postText){
+exports.editPost = function(id, postTitle, postText){
   var deferred = Q.defer(),
       updateQuery = "update post " +
         "  set post_text = '" + postText + "' " +
@@ -114,7 +114,7 @@ exports.updatePost = function(id, postTitle, postText){
   console.log(updateQuery);
 
   pg.connect(dbUrl, function(err, client, done){
-    client.query(updatePost, function(err, result){
+    client.query(updateQuery, function(err, result){
       handleError(err, deferred, done);
 
       done();

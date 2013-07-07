@@ -35,9 +35,9 @@ angular.module('japb', ['japb.controllers','japb.filters', 'japb.services', 'jap
       when('/contact', {
         templateUrl: '/partials/contact',
         controller: 'IndexCtrl'
-      }).
-      otherwise({
-        redirectTo: '/'
       });
+      /*.otherwise({
+        redirectTo: '/'
+      });*/
     $locationProvider.html5Mode(true);
   }]);
