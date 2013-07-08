@@ -13,7 +13,7 @@ html(ng-app="japb")
     link(rel='stylesheet', href='/public/lib/bootstrap/css/bootstrap-responsive.css')
     
     //App styles
-    link(rel='stylesheet', href='/public/css/app.css')
+    link(rel='stylesheet', href='/public/css/style.css')
   body
     div.navbar.navbar-inverse.navbar-fixed-top
       div.navbar-inner
@@ -35,7 +35,7 @@ html(ng-app="japb")
                 ul.dropdown-menu
                   li
                     a(href='/addPost') New Post
-            div.pull-right
+            div.pull-right.sign-in
               if username==undefined
                 p Anonymous <a href='/signin'>(sign in)</a>
               else

@@ -1,7 +1,7 @@
 /*
  * GET home page.
  */
-var dataAccess = require('./dataAccess');
+var dataAccess = require('../data/dataAccess');
 
 exports.posts = function(req, res){
   var posts = [];

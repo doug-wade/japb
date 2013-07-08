@@ -1,7 +1,7 @@
 h2 Edit Post
 label(for='title') Title:
-input(ng-model='post.title', name='title')
+textarea(ng-model='post.title', name='title', class='span12 post-title-box')
 p Body:
-textarea(ng-model='post.text', cols='50', rows='15')
+textarea(ng-model='post.text', class='span12 post-body-box')
 p
   button(ng-click='editPost()') Edit Post
