@@ -65,7 +65,7 @@ exports.createPost = function(postTitle, postText) {
   console.log(insertQuery);
 
   pg.connect(dbUrl, function(err, client, done) {
-    client.query(queries.getSqlQuery('addPost'), [postTitle, postText] function(err, result) {
+    client.query(queries.getSqlQuery('addPost'), [postTitle, postText], function(err, result) {
       handleError(err, deferred, done);
 
       console.log(result.rows[0].id);

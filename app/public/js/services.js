@@ -4,7 +4,7 @@
 
 angular.module('japb.services', ['ngResource']).
   factory('Post', function($resource){
-    return $resource('api/post/:id')
+    return $resource('api/post/:id');
   });
   /* Maybe this is a thing that would work?
   factory('Post', function($resource){
