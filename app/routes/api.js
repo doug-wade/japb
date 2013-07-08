@@ -38,7 +38,8 @@ exports.post = function(req, res){
 exports.addPost = function(req, res){
   dataAccess.createPost(req.body.title, req.body.text).
   then(function(data){
-    res.json({ id: data.id });
+    console.log('api: ' + data)
+    res.json({ id: data });
   }, function(error){
     res.json({ error: error });
   });
