@@ -2,8 +2,10 @@
 create table jabp_user
 (
 	user_id serial primary key
+	,username text
 	,email_address text
-	,hash_pipe_salt text
+	,pw_hash text
+	,pw_hash_salt text
 );
 commit;
 
@@ -12,6 +14,21 @@ create table user_token
 	user_id integer references jabp_user (user_id)
 	,temporary_token text
 	,token_expiry timestamp
+);
+
+create table user_permissions
+(
+	user_id integer references japb_user (user_id)
+	,is_admin boolean
+	,is_shadow_banned boolean
+);
+
+create table comments
+(
+	post_id integer references post (post_id)
+	,user_id integer references japb_user (user_id)
+	,comment_text text
+	,is_hidden boolean
 );
 
 create table post
@@ -37,7 +54,9 @@ create table map_post_to_tag
 create function insert_user
 (
 	new_user_email text
-	,new_user_hash_pipe_salt text
+	,new_username text
+	,new_user_hash text
+	,new_user_salt text
 	,out new_user_id int
 )
 returns integer
@@ -46,9 +65,11 @@ $$ begin
 insert into japb_user
 (
 	email_address
-	,hash_pipe_salt
+	,username
+	,pw_hash
+	,pw_hash_salt
 )
-values (new_user_email, new_user_hash_pipe_salt)
+values (new_user_email, new_username, new_user_hash, new_user_salt)
 returning user_id into new_user_id;
 end $$
 language plpgsql;

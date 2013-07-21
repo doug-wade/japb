@@ -1,13 +1,56 @@
 /*
  * GET home page.
  */
-var dataAccess = require('../data/dataAccess');
+var dataAccess = require('../data/dataAccess'),
+    bcrypt = require('bcrypt'),
+    secret = 'YOUR SECRET HERE';
+
+function hash_pw(salt, pw){
+  bcrypt.hash(salt, pw + secret, function(err, hash){
+    if (err){
+      return None;
+    }
+    return hash;
+  });
+}
+
+function send_error(res, err){
+  res.json({
+    error: registrationError
+  });
+}
+
+exports.registerUser = function(req, res){
+  var hash, userId,
+      registrationError = 'There was a problem with your registration.  Please try again.',
+      pw = req.body.password,
+      username = req.body.username;
+  bcrypt.genSalt(function(err, salt){
+    if (err){
+      send_error(res, registrationError);
+    }
+    hash = hash_pw(salt, pw);
+    if (hash){
+      userId = dataAccess.registerUser(username, req.body.email, hash, salt);
+      res.json({
+        userId: userId,
+        username: username
+      });
+    } else {
+      send_error(res, registrationError);
+    }
+  });
+}
+
+exports.loginUser = function(req, res){
+  salt 
+}
 
 exports.posts = function(req, res){
   var posts = [];
   dataAccess.getPosts()
   .then(function(data){
-    data.rows.forEach(function(post, i){
+    data.posts.forEach(function(post, i){
       posts.push({
         id: post.id,
         title: post.title,
@@ -24,11 +67,11 @@ exports.posts = function(req, res){
 };
 
 exports.post = function(req, res){
-  var id = req.params.id;
+  var postRow, id = req.params.id;
 
   dataAccess.getPost(id)
   .then(function(data){
-    var postRow = data.rows[0];
+    postRow = data.post;
     res.json({
       post: postRow
     });
@@ -38,8 +81,7 @@ exports.post = function(req, res){
 exports.addPost = function(req, res){
   dataAccess.createPost(req.body.title, req.body.text).
   then(function(data){
-    console.log('api: ' + data)
-    res.json({ id: data });
+    res.json({ id: data.post_id });
   }, function(error){
     res.json({ error: error });
   });
@@ -50,8 +92,7 @@ exports.editPost = function(req, res){
 
   dataAccess.editPost(id, req.body.title, req.body.text).
   then(function(data){
-    console.log(JSON.stringify(data));
-    res.json({ id: JSON.stringify(data) });
+    res.json({ id: JSON.stringify(data.post_id) });
   });
 };
 
@@ -68,8 +109,8 @@ exports.deletePost = function(req, res){
 
 exports.getDate = function(req, res){
   dataAccess.getDate()
-  .then(function(dateResult){ 
-    res.json({ date: dateResult }); 
+  .then(function(data){ 
+    res.json({ date: data.now }); 
   }, function(error){
     res.json({ error: error });
   });

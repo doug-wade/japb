@@ -28,13 +28,21 @@ angular.module('japb', ['japb.controllers','japb.filters', 'japb.services', 'jap
         templateUrl: '/partials/about',
         controller: 'IndexCtrl'
       }).
+      when('/contact', {
+        templateUrl: '/partials/contact',
+        controller: 'IndexCtrl'
+      }).
       when('/signin', {
         templateUrl: '/partials/signin',
         controller: 'IndexCtrl'
       }).
-      when('/contact', {
-        templateUrl: '/partials/contact',
-        controller: 'IndexCtrl'
+      when('/signup', {
+        templateUrl: '/partials/signup',
+        controller: 'UserCtrl'
+      }).
+      when('/forgotPassword', {
+        templateUrl: '/partials/forgotPassword',
+        controller: 'UserCtrl'
       });
       /*.otherwise({
         redirectTo: '/'

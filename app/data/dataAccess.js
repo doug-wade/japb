@@ -20,7 +20,9 @@ exports.getDate = function() {
 
       done();
 
-      deferred.resolve(result.rows[0].when);
+      deferred.resolve({
+        now: result.rows[0].when
+      });
     });
   });
 
@@ -28,15 +30,28 @@ exports.getDate = function() {
 }
 
 exports.getPosts = function() {
-  var deferred = Q.defer();
+  var posts = [],
+      deferred = Q.defer();
 
   pg.connect(dbUrl, function(err, client, done) {
     client.query(queries.getSqlQuery('getAllPosts'), function(err, result) {
       handleError(err, deferred, done);
 
       done();
+      console.log(result.rows);
+      result.rows.forEach(function(post, i){
+        console.log(post);
+        posts.push({
+          id: post.id,
+          title: post.title,
+          teaser: post.text.substr(0,50) + '...',
+          text: post.text
+        });
+      });
 
-      deferred.resolve(result);
+      deferred.resolve({
+        posts: posts
+      });
     });
   });
 
@@ -52,7 +67,9 @@ exports.getPost = function(id) {
 
       done();
 
-      deferred.resolve(result);
+      deferred.resolve({
+        post: result.rows[0]
+      });
     });
   });
 
@@ -66,11 +83,11 @@ exports.createPost = function(postTitle, postText) {
     client.query(queries.getSqlQuery('addPost'), [postTitle, postText], function(err, result) {
       handleError(err, deferred, done);
 
-      console.log(result.rows[0].id);
-
       done();
 
-      deferred.resolve(result.rows[0].post_id);      
+      deferred.resolve({
+        post_id: result.rows[0].post_id
+      });
     });
   });
 
@@ -102,9 +119,41 @@ exports.editPost = function(id, postTitle, postText){
 
       done();
 
-      deferred.resolve(id);
+      deferred.resolve({
+        post_id: id
+      });
     });
   });
 
   return deferred.promise;
+}
+
+exports.registerUser = function(username, email, hash, salt){
+  var deferred = Q.defer();
+
+  pg.connect(dbUrl, function(err, client, done){
+    client.query(queries.getSqlQuery('insertUser'), [email, username, hash, salt], function(err, result){
+      handleError(err, deferred, done);
+
+      done();
+
+      deferred.resolve({
+        user_id: result.rows[0].user_id
+      });
+    });
+  });
+}
+
+exports.loginUser = function(login){
+  var deferred = Q.defer();
+
+  pg.connect(dbUrl, function(err, client, done){
+    client.query(queries.getSqlQuery('getUser'), [login], function(err, result){
+      handleError(err, deferred, done);
+
+      done();
+
+      deferred.resolve();
+    });
+  });
 }

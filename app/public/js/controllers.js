@@ -10,6 +10,20 @@ angular.module('japb.controllers', ['japb.services']).
     });
   }).
 
+  controller('UserCtrl', function($scope, $http){
+    $scope.form = {};
+    $scope.registerUser = function() {
+      $http.post('/api/user/register', $scope.form).
+      success(function(data){
+        $location.path('/');
+      });
+    };
+    $http.get('/api/user').
+    success(function(data, status, headers, config){
+      $scope.user = data.username;
+    });
+  }).
+
   controller('AddPostCtrl', function($scope, $http, $location){
     $scope.form = {};
     $scope.submitPost = function() {
