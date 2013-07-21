@@ -1,17 +1,16 @@
 ﻿begin;
-create table jabp_user
+create table japb_user
 (
 	user_id serial primary key
 	,username text
 	,email_address text
 	,pw_hash text
-	,pw_hash_salt text
 );
 commit;
 
 create table user_token
 (
-	user_id integer references jabp_user (user_id)
+	user_id integer references japb_user (user_id)
 	,temporary_token text
 	,token_expiry timestamp
 );
@@ -56,7 +55,6 @@ create function insert_user
 	new_user_email text
 	,new_username text
 	,new_user_hash text
-	,new_user_salt text
 	,out new_user_id int
 )
 returns integer
@@ -67,9 +65,8 @@ insert into japb_user
 	email_address
 	,username
 	,pw_hash
-	,pw_hash_salt
 )
-values (new_user_email, new_username, new_user_hash, new_user_salt)
+values (new_user_email, new_username, new_user_hash)
 returning user_id into new_user_id;
 end $$
 language plpgsql;

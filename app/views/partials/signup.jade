@@ -1,9 +1,9 @@
 form.form-signin
   h2.form-signin-heading Create Account
-  input.input-block-level(type='text', placeholder='Username')
-  input.input-block-level(type='text', placeholder='Email address')
-  input.input-block-level(type='password', placeholder='Password')
+  input.input-block-level(type='text', ng-model='form.username', name='username', placeholder='Username')
+  input.input-block-level(type='text', ng-model='form.email', name='email', placeholder='Email address')
+  input.input-block-level(type='password', ng-model='form.password', name='password', placeholder='Password')
   input.input-block-level(type='password', placeholder='Confirm Password')
   label.checkbox Remember me
     input(type='checkbox', value='remember-me')
-  button.btn.btn-large.btn-primary(type='submit', ng-click='registerUser') Create
+  button.btn.btn-large.btn-primary(type='submit', ng-click='registerUser()') Create

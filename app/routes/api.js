@@ -3,20 +3,25 @@
  */
 var dataAccess = require('../data/dataAccess'),
     bcrypt = require('bcrypt'),
+    Q = require('q'),
     secret = 'YOUR SECRET HERE';
 
 function hash_pw(salt, pw){
-  bcrypt.hash(salt, pw + secret, function(err, hash){
+  var deferred = Q.defer();
+
+  bcrypt.hash(pw + secret, salt, function(err, hash){
     if (err){
-      return None;
+      deferred.reject(err);
     }
-    return hash;
+    deferred.resolve({hash: hash});
   });
+
+  return deferred.promise;
 }
 
 function send_error(res, err){
   res.json({
-    error: registrationError
+    error: err
   });
 }
 
@@ -25,25 +30,29 @@ exports.registerUser = function(req, res){
       registrationError = 'There was a problem with your registration.  Please try again.',
       pw = req.body.password,
       username = req.body.username;
+  console.log('pw: ', req.body.password);
   bcrypt.genSalt(function(err, salt){
     if (err){
       send_error(res, registrationError);
     }
-    hash = hash_pw(salt, pw);
-    if (hash){
-      userId = dataAccess.registerUser(username, req.body.email, hash, salt);
+    hash_pw(salt, pw).
+    then(function(data){
+      dataAccess.registerUser(username, req.body.email, data.hash);
+    }).
+    then(function(data){
       res.json({
-        userId: userId,
-        username: username
+        userId: data.user_id,
+        username: data.username
       });
-    } else {
+    }).
+    catch(function(err){
       send_error(res, registrationError);
-    }
+    });
   });
 }
 
 exports.loginUser = function(req, res){
-  salt 
+  var salt = '';
 }
 
 exports.posts = function(req, res){

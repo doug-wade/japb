@@ -128,17 +128,20 @@ exports.editPost = function(id, postTitle, postText){
   return deferred.promise;
 }
 
-exports.registerUser = function(username, email, hash, salt){
+exports.registerUser = function(username, email, hash){
   var deferred = Q.defer();
 
+  console.log('Saving user to db...', username, email, hash);
+
   pg.connect(dbUrl, function(err, client, done){
-    client.query(queries.getSqlQuery('insertUser'), [email, username, hash, salt], function(err, result){
+    client.query(queries.getSqlQuery('insertUser'), [email, username, hash], function(err, result){
       handleError(err, deferred, done);
 
       done();
 
       deferred.resolve({
-        user_id: result.rows[0].user_id
+        user_id: result.rows[0].user_id,
+        username: username
       });
     });
   });
