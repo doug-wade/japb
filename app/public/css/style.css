@@ -37,5 +37,13 @@ a {
   height: 15em;
 }
 .sign-in {
-  color: #333;
+  color: #999;
+  text-align: -webkit-match-parent;
+  height: auto !important;
+  display: block;
+}
+.sign-in p {
+  padding: 10px 15px 10px;
+  line-height: 20px;
+  display: block;
 }
