@@ -231,7 +231,7 @@ exports.checkEmail = function(email_address){
 * @returns {boolean} True if the username exists, False otherwise.
 */
 exports.checkUsername = function(username){
-  return executeSqlQuery('checkUsername'), [username]);
+  return executeSqlQuery('checkUsername', [username]);
 }
 
 /**
