@@ -60,14 +60,65 @@ create function insert_user
 returns integer
 as
 $$ begin
-insert into japb_user
+declare email_used boolean;
+declare username_used boolean;
+begin
+	select check_username(new_username) into username_used;
+	select check_email(new_user_email) into email_used;
+	if new_user_email = '' or new_username = '' or new_user_hash = '' or email_used or username_used
+	then
+		select 0 into new_user_id;
+	else
+		insert into japb_user
+		(
+			email_address
+			,username
+			,pw_hash
+		)
+		values (new_user_email, new_username, new_user_hash)
+		returning user_id into new_user_id;
+	end if;
+end;
+end $$
+language plpgsql;
+
+create function check_username
 (
-	email_address
-	,username
-	,pw_hash
+	username_to_check text
 )
-values (new_user_email, new_username, new_user_hash)
-returning user_id into new_user_id;
+returns boolean
+as
+$$ begin
+if exists (
+	select user_id
+	from japb_user
+	where japb_user.username = username_to_check
+)
+then
+	return True as "username_exists";
+else
+	return False as "username_exists";
+end if;
+end $$
+language plpgsql;
+
+create function check_email
+(
+	email_adress_to_check text
+)
+returns boolean
+as
+$$ begin
+if exists (
+	select user_id
+	from japb_user
+	where japb_user.email_address = email_adress_to_check
+)
+then
+	return True as "email_exists";
+else
+	return False as "email_exists";
+end if;
 end $$
 language plpgsql;
 
@@ -122,12 +173,14 @@ language plpgsql;
 create function delete_post
 (
 	former_post_id int
+	,out post_deleted boolean
 )
-returns void
+returns boolean
 as
 $$ begin
 delete from post
 where post.post_id = former_post_id;
+post_deleted := found;
 return;
 end $$
 language plpgsql;
@@ -137,14 +190,21 @@ create function update_post
 	existing_post_id int
 	,new_post_title text
 	,new_post_text text
+	,out updated_post_id integer
 )
-returns void
+returns integer
 as
 $$ begin
 update post
 set post_text = new_post_text
 	,post_title = new_post_title
 where post.post_id = existing_post_id;
+if found
+then
+	updated_post_id := existing_post_id;
+else
+	updated_post_id := 0;
+end if;
 return;
 end $$
 language plpgsql;

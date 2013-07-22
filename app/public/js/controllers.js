@@ -1,8 +1,9 @@
 'use strict';
 
-//Controllers
+var secret = 'YOUR SECRET HERE';
 
-angular.module('japb.controllers', ['japb.services']).
+//Controllers
+angular.module('japb.controllers', ['japb.services', 'ngCookies']).
   controller('IndexCtrl', function($scope, $http){
     $http.get('/api/posts').
     success(function(data, status, headers, config) {
@@ -10,26 +11,42 @@ angular.module('japb.controllers', ['japb.services']).
     });
   }).
 
-  controller('UserCtrl', function($scope, $http){
-    $scope.form = {};
-    $scope.registerUser = function() {
-      $http.post('/api/user/register', $scope.form).
+  controller('UserCtrl', function($scope, $http, $location, $cookies){
+    $scope.master = {};
+
+    $scope.registerUser = function(user){
+      $http.post('/api/user/register', user).
       success(function(data){
+        console.log(data);
+        $cookies.userCookie = 'username=' + data.username + 
+                              '&userId=' + data.userId;
         $location.path('/');
       });
     };
+
+    $scope.login = function() {
+      $http.post('/api/user/login', $scope.form).
+      success(function(data){
+        $cookies.userCookie = 'username=' + data.username + 
+                              '&userId=' + data.userId;
+        $location.path('/');
+      });
+    };
+
     $http.get('/api/user').
     success(function(data, status, headers, config){
-      $scope.user = data.username;
+      $scope.username = data.username;
     });
   }).
 
   controller('AddPostCtrl', function($scope, $http, $location){
-    $scope.form = {};
-    $scope.submitPost = function() {
-      $http.post('/api/post', $scope.form).
+    $scope.master = {};
+
+    $scope.submitPost = function(post) {
+      $http.post('/api/post', post).
       success(function(data) {
-        $location.path('/');
+        console.log(data);
+        $location.url('/readPost/' + data.id);
       });
     };
   }).

@@ -30,22 +30,24 @@ exports.registerUser = function(req, res){
       registrationError = 'There was a problem with your registration.  Please try again.',
       pw = req.body.password,
       username = req.body.username;
-  console.log('pw: ', req.body.password);
   bcrypt.genSalt(function(err, salt){
     if (err){
+      console.log(err);
       send_error(res, registrationError);
     }
     hash_pw(salt, pw).
     then(function(data){
-      dataAccess.registerUser(username, req.body.email, data.hash);
-    }).
-    then(function(data){
-      res.json({
-        userId: data.user_id,
-        username: data.username
+      dataAccess.registerUser(username, req.body.email, data.hash).
+      then(function(data){
+        console.log('Attempting to send json...');
+        res.json({
+          userId: data.user_id,
+          username: data.username
+        });
       });
     }).
     catch(function(err){
+      console.log(err);
       send_error(res, registrationError);
     });
   });

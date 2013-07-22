@@ -1,8 +1,13 @@
-
 h2 Create New Post
-label(for='title') Title:
-textarea(ng-model='form.title', name='title', class='span12 post-title-box')
-p Body:
-textarea(ng-model='form.text', class='span12 post-body-box')
-p
-  button(ng-click='submitPost()') Submit Post
+form.css-form
+  label(for='title') Title:
+  textarea(ng-model='post.title', 
+           name='title', 
+           class='span12 post-title-box', 
+           required)
+  label(for='text') Body:
+  textarea(ng-model='post.text', 
+           name='text', 
+           class='span12 post-body-box', 
+           required)
+  button(ng-click='submitPost(post)') Submit Post
