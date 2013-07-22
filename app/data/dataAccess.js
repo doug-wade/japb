@@ -61,11 +61,30 @@ var formatResults = function(result, queryName) {
       return { posts: posts };
 
     case 'updatePost':
-      console.log(result.rows);
       return { post_id: result.rows[0].updated_post_id };
 
+    //Users
+    case 'checkEmail':
+      return { exists: result.rows[0].email_exists };
+
+    case 'checkUsername':
+      return { exists: result.rows[0].username_exists };
+
+    case 'getUser':
+      return { user_id: result.rows[0].user_id, 
+               username: result.rows[0].username };
+
+    case 'insertUser':
+      var new_user_id = result.rows[0].insert_user;
+
+      if (new_user_id == 0){
+        deferred.resolve({ error: 'Insert failed.' });
+      }
+
+      return { user_id: new_user_id, username: username };
+
     default:
-      return { err: 'An unknown SQL query was called.' }
+      return { error: 'An unknown SQL query was called.' };
   }
 };
 
@@ -175,115 +194,55 @@ exports.editPost = function(id, postTitle, postText){
 }
 
 /**
-* @ngdoc
-* @name
+* @ngdoc function
+* @name registerUser
 * @function
 *
-* @description 
-* @param
-* @returns
+* @description Registers a new user in the database.
+* @param {string} username The new user's username.
+* @param {string} email The new user's email address.
+* @param {string} hash The hash of the user's password, including cycles and salt.
+* @returns {object} The new user's username and user_id.
 */
 exports.registerUser = function(username, email, hash){
-  var new_user_id, 
-      deferred = Q.defer();
-
-  console.log('Saving user to db...', username, email, hash);
-
-  pg.connect(dbUrl, function(err, client, done){
-    client.query(queries.getSqlQuery('insertUser'), [email, username, hash], function(err, result){
-      handleError(err, deferred, done);
-
-      done();
-
-      new_user_id = result.rows[0].insert_user;
-
-      console.log('new_user_id: ', new_user_id);
-
-      if (new_user_id == 0){
-        deferred.reject('Insert failed.');
-      }
-
-      deferred.resolve({
-        user_id: new_user_id,
-        username: username
-      });
-    });
-  });
-
-  return deferred.promise;
+  return executeSqlQuery('insertUser', [email, username, hash]);
 }
 
 /**
-* @ngdoc
-* @name
+* @ngdoc function
+* @name checkEmail
 * @function
 *
-* @description 
-* @param
-* @returns
+* @description Checks to see if an email address already exists.
+* @param {string} email_address The email address to check.
+* @returns {boolean} True if the email exists, False otherwise.
 */
 exports.checkEmail = function(email_address){
-  var deferred = Q.defer();
-
-  pg.connect(dbUrl, function(err, client, done){
-    client.query(queries.getSqlQuery('checkEmail'), [email_address], function(err, result){
-      handleError(err, deferred, done);
-
-      done();
-
-      deferred.resolve({
-        exists: result.rows[0].email_exists
-      });
-
-    });
-  });
+  return executeSqlQuery('checkEmail', [email_address]);
 }
 
 /**
-* @ngdoc
-* @name
+* @ngdoc function
+* @name checkUsername
 * @function
 *
-* @description 
-* @param
-* @returns
+* @description Checks to see if an username already exists.
+* @param {string} username The username to check.
+* @returns {boolean} True if the username exists, False otherwise.
 */
 exports.checkUsername = function(username){
-  var deferred = Q.defer();
-
-  pg.connect(dbUrl, function(err, client, done){
-    client.query(queries.getSqlQuery('checkUsername'), [username], function(err, result){
-      handleError(err, deferred, done);
-
-      done();
-
-      deferred.resolve({
-        exists: result.rows[0].username_exists
-      });
-
-    });
-  });
+  return executeSqlQuery('checkUsername'), [username]);
 }
 
 /**
-* @ngdoc
-* @name
+* @ngdoc function
+* @name loginUser
 * @function
 *
-* @description 
-* @param
-* @returns
+* @description Gets the user information for a given login 
+* @param {string} login A username or email address
+* @returns {object} The user's information.
 */
 exports.loginUser = function(login){
-  var deferred = Q.defer();
-
-  pg.connect(dbUrl, function(err, client, done){
-    client.query(queries.getSqlQuery('getUser'), [login], function(err, result){
-      handleError(err, deferred, done);
-
-      done();
-
-      deferred.resolve();
-    });
-  });
+  return executeSqlQuery('getUser', [login]);
 }
