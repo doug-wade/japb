@@ -6,6 +6,16 @@ var dataAccess = require('../data/dataAccess'),
     Q = require('q'),
     secret = 'YOUR SECRET HERE';
 
+/**
+* @ngdoc function
+* @name hash_pw
+* @function
+*
+* @description Uses Bcrypt to create a password hash 
+* @param {string} salt The Bcrypt-generated salt
+* @param {string} pw The user's password
+* @returns {object} A promise which eventually returns the hash.
+*/
 function hash_pw(salt, pw){
   var deferred = Q.defer();
 
@@ -19,17 +29,37 @@ function hash_pw(salt, pw){
   return deferred.promise;
 }
 
+/**
+* @ngdoc function
+* @name send_error
+* @function
+*
+* @description Sends an error back to the client
+* @param {object} res The node response object
+* @param {string} err The error message to send.
+*/
 function send_error(res, err){
   res.json({
     error: err
   });
 }
 
+/**
+* @ngdoc function
+* @name registerUser
+* @function
+*
+* @description Registers a new user in the db.
+* @param {object} req The node request object
+* @param {object} res The node response object.
+* @returns {object} The user cookie.
+*/
 exports.registerUser = function(req, res){
   var hash, userId,
       registrationError = 'There was a problem with your registration.  Please try again.',
       pw = req.body.password,
       username = req.body.username;
+
   bcrypt.genSalt(function(err, salt){
     if (err){
       console.log(err);
@@ -39,10 +69,13 @@ exports.registerUser = function(req, res){
     then(function(data){
       dataAccess.registerUser(username, req.body.email, data.hash).
       then(function(data){
-        console.log('Attempting to send json...');
         res.json({
           userId: data.user_id,
-          username: data.username
+          username: data.username,
+          //Give minimum permissions by default; 
+          //TODO: Add manage permissions activity
+          //3 -- comment; 5 -- moderate comments; 7 -- moderate posts; 11 -- moderate users
+          accessLevel: data.accessLevel
         });
       });
     }).
@@ -54,7 +87,27 @@ exports.registerUser = function(req, res){
 }
 
 exports.loginUser = function(req, res){
-  var salt = '';
+  var username = req.body.username, 
+      password = req.body.userpassword;
+
+  console.log('un: ' + username + ' up: ' + password);
+  dataAccess.loginUser(username)
+    .then(function(data){
+      bcrypt.compare(password, data.hash, function(err, success){
+        if (err) {
+          send_error(res, err);
+        }
+        if (success) {
+          res.json({
+            username: data.username,
+            userId: data.user_id,
+            accessLevel: data.access_level
+          });
+        } else {
+          send_error(res, 'Login Failed');
+        }
+      });
+    });
 }
 
 exports.posts = function(req, res){
@@ -119,6 +172,7 @@ exports.deletePost = function(req, res){
 };
 
 exports.getDate = function(req, res){
+
   dataAccess.getDate()
   .then(function(data){ 
     res.json({ date: data.now }); 

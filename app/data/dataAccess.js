@@ -50,7 +50,6 @@ var formatResults = function(result, queryName) {
     case 'getAllPosts':
       var posts = [];
       result.rows.forEach(function(post){
-        console.log(post);
         posts.push({
           id: post.id,
           title: post.title,
@@ -71,8 +70,10 @@ var formatResults = function(result, queryName) {
       return { exists: result.rows[0].username_exists };
 
     case 'getUser':
+      console.log(result);
       return { user_id: result.rows[0].user_id, 
-               username: result.rows[0].username };
+               username: result.rows[0].username,
+               accessLevel: result.rows[0].access_level };
 
     case 'insertUser':
       var new_user_id = result.rows[0].insert_user;
@@ -244,5 +245,6 @@ exports.checkUsername = function(username){
 * @returns {object} The user's information.
 */
 exports.loginUser = function(login){
+  console.log('dataccess got login: ' + login);
   return executeSqlQuery('getUser', [login]);
 }

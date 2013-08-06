@@ -47,6 +47,7 @@ app.put('/api/post/:id', api.editPost);
 app.delete('/api/post/:id', api.deletePost);
 app.get('/api/date', api.getDate);
 app.post('/api/user/register', api.registerUser);
+app.post('/api/user/login', api.loginUser)
 
 app.listen(3000, function(){
   console.log("Express server listening on port %d", app.get('port'));

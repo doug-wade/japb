@@ -5,6 +5,7 @@ create table japb_user
 	,username text
 	,email_address text
 	,pw_hash text
+	,access_level integer
 );
 commit;
 
@@ -13,13 +14,6 @@ create table user_token
 	user_id integer references japb_user (user_id)
 	,temporary_token text
 	,token_expiry timestamp
-);
-
-create table user_permissions
-(
-	user_id integer references japb_user (user_id)
-	,is_admin boolean
-	,is_shadow_banned boolean
 );
 
 create table comments

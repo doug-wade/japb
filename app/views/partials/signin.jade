@@ -1,10 +1,10 @@
 form.form-signin
   h2.form-signin-heading Sign In
-  input.input-block-level(type='text', placeholder='Username or Email address')
-  input.input-block-level(type='password', placeholder='Password')
+  input.input-block-level(type='text', ng-model='user.username', placeholder='Username or Email address')
+  input.input-block-level(type='password', ng-model='user.userpassword', placeholder='Password')
   label.checkbox Remember me
     input(type='checkbox', value='remember-me')
-  button.btn.btn-large.btn-primary(type='submit', ng-click='') Sign in
+  button.btn.btn-large.btn-primary(type='submit', ng-click='loginUser(user)') Sign in
   br
   br
   p

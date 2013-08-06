@@ -6,7 +6,7 @@ var sqlQueryDict = {
   'deletePost': 'select delete_post($1);',
   'updatePost': 'select update_post($3, $1, $2);',
   'insertUser': 'select insert_user($1, $2, $3);',
-  'getUser': 'select pw_hash as "hash", username as "username", user_id as "user_id" from japb_user where username = $1 or email_address = $1;',
+  'getUser': 'select pw_hash as "hash", username as "username", user_id as "user_id", access_level as "access_level" from japb_user where username = $1 or email_address = $1;',
   'updateUserPassword': 'select update_user_password($1, $2, $3);',
   'checkEmail': 'select check_email($1);',
   'checkUsername': 'select check_username($1);'

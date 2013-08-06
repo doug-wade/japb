@@ -34,11 +34,11 @@ angular.module('japb', ['japb.controllers','japb.filters', 'japb.services', 'jap
       }).
       when('/signin', {
         templateUrl: '/partials/signin',
-        controller: 'IndexCtrl'
+        controller: 'SigninCtrl'
       }).
       when('/signup', {
         templateUrl: '/partials/signup',
-        controller: 'UserCtrl'
+        controller: 'SignupCtrl'
       }).
       when('/forgotPassword', {
         templateUrl: '/partials/forgotPassword',
