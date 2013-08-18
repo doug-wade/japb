@@ -1,7 +1,7 @@
 var pg = require('pg'),
     Q = require('q'),
     queries = require('./SqlQueries'),
-    dbUrl = Process.env.POSTGRESQLURL;
+    dbUrl = process.env.DATABASE_URL;
 
 /**
 * @ngdoc function
