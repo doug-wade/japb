@@ -49,6 +49,6 @@ app.get('/api/date', api.getDate);
 app.post('/api/user/register', api.registerUser);
 app.post('/api/user/login', api.loginUser)
 
-app.listen(3000, function(){
+app.listen(Proces.env.PORT, function(){
   console.log("Express server listening on port %d", app.get('port'));
 });

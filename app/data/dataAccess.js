@@ -1,7 +1,7 @@
 var pg = require('pg'),
     Q = require('q'),
     queries = require('./SqlQueries'),
-    dbUrl = "tcp://japbAdmin:34ae82ede2@localhost/japb";
+    dbUrl = Process.env.POSTGRESQLURL;
 
 /**
 * @ngdoc function
