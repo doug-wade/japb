@@ -1,4 +1,4 @@
-﻿create table japb_user
+﻿CREATE TABLE japb_user
 (
 	user_id serial primary key
 	,username text
@@ -7,14 +7,14 @@
 	,access_level integer
 );
 
-create table user_token
+CREATE TABLE user_token
 (
 	user_id integer references japb_user (user_id)
 	,temporary_token text
 	,token_expiry timestamp
 );
 
-create table comments
+CREATE TABLE comments
 (
 	post_id integer references post (post_id)
 	,user_id integer references japb_user (user_id)
@@ -22,7 +22,7 @@ create table comments
 	,is_hidden boolean
 );
 
-create table post
+CREATE TABLE post
 (
 	post_id serial primary key
 	,post_text text
@@ -30,19 +30,19 @@ create table post
 	,posted_by_id integer
 );
 
-create table tag
+CREATE TABLE tag
 (
 	tag_id serial primary key
 	,tag_display_name text
 );
 
-create table map_post_to_tag
+CREATE TABLE map_post_to_tag
 (
 	tag_id integer references tag (tag_id)
 	,post_id integer references post (post_id)
 );
 
-create function insert_user
+CREATE FUNCTION insert_user
 (
 	new_user_email text
 	,new_username text
@@ -74,7 +74,7 @@ end;
 end $$
 language plpgsql;
 
-create function check_username
+CREATE FUNCTION check_username
 (
 	username_to_check text
 )
@@ -94,7 +94,7 @@ end if;
 end $$
 language plpgsql;
 
-create function check_email
+CREATE FUNCTION check_email
 (
 	email_adress_to_check text
 )
@@ -114,7 +114,7 @@ end if;
 end $$
 language plpgsql;
 
-create function update_user_password
+CREATE FUNCTION update_user_password
 (
 	user_id int
 	,updated_user_hash_pipe_salt text
@@ -143,7 +143,7 @@ end if;
 end $$
 language plpgsql;
 
-create function insert_post
+CREATE FUNCTIONFUNCTION insert_post
 (
 	new_post_title text
 	,new_post_text text
@@ -162,7 +162,7 @@ returning post_id into new_post_id;
 end $$
 language plpgsql;
 
-create function delete_post
+CREATE FUNCTION delete_post
 (
 	former_post_id int
 	,out post_deleted boolean
@@ -177,7 +177,7 @@ return;
 end $$
 language plpgsql;
 
-create function update_post
+CREATE FUNCTION update_post
 (
 	existing_post_id int
 	,new_post_title text
