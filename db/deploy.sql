@@ -1,5 +1,4 @@
-﻿begin;
-create table japb_user
+﻿create table japb_user
 (
 	user_id serial primary key
 	,username text
@@ -7,7 +6,6 @@ create table japb_user
 	,pw_hash text
 	,access_level integer
 );
-commit;
 
 create table user_token
 (

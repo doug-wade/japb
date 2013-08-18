@@ -6,7 +6,7 @@ var pg = require('pg')
 
 client = new pg.Client(connectionString);
 client.connect();
-fs.readFile('./db/deploy.sql', {encoding:'utf8'}, function(err, queryString){
+fs.readFile('./db/deploy.sql', { encoding:'utf8' }, function(err, queryString){
     if (err){
         console.log(err);
     }
