@@ -6,11 +6,11 @@ html(ng-app="japb")
     title= title
     
     //bootstrap hosted for production
-    //link(rel='stylesheet', href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css')
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css')
     
     //boostrap local for debugging
-    link(rel='stylesheet', href='/public/lib/bootstrap/css/bootstrap.css')
-    link(rel='stylesheet', href='/public/lib/bootstrap/css/bootstrap-responsive.css')
+    //link(rel='stylesheet', href='/public/lib/bootstrap/css/bootstrap.css')
+    //link(rel='stylesheet', href='/public/lib/bootstrap/css/bootstrap-responsive.css')
     
     //App styles
     link(rel='stylesheet', href='/public/css/style.css')
@@ -46,27 +46,28 @@ html(ng-app="japb")
 
     //JQuery hosted for production (1.10.2 not hosted yet, but 1.10.1 not available from jQuery.
     //Local development continues on 1.10.2 on the hope that Google will host it eventually.)
-    //script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js')
 
     //JQuery local for debugging
-    script(src='/public/lib/jquery/jquery-1.10.2.js')
+    //script(src='/public/lib/jquery/jquery-1.10.2.js')
 
     //Angular hosted for production
-    //script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js')
-    //script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js')
+    script(src='http://code.angularjs.org/1.1.5/angular.min.js')
+    script(src='http://code.angularjs.org/1.1.5/angular-resource.min.js')
+    script(src='http://code.angularjs.org/1.1.5/angular-cookies.min.js')
+    script(src='http://code.angularjs.org/1.1.5/angular-sanitize.min.js')
 
     //Angular local for debugging
-    script(src='/public/lib/angular/angular.js')
-    script(src='/public/lib/angular/angular-resource.js')
-    script(src='/public/lib/angular/angular-cookies.js')
-    script(src='/public/lib/angular/angular-sanitize.js')
-    script(src='/public/lib/angular/angular-resource.js')
+    //script(src='/public/lib/angular/angular.js')
+    //script(src='/public/lib/angular/angular-resource.js')
+    //script(src='/public/lib/angular/angular-cookies.js')
+    //script(src='/public/lib/angular/angular-sanitize.js')
 
     //Bootstrap hosted for production
-    //script(src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js')
+    script(src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js')
 
     //Bootstrap local for debugging
-    script(src='/public/lib/bootstrap/js/bootstrap.js')
+    //script(src='/public/lib/bootstrap/js/bootstrap.js')
 
     //App Javascripts
     script(src='/public/js/services.js')

@@ -18,8 +18,8 @@ app.configure(function(){
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.cookieParser(process.env.COOKIESECRET));
-  app.use(express.session({ secret: process.env.SESSIONSECRET }));
+  app.use(express.cookieParser(process.env.COOKIESECRET || 'your secret here'));
+  app.use(express.session({ secret: process.env.SESSIONSECRET || 'your secret here'}));
   app.use(require('stylus').middleware({ src: __dirname + '/css' }));
   app.use(app.router);
   app.use(express.static(__dirname));
@@ -49,6 +49,6 @@ app.get('/api/date', api.getDate);
 app.post('/api/user/register', api.registerUser);
 app.post('/api/user/login', api.loginUser)
 
-app.listen(process.env.PORT, function(){
+app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d", app.get('port'));
 });

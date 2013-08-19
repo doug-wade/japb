@@ -1,202 +1,202 @@
-﻿CREATE TABLE japb_user
+﻿create table japb_user
 (
-	user_id SERIAL PRIMARY KEY
-	,username TEXT
-	,email_address TEXT
-	,pw_hash TEXT
-	,access_level INTEGER
+	user_id serial primary key
+	,username text
+	,email_address text
+	,pw_hash text
+	,access_level integer
 );
 
-CREATE TABLE user_token
+create table user_token
 (
-	user_id INTEGER REFERENCES japb_user (user_id)
-	,temporary_token TEXT
-	,token_expiry TIMESTAMP
+	user_id integer references japb_user (user_id)
+	,temporary_token text
+	,token_expiry timestamp
 );
 
-CREATE TABLE comments
+create table post
 (
-	post_id INTEGER REFERENCES post (post_id)
-	,user_id INTEGER REFERENCES japb_user (user_id)
-	,comment_text TEXT
-	,is_hidden BOOLEAN
+	post_id serial primary key
+	,post_text text
+	,post_title text
+	,posted_by_id integer
 );
 
-CREATE TABLE post
+create table comments
 (
-	post_id SERIAL PRIMARY KEY
-	,post_text TEXT
-	,post_title TEXT
-	,posted_by_id INTEGER
+	post_id integer references post (post_id)
+	,user_id integer references japb_user (user_id)
+	,comment_text text
+	,is_hidden boolean
 );
 
-CREATE TABLE tag
+create table tag
 (
-	tag_id SERIAL PRIMARY KEY
-	,tag_display_name TEXT
+	tag_id serial primary key
+	,tag_display_name text
 );
 
-CREATE TABLE map_post_to_tag
+create table map_post_to_tag
 (
-	tag_id INTEGER REFERENCES tag (tag_id)
-	,post_id INTEGER REFERENCES post (post_id)
+	tag_id integer references tag (tag_id)
+	,post_id integer references post (post_id)
 );
 
-CREATE FUNCTION insert_user
+create function insert_user
 (
-	new_user_email TEXT
-	,new_username TEXT
-	,new_user_hash TEXT
-	,out new_user_id INTEGER
+	new_user_email text
+	,new_username text
+	,new_user_hash text
+	,out new_user_id int
 )
-RETURNS INTEGER
-AS
-$$ BEGIN
-DECLARE email_used BOOLEAN;
-DECLARE username_used BOOLEAN;
-BEGIN
-	SELECT check_username(new_username) INTO username_used;
-	SELECT check_email(new_user_email) INTO email_used;
-	IF new_user_email = '' OR new_username = '' OR new_user_hash = '' OR email_used OR username_used
-	THEN
-		SELECT 0 INTO new_user_id;
-	ELSE
-		INSERT INTO japb_user
+returns integer
+as
+$$ begin
+declare email_used boolean;
+declare username_used boolean;
+begin
+	select check_username(new_username) into username_used;
+	select check_email(new_user_email) into email_used;
+	if new_user_email = '' or new_username = '' or new_user_hash = '' or email_used or username_used
+	then
+		select 0 into new_user_id;
+	else
+		insert into japb_user
 		(
 			email_address
 			,username
 			,pw_hash
 		)
-		VALUES (new_user_email, new_username, new_user_hash)
-		RETURNING user_id INTO new_user_id;
-	END IF;
-END;
-END $$
-LANGUAGE PLPGSQL;
+		values (new_user_email, new_username, new_user_hash)
+		returning user_id into new_user_id;
+	end if;
+end;
+end $$
+language plpgsql;
 
-CREATE FUNCTION check_username
+create function check_username
 (
-	username_to_check TEXT
+	username_to_check text
 )
-RETURNS BOOLEAN
-AS
-$$ BEGIN
-IF EXISTS (
-	SELECT user_id
-	FROM japb_user
-	WHERE japb_user.username = username_to_check
+returns boolean
+as
+$$ begin
+if exists (
+	select user_id
+	from japb_user
+	where japb_user.username = username_to_check
 )
-THEN
-	RETURN True AS "username_exists";
-ELSE
-	RETURN False AS "username_exists";
-END IF;
-END $$
-LANGUAGE PLPGSQL;
+then
+	return True as "username_exists";
+else
+	return False as "username_exists";
+end if;
+end $$
+language plpgsql;
 
-CREATE FUNCTION check_email
+create function check_email
 (
-	email_adress_to_check TEXT
+	email_adress_to_check text
 )
-RETURNS BOOLEAN
-AS
-$$ BEGIN
-IF EXISTS (
-	SELECT user_id
-	FROM japb_user
-	WHERE japb_user.email_address = email_adress_to_check
+returns boolean
+as
+$$ begin
+if exists (
+	select user_id
+	from japb_user
+	where japb_user.email_address = email_adress_to_check
 )
-THEN
-	RETURN True AS "email_exists";
-ELSE
-	RETURN False AS "email_exists";
-END IF;
-END $$
-LANGUAGE PLPGSQL;
+then
+	return True as "email_exists";
+else
+	return False as "email_exists";
+end if;
+end $$
+language plpgsql;
 
-CREATE FUNCTION update_user_password
+create function update_user_password
 (
-	user_id INTEGER
-	,updated_user_hash_pipe_salt TEXT
-	,temporary_token TEXT
+	user_id int
+	,updated_user_hash_pipe_salt text
+	,temporary_token text
 )
-RETURNS BOOLEAN
-AS
-$$ BEGIN
-IF EXISTS (
-	SELECT user_id
-	FROM japb_user
-	INNER JOIN user_token
-		ON user_token.user_id = japb_user.user_id
-	WHERE temporary_token = user_token.temporary_token
-		AND japb_user.user_id = user_id
-		AND user_token.expiry_date < current_timestamp
+returns boolean
+as
+$$ begin
+if exists (
+	select user_id
+	from japb_user
+	inner join user_token
+		on user_token.user_id = japb_user.user_id
+	where temporary_token = user_token.temporary_token
+		and japb_user.user_id = user_id
+		and user_token.expiry_date < current_timestamp
 )
-THEN
-	UPDATE japb_user
-	SET hash_pipe_salt = updated_user_hash_pipe_salt;
-ELSE
-	DELETE
-	DELETE user_token
-	WHERE user_id = user_id;
-END IF;
-END $$
-LANGUAGE PLPGSQL;
+then
+	update japb_user
+	set hash_pipe_salt = updated_user_hash_pipe_salt;
+else
+	delete
+	from user_token
+	where user_id = user_id;
+end if;
+end $$
+language plpgsql;
 
-CREATE FUNCTION insert_post
+create function insert_post
 (
-	new_post_title TEXT
-	,new_post_TEXT TEXT
+	new_post_title text
+	,new_post_text text
 	,out new_post_id int
 )
-RETURNS INTEGER
-AS
-$$ BEGIN
-INSERT INTO post
+returns integer
+as
+$$ begin
+insert into post
 (
 	post_text
 	,post_title
 )
-VALUES (new_post_text, new_post_title)
-RETURNING post_id INTO new_post_id;
-END $$
-LANGUAGE PLPGSQL;
+values (new_post_text, new_post_title)
+returning post_id into new_post_id;
+end $$
+language plpgsql;
 
-CREATE FUNCTION delete_post
+create function delete_post
 (
 	former_post_id int
-	,out post_deleted BOOLEAN
+	,out post_deleted boolean
 )
-RETURNS BOOLEAN
-AS
-$$ BEGIN
-DELETE FROM post
-WHERE post.post_id = former_post_id;
+returns boolean
+as
+$$ begin
+delete from post
+where post.post_id = former_post_id;
 post_deleted := found;
-RETURN;
-END $$
-LANGUAGE PLPGSQL;
+return;
+end $$
+language plpgsql;
 
-CREATE FUNCTION update_post
+create function update_post
 (
 	existing_post_id int
-	,new_post_title TEXT
-	,new_post_TEXT TEXT
-	,out updated_post_id INTEGER
+	,new_post_title text
+	,new_post_text text
+	,out updated_post_id integer
 )
-RETURNS INTEGER
-AS
-$$ BEGIN
-UPDATE post
-SET post_TEXT = new_post_text
+returns integer
+as
+$$ begin
+update post
+set post_text = new_post_text
 	,post_title = new_post_title
-WHERE post.post_id = existing_post_id;
-IF FOUND
-THEN
+where post.post_id = existing_post_id;
+if found
+then
 	updated_post_id := existing_post_id;
-ELSE
+else
 	updated_post_id := 0;
-END IF;
-RETURN;
-END $$
-LANGUAGE PLPGSQL;
+end if;
+return;
+end $$
+language plpgsql;
