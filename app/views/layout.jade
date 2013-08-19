@@ -4,16 +4,18 @@ html(ng-app="japb")
     meta(charset='utf8')
     base(href='/')
     title= title
-    
+    link(rel='icon', href='/public/favicon.ico', type='image/x-icon')
+
     //bootstrap hosted for production
     link(rel='stylesheet', href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css')
-    
+
     //boostrap local for debugging
     //link(rel='stylesheet', href='/public/lib/bootstrap/css/bootstrap.css')
     //link(rel='stylesheet', href='/public/lib/bootstrap/css/bootstrap-responsive.css')
-    
+
     //App styles
     link(rel='stylesheet', href='/public/css/style.css')
+
   body
     div.navbar.navbar-inverse.navbar-fixed-top
       div.navbar-inner
