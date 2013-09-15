@@ -1,1 +1,1 @@
-It's just another programming blog, based on node/express/angular, with a little bootstrap because I'm not a designer.  The development version of the software is hosted at <a href='justanotherprogrammingblog.herokuapp.com'>justanotherprogrammingblog.herokuapp.com</a>.
+It's just another programming blog, based on node/express/angular, with a little bootstrap because I'm not a designer.  The development version of the software is hosted at <a href='http://www.justanotherprogrammingblog.herokuapp.com'>justanotherprogrammingblog.herokuapp.com</a>.
