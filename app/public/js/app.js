@@ -44,8 +44,5 @@ angular.module('japb', ['japb.controllers','japb.filters', 'japb.services', 'jap
         templateUrl: '/partials/forgotPassword',
         controller: 'UserCtrl'
       });
-      /*.otherwise({
-        redirectTo: '/'
-      });*/
     $locationProvider.html5Mode(true);
   }]);

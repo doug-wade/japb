@@ -6,14 +6,17 @@ html(ng-app="japb")
     title= title
     link(rel='icon', href='/public/favicon.ico', type='image/x-icon')
 
-    //bootstrap hosted for production
-    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css')
+    // Twitter Bootstrap hosted for production
+    // TODO: Manage this with Bower
+    // link(rel='stylesheet', href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css')
 
-    //boostrap local for debugging
-    //link(rel='stylesheet', href='/public/lib/bootstrap/css/bootstrap.css')
-    //link(rel='stylesheet', href='/public/lib/bootstrap/css/bootstrap-responsive.css')
+    // boostrap local for development
+    // TODO: Manage this with Bower
+    link(rel='stylesheet', href='/public/lib/bootstrap/css/bootstrap.css')
+    link(rel='stylesheet', href='/public/lib/bootstrap/css/bootstrap-responsive.css')
 
-    //App styles
+    // App styles
+    // TODO: Migrate this to less.
     link(rel='stylesheet', href='/public/css/style.css')
 
   body
@@ -46,30 +49,23 @@ html(ng-app="japb")
       block content
     include footer
 
-    //JQuery hosted for production (1.10.2 not hosted yet, but 1.10.1 not available from jQuery.
-    //Local development continues on 1.10.2 on the hope that Google will host it eventually.)
-    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js')
+    // Angular hosted for production
+    //script(src='http://code.angularjs.org/1.1.5/angular.min.js')
+    //script(src='http://code.angularjs.org/1.1.5/angular-resource.min.js')
+    //script(src='http://code.angularjs.org/1.1.5/angular-cookies.min.js')
+    //script(src='http://code.angularjs.org/1.1.5/angular-sanitize.min.js')
 
-    //JQuery local for debugging
-    //script(src='/public/lib/jquery/jquery-1.10.2.js')
+    // Angular local for development 
+    // TODO: Manage this with Bower
+    script(src='/public/lib/angular/angular.js')
+    script(src='/public/lib/angular/angular-resource.js')
+    script(src='/public/lib/angular/angular-cookies.js')
+    script(src='/public/lib/angular/angular-sanitize.js')
 
-    //Angular hosted for production
-    script(src='http://code.angularjs.org/1.1.5/angular.min.js')
-    script(src='http://code.angularjs.org/1.1.5/angular-resource.min.js')
-    script(src='http://code.angularjs.org/1.1.5/angular-cookies.min.js')
-    script(src='http://code.angularjs.org/1.1.5/angular-sanitize.min.js')
+    // Bootstrap hosted for production
+    //script(src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js')
 
-    //Angular local for debugging
-    //script(src='/public/lib/angular/angular.js')
-    //script(src='/public/lib/angular/angular-resource.js')
-    //script(src='/public/lib/angular/angular-cookies.js')
-    //script(src='/public/lib/angular/angular-sanitize.js')
-
-    //Bootstrap hosted for production
-    script(src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js')
-
-    //Bootstrap local for debugging
-    //script(src='/public/lib/bootstrap/js/bootstrap.js')
+    // TODO: Host Bootstrap locally for development using Bower.
 
     //App Javascripts
     script(src='/public/js/services.js')

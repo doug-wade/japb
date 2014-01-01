@@ -4,7 +4,8 @@
 
 var express = require('express')
   , routes = require('./routes/index')
-  , api = require('./routes/api');
+  , api = require('./routes/api')
+  , stylus = require('stylus');
 
 var app = express();
 
@@ -15,12 +16,13 @@ app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.set(express.favicon(__dirname + '/public/favicon.ico'));
+  
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser(process.env.COOKIESECRET || 'your secret here'));
   app.use(express.session({ secret: process.env.SESSIONSECRET || 'your secret here'}));
-  app.use(require('stylus').middleware({ src: __dirname + '/css' }));
+  app.use(stylus.middleware({ src: __dirname + '/css' }));
   app.use(app.router);
   app.use(express.static(__dirname));
 });
