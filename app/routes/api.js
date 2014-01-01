@@ -1,7 +1,7 @@
 /*
  * GET home page.
  */
-var dataAccess = require('../data/dataAccess'),
+var dataAccess = {},
     bcrypt = require('bcrypt'),
     Q = require('q'),
     secret = 'YOUR SECRET HERE';
