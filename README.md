@@ -6,6 +6,9 @@ On the DevOps side, I'm in the process of migrating from PostgreSQL/Heroku to Dy
 
 The development version of the software is currently hosted at []d'http://justanotherprogrammingblog.herokuapp.com'>justanotherprogrammingblog.herokuapp.com</a>.
 
+The Development environment requires:
+
+[DynamoDB Local](https://s3-us-west-2.amazonaws.com/dynamodb-local/dynamodb_local_2013-12-12.tar.gz).  Development settings expect its location to be at the root of the project, in a folder called dynamodb_local
 
 ## License
 
