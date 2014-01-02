@@ -19,6 +19,8 @@ npm-debug.log
 node_modules
 dynamodb_local
 logs
+bower_components
+public/lib
 
 .env
 .pgpass

@@ -1,10 +1,6 @@
 module.exports = (grunt) ->
-  # TODO:
-  # I should use bower for boostrap and angular, so I should need to use this:
-  # grunt.loadNpmTasks('grunt-bower');
-  # I may require copying to lib, in which case I'll need this:
-  # grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-copy')
+  grunt.loadNpmTasks('grunt-bower')
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-contrib-uglify')
   grunt.loadNpmTasks('grunt-contrib-watch')
@@ -36,5 +32,27 @@ module.exports = (grunt) ->
     watch: {
       files: ['<%= coffee.files %> '],
       tasks: ['coffee.compiledev']
+    },
+    bower: {
+      install: {
+        options: {
+          targetDir: './public/lib',
+          layout: 'byType',
+          install: true,
+          verbose: true,
+          cleanTargetDir: true,
+          cleanBowerDir: true,
+          bowerOptions: {}
+        }
+      }
+    },
+    # TODO: This doesn't copy properly, and 
+    copy: {
+      main: {
+        files: [
+          {expand:true, src: ['bower_components/**'], dest: 'public/' }]
+      }
     }
-   })
+  })
+
+  grunt.registerTask('deps', ['npm-install', 'bower', 'copy'])

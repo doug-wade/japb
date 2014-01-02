@@ -41,9 +41,9 @@ app.configure(function(){
 
   app.use(express.cookieParser(process.env.COOKIESECRET || 'your secret here'));
   app.use(express.session({ secret: process.env.SESSIONSECRET || 'your secret here'}));
-  app.use(stylus.middleware({ src: __dirname + '/css' }));
+  app.use(stylus.middleware({ src: __dirname + '/public/css' }));
   app.use(app.router);
-  app.use(express.static(__dirname));
+  app.use(express.static(__dirname + '/public/'));
 });
 
 app.configure('development', function(){
