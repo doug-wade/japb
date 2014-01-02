@@ -9,6 +9,7 @@
     "bootstrap": "~3.0.3",
     "angular-resource": "~1.2.6",
     "angular-cookies": "~1.2.6",
-    "angular-sanitize": "~1.2.6"
+    "angular-sanitize": "~1.2.6",
+    "angular-route": "~1.2.6"
   }
 }

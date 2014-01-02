@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on filters, and services
-angular.module('japb', ['japb.controllers','japb.filters', 'japb.services', 'japb.directives']).
+angular.module('japb', ['ngRoute', 'japb.controllers','japb.filters', 'japb.services', 'japb.directives']).
   config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.
       when('/', {
