@@ -2,15 +2,18 @@
  * Module dependencies.
  */
 
-var express = require('express')
+var fs = require('fs')
+  , express = require('express')
   , routes = require('./routes/index')
   , api = require('./routes/api')
   , stylus = require('stylus');
 
+var today = new Date();
+var loggingStream = fs.createWriteStream('./logs/' + today.toDateString() + '-express-logs.txt');
+
 var app = express();
 
 // Configuration
-
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
@@ -18,8 +21,24 @@ app.configure(function(){
   app.set(express.favicon(__dirname + '/public/favicon.ico'));
   
   app.use(express.logger('dev'));
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
+
+  // Middleware
+  // Prevent cross-site scripting
+  // app.use(express.csrf('my secret here.'));
+
+  // body parsing middleware
+  app.use(express.json());
+  app.use(express.urlencoded());
+
+  // Authentication middleware
+  //app.use(express.basicAuth(function(req, res, next) { 
+  //  next();
+  //  return true; 
+  //}));
+
+  // Logging middleware
+  app.use(express.logger({ stream: loggingStream }));
+
   app.use(express.cookieParser(process.env.COOKIESECRET || 'your secret here'));
   app.use(express.session({ secret: process.env.SESSIONSECRET || 'your secret here'}));
   app.use(stylus.middleware({ src: __dirname + '/css' }));
