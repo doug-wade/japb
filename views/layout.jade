@@ -16,31 +16,36 @@ html(ng-app="japb")
     link(rel='stylesheet', href='/css/style.styl')
 
   body
-    div.navbar.navbar-inverse.navbar-fixed-top
-      div.navbar-inner
-        div.container
-          button.btn.btn-navbar(type='button',
-                                data-toggle='collapse',
-                                data-target='.nav-collapse')
+    div.navbar.navbar-default.navbar-inverse(role='navigation')
+      div.container
+        div.navbar-header
+          button.navbar-toggle(type='button',
+                               data-toggle='collapse',
+                               data-target='.nav-collapse')
+            span.sr-only Toggle navigation
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.brand(href='/') JAPB
-          div.nav-collapse.collapse
-            ul.nav
-              li.active
-                a(href='/') Home
-              li.dropdown
-                a.dropdown-toggle(href='#',
-                                  data-toggle='dropdown') Admin
-                ul.dropdown-menu
-                  li
-                    a(href='/addPost') New Post
-            div.pull-right.sign-in
-              if username==undefined
-                p Anonymous <a href='/signin'>(sign in)</a>
-              else
-                p #{username}
+          a.navbar-brand(href='/') JAPB
+        div.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='/') Home
+            li
+              a(href='/about') About
+            li
+              a(href='/contact') Contact
+            li.dropdown
+              a.dropdown-toggle(href='#',
+                                data-toggle='dropdown') Admin
+              ul.dropdown-menu
+                li
+                  a(href='/addPost') New Post
+          div.sign-in.navbar-right
+            if username==undefined
+              p Anonymous <a href='/signin'>(sign in)</a>
+            else
+              p #{username}
     div.container
       block content
     include footer
