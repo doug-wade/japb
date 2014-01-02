@@ -4,7 +4,7 @@ I'm using [AngularJS](angularjs.org) to serve an SPA, so I'm using [ExpressJS](e
 
 On the DevOps side, I'm in the process of migrating from PostgreSQL/Heroku to DynamoDB/AWS, and doing more automating with Grunt.
 
-The development version of the software is currently hosted at []d'http://justanotherprogrammingblog.herokuapp.com'>justanotherprogrammingblog.herokuapp.com</a>.
+v0.0.1 is currently hosted at [justanotherprogrammingblog.herokuapp.com](http://justanotherprogrammingblog.herokuapp.com), though as part of 0.0.2 (currently under development), the site is being migrated to AWS.
 
 The Development environment requires:
 
