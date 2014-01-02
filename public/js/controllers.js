@@ -90,6 +90,10 @@ angular.module('japb.controllers', ['japb.services', 'ngCookies']).
 
   controller('SigninCtrl', function($scope, $http, $location, $cookies){
 
+    $scope.go = function(path) {
+      $location.path(path);
+    };
+
     $scope.loginUser = function(user) {
       console.log('registering user...');
       console.log(user);
